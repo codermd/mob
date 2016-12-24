@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpenseItemCell" rowHeight="88" id="cxk-wN-pdQ" customClass="ExpenseItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sa2-Vf-jE2">
+                        <rect key="frame" x="13" y="8" width="294" height="71"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" text="Very very long and awesome and expensive ExpenceItemCell and all stuffs" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVx-1W-izN">
+                                <rect key="frame" x="5" y="0.0" width="216" height="50"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="20 GBP" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8p-cC-cJb">
+                                <rect key="frame" x="234" y="2" width="55" height="22"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="250" text="18 EUR" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqG-3d-fSk">
+                                <rect key="frame" x="242" y="24" width="47" height="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sgW-nV-LD4">
+                                <rect key="frame" x="269" y="46" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="3ke-D5-mWV"/>
+                                    <constraint firstAttribute="width" constant="20" id="5HM-Bq-NeS"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.59607843140000005" blue="0.72549019609999998" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="sgW-nV-LD4" secondAttribute="bottom" constant="5" id="2xE-sL-TNL"/>
+                            <constraint firstItem="XVx-1W-izN" firstAttribute="top" secondItem="sa2-Vf-jE2" secondAttribute="top" id="BAO-b0-jug"/>
+                            <constraint firstAttribute="trailing" secondItem="o8p-cC-cJb" secondAttribute="trailing" constant="5" id="Cbg-hR-Tr7"/>
+                            <constraint firstItem="sgW-nV-LD4" firstAttribute="top" secondItem="yqG-3d-fSk" secondAttribute="bottom" constant="5" id="DHO-GQ-Jvh"/>
+                            <constraint firstAttribute="trailing" secondItem="yqG-3d-fSk" secondAttribute="trailing" constant="5" id="Meu-4T-TnY"/>
+                            <constraint firstItem="XVx-1W-izN" firstAttribute="leading" secondItem="sa2-Vf-jE2" secondAttribute="leading" constant="5" id="V1A-kh-sES"/>
+                            <constraint firstItem="yqG-3d-fSk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XVx-1W-izN" secondAttribute="trailing" constant="10" id="W5T-Nf-Ae4"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XVx-1W-izN" secondAttribute="bottom" constant="5" id="cvI-SX-4KH"/>
+                            <constraint firstAttribute="trailing" secondItem="sgW-nV-LD4" secondAttribute="trailing" constant="5" id="qSs-PY-iQT"/>
+                            <constraint firstItem="o8p-cC-cJb" firstAttribute="top" secondItem="sa2-Vf-jE2" secondAttribute="top" constant="2" id="s3n-lT-vTs"/>
+                            <constraint firstItem="yqG-3d-fSk" firstAttribute="top" secondItem="o8p-cC-cJb" secondAttribute="bottom" id="wIM-2o-F5d"/>
+                            <constraint firstItem="o8p-cC-cJb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XVx-1W-izN" secondAttribute="trailing" constant="10" id="yZM-xC-umg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sa2-Vf-jE2" firstAttribute="trailing" secondItem="YTl-1W-gDM" secondAttribute="trailingMargin" constant="-5" id="KXb-R8-ZaF"/>
+                    <constraint firstItem="sa2-Vf-jE2" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" constant="5" id="Vqg-Ic-e1O"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="sa2-Vf-jE2" secondAttribute="bottom" id="ecl-34-Lot"/>
+                    <constraint firstItem="sa2-Vf-jE2" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" id="qPP-Sl-kkW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="Amount1Label" destination="o8p-cC-cJb" id="Eff-cj-1vh"/>
+                <outlet property="Amount2Label" destination="yqG-3d-fSk" id="Chn-h4-Zmu"/>
+                <outlet property="ContainerView" destination="sa2-Vf-jE2" id="iH9-ON-wpK"/>
+                <outlet property="PolicyRuleImageView" destination="sgW-nV-LD4" id="H7z-L0-Kdb"/>
+                <outlet property="TitleLabel" destination="XVx-1W-izN" id="BAy-SL-qTt"/>
+            </connections>
+            <point key="canvasLocation" x="290" y="414.5"/>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

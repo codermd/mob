@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LookupViewController">
+            <connections>
+                <outlet property="SearchBar" destination="W23-HZ-UtH" id="3Tp-nx-ire"/>
+                <outlet property="TableView" destination="2dT-vD-gXT" id="wuV-tq-kHN"/>
+                <outlet property="loadingIndicator" destination="ILX-5o-cyx" id="vEy-EY-isY"/>
+                <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2dT-vD-gXT">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" red="0.80392156859999997" green="0.81568627449999997" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <searchBar key="tableHeaderView" contentMode="redraw" id="W23-HZ-UtH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </searchBar>
+                </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ILX-5o-cyx">
+                    <rect key="frame" x="142" y="310" width="37" height="37"/>
+                    <color key="color" red="0.0" green="0.6588235294" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="0.070588235289999995" green="0.59607843140000005" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="ILX-5o-cyx" secondAttribute="centerX" id="FDJ-Ra-Qc2"/>
+                <constraint firstItem="2dT-vD-gXT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HLz-86-1gH"/>
+                <constraint firstAttribute="trailing" secondItem="2dT-vD-gXT" secondAttribute="trailing" id="I3e-W6-dFP"/>
+                <constraint firstAttribute="centerY" secondItem="ILX-5o-cyx" secondAttribute="centerY" constant="-44" id="II7-xD-lW1"/>
+                <constraint firstItem="2dT-vD-gXT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MBB-hj-qsR"/>
+                <constraint firstAttribute="bottom" secondItem="2dT-vD-gXT" secondAttribute="bottom" id="gjU-gp-QuQ"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

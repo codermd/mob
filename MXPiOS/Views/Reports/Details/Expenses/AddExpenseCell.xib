@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddExpenseCell" rowHeight="56" id="cxk-wN-pdQ" customClass="AddExpenseCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kfn-Qx-0eK">
+                        <rect key="frame" x="8" y="8" width="304" height="39"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add expense" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBI-Jh-8fD">
+                                <rect key="frame" x="104" y="9" width="96" height="22"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.59607843140000005" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="DBI-Jh-8fD" secondAttribute="centerX" id="HQV-rM-nNr"/>
+                            <constraint firstAttribute="centerY" secondItem="DBI-Jh-8fD" secondAttribute="centerY" id="Svq-zi-Jib"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Kfn-Qx-0eK" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" id="11n-8Q-bBD"/>
+                    <constraint firstItem="Kfn-Qx-0eK" firstAttribute="trailing" secondItem="YTl-1W-gDM" secondAttribute="trailingMargin" id="49T-bJ-tdr"/>
+                    <constraint firstItem="Kfn-Qx-0eK" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" id="C1x-we-KpX"/>
+                    <constraint firstItem="Kfn-Qx-0eK" firstAttribute="bottom" secondItem="YTl-1W-gDM" secondAttribute="bottomMargin" id="dhc-PQ-tgF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="AddExpenseLabel" destination="DBI-Jh-8fD" id="V79-oR-zF5"/>
+                <outlet property="ButtonAddExpense" destination="Kfn-Qx-0eK" id="pJy-2m-qLb"/>
+            </connections>
+            <point key="canvasLocation" x="594" y="544"/>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

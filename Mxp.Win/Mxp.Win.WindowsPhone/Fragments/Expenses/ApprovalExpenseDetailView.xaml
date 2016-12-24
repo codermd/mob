@@ -1,0 +1,100 @@
+﻿<Page
+    x:Class="Mxp.Win.ApprovalExpenseDetailView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mxp.Win"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="White">
+        <Grid.Resources>
+            <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="#00A8C6" >
+            <TextBlock x:Name="Title" Foreground ="White" Margin="20,5,20,10" Style="{StaticResource SubheaderTextBlockStyle}"/>
+        </Grid>
+        <local:SelectionHub Grid.Row="1"
+             Background="White"
+             SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}"   
+             x:Name="HubExpense"  Margin="0 25 0 0" 
+             SectionsInViewChanged="HubExpense_SectionsInViewChanged">
+            <HubSection  Tag="0"  Foreground="Black" x:Name="DetailsSection"   >
+                <HubSection.Header>
+                    <TextBlock Style="{StaticResource HeaderTextBlockStyle}" x:Name="DetailsHeader"/>
+                </HubSection.Header>
+                <HubSection.Resources>
+                    <CollectionViewSource x:Name="DetailFieldsSource" IsSourceGrouped="true" ItemsPath="ItemsField"/>
+                </HubSection.Resources>
+                <DataTemplate>
+                    <Grid>
+                        <ListView x:Name="FieldsListView" 
+                              Loaded="FieldListLoaded"
+                              Margin="0 -40 0 0"
+                              ShowsScrollingPlaceholders="True" 
+                              VerticalAlignment="Top"
+                              HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                              SelectionMode="None"    
+                              ItemContainerStyle="{StaticResource StretchedListViewItemStyle}"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden" 
+                              ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                              ItemsSource="{Binding Source={StaticResource DetailFieldsSource}}">
+                            <ListView.GroupStyle>
+                                <GroupStyle>
+                                    <GroupStyle.HeaderTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="0,40,0,0" Text="{Binding Key}" Style="{StaticResource SubheaderTextBlockStyle}" />
+                                        </DataTemplate>
+                                    </GroupStyle.HeaderTemplate>
+                                </GroupStyle>
+                            </ListView.GroupStyle>
+                            <ListView.ItemTemplate >
+                                <DataTemplate>
+                                    <local:DetailField HorizontalContentAlignment="Stretch" />
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            <HubSection Tag="1" Foreground="Black" x:Name="ReceiptsSection"  Visibility="{Binding CanShowReceipts, Converter={StaticResource BoolToVisibilityConverter}}" >
+                <HubSection.Header>
+                    <TextBlock  Style="{StaticResource HeaderTextBlockStyle}" x:Name="ReceiptsHeader"/>
+                </HubSection.Header>
+                <DataTemplate>
+                    <Grid>
+                        <local:ReceiptsGallery x:Name="ReceiptsGallery" Loaded="ReceiptsGallery_Loaded"/>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            <HubSection Tag="2" Foreground="Black" x:Name="AttendeesSection" Visibility="{Binding CanShowAttendees, Converter={StaticResource BoolToVisibilityConverter}}">
+                <HubSection.Header>
+                    <TextBlock Style="{StaticResource HeaderTextBlockStyle}" x:Name="AttendeesHeader"/>
+                </HubSection.Header>
+                <DataTemplate>
+                    <ScrollViewer>
+                        <StackPanel>
+                          
+                            <local:AttendeesGallery x:Name="AttendeesGallery"  Loaded="AttendeesGallery_Loaded"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </DataTemplate>
+            </HubSection>
+        </local:SelectionHub>
+        <Grid Grid.Row="1"
+              Background="Transparent"
+              x:Name="ProgressGrid"
+              Visibility="Collapsed"
+              Tapped="Grid_Tapped">
+            <ProgressRing  Foreground="#00A8C6"
+                           Grid.Row="1"
+                           x:Name="ExpProgressRing" />
+        </Grid>
+    </Grid>
+  
+</Page>

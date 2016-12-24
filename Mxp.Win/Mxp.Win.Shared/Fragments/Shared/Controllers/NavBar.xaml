@@ -1,0 +1,32 @@
+﻿<UserControl
+    x:Class="Mxp.Win.NavBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mxp.Win"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid Background="#34323F" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid  Grid.Column="0" x:Name="ExpensesColumn" Opacity="1">
+            <local:NavBarButton x:Name="ButtonExpenses"    Tapped="ButtonExpenses_Tapped"/>
+        </Grid>
+        <Grid  Grid.Column="1" x:Name="ReportsColumn" Opacity="0.5">
+            <local:NavBarButton x:Name="ButtonReports"   Tapped="ButtonReports_Tapped"/>
+        </Grid>
+        <Grid  Grid.Column="2" x:Name="ApprovalsColumn" Opacity="0.5">
+            <local:NavBarButton x:Name="ButtonApprovals"   Tapped="ButtonApprovals_Tapped"/>
+        </Grid>
+        <Grid  Grid.Column="3" x:Name="SettingsColumn" Opacity="0.5">
+            <local:NavBarButton x:Name="ButtonSettings"   Tapped="ButtonSettings_Tapped" />
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="QcU-5L-xmU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="00D-Y1-zd7">
+            <objects>
+                <navigationController id="JO8-Q7-POT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W9V-bj-meC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QcU-5L-xmU" kind="relationship" relationship="rootViewController" id="1qW-KW-Pp6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cvv-ZU-H4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114" y="981"/>
+        </scene>
+        <!--Report Details View Controller-->
+        <scene sceneID="AhI-jw-Saf">
+            <objects>
+                <viewController id="QcU-5L-xmU" customClass="ReportDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="esd-KK-NiP"/>
+                        <viewControllerLayoutGuide type="bottom" id="67s-0t-aMg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Smm-Y6-57p">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQA-9f-DOK">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DRo-4N-Sdx">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="VZY-WS-56L"/>
+                                </constraints>
+                                <segments>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                </segments>
+                                <color key="tintColor" red="0.070588235289999995" green="0.59607843140000005" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="SelectionChange:" destination="QcU-5L-xmU" eventType="valueChanged" id="EoV-wK-jec"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DRo-4N-Sdx" firstAttribute="top" secondItem="Smm-Y6-57p" secondAttribute="topMargin" constant="5" id="14J-OR-AO8"/>
+                            <constraint firstItem="OQA-9f-DOK" firstAttribute="leading" secondItem="Smm-Y6-57p" secondAttribute="leadingMargin" constant="-8" id="DVH-mQ-b2Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DRo-4N-Sdx" secondAttribute="trailing" constant="-7" id="Dfc-EU-xrm"/>
+                            <constraint firstItem="DRo-4N-Sdx" firstAttribute="leading" secondItem="Smm-Y6-57p" secondAttribute="leadingMargin" constant="-7" id="Evd-9E-Q89"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OQA-9f-DOK" secondAttribute="trailing" constant="-8" id="MLK-F2-QxK"/>
+                            <constraint firstItem="OQA-9f-DOK" firstAttribute="top" secondItem="DRo-4N-Sdx" secondAttribute="bottom" constant="8" id="oIf-rA-3wg"/>
+                            <constraint firstItem="67s-0t-aMg" firstAttribute="top" secondItem="OQA-9f-DOK" secondAttribute="bottom" id="orN-4D-ju2"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="v2j-Cu-Ja8"/>
+                    <connections>
+                        <outlet property="SegmentedControl" destination="DRo-4N-Sdx" id="ZKh-CY-eXu"/>
+                        <outlet property="ViewContainer" destination="OQA-9f-DOK" id="SG7-fW-Rsc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OhT-lJ-ZKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="409"/>
+        </scene>
+        <!--Expenses Manager Table View Controller-->
+        <scene sceneID="ofc-ye-sm2">
+            <objects>
+                <tableViewController storyboardIdentifier="ExpensesManagerTableViewController" id="84A-Rx-0Jy" customClass="ExpensesManagerTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jXK-Lc-jMm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7hA-Bn-UDs">
+                                <rect key="frame" x="0.0" y="22" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7hA-Bn-UDs" id="s6X-20-MuU">
+                                    <frame key="frameInset" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="84A-Rx-0Jy" id="Bpv-s2-xpV"/>
+                            <outlet property="delegate" destination="84A-Rx-0Jy" id="8oS-38-ule"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lJ4-Zw-xAn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="716"/>
+        </scene>
+        <!--Report Receipts Collection View Controller-->
+        <scene sceneID="Zv0-jh-KDk">
+            <objects>
+                <collectionViewController storyboardIdentifier="ReportReceiptsCollectionViewController" id="Dse-LF-qX8" customClass="ReportReceiptsCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ZPc-Jk-x93">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vyS-qy-nmM">
+                            <size key="itemSize" width="103" height="122"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="Dse-LF-qX8" id="ylz-71-5Fa"/>
+                            <outlet property="delegate" destination="Dse-LF-qX8" id="jdF-vD-qd1"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aKB-eD-a0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="806" y="1381"/>
+        </scene>
+        <!--History Table View Controller-->
+        <scene sceneID="HY8-ty-ZpM">
+            <objects>
+                <tableViewController storyboardIdentifier="HistoryTableViewController" id="f9l-c8-MEH" customClass="HistoryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bvr-VD-cPz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4o5-tL-82b">
+                                <rect key="frame" x="0.0" y="22" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4o5-tL-82b" id="a8Z-Tu-PiQ">
+                                    <frame key="frameInset" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="f9l-c8-MEH" id="xKH-b5-hd1"/>
+                            <outlet property="delegate" destination="f9l-c8-MEH" id="y4a-Xy-ryU"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVz-N1-gR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="2076"/>
+        </scene>
+        <!--Report Details Table View Controller-->
+        <scene sceneID="uSF-jh-ZSY">
+            <objects>
+                <tableViewController storyboardIdentifier="ReportDetailsTableViewController" id="FTG-mS-fWF" customClass="ReportDetailsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JgO-RS-diT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <connections>
+                            <outlet property="dataSource" destination="FTG-mS-fWF" id="Zg9-kj-sdk"/>
+                            <outlet property="delegate" destination="FTG-mS-fWF" id="tQQ-wW-7gF"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCC-Bz-tB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="57"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="Mxp.Win.ADateTimePicker"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mxp.Win"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="#00A8C6" >
+            <TextBlock x:Name="Title" Foreground ="White" Margin="20,5,20,10" Style="{StaticResource SubheaderTextBlockStyle}"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel>
+                <DatePicker Margin="20"  IsEnabled="{Binding Field.IsEditable}" 
+                  HorizontalContentAlignment="Center" 
+                  Width="Auto" RequestedTheme="Light" FontSize="20"
+                  FontWeight="Bold" VerticalAlignment="Center" 
+                  x:Name="DatePickerField" Background="#efefef" 
+                  Foreground="#00A8C6" BorderThickness="0"                   
+                  DateChanged="DatePickerField_DateChanged"/>
+                <TimePicker  Margin="20" IsEnabled="{Binding Field.IsEditable}" 
+                  HorizontalContentAlignment="Center" 
+                  Width="Auto" RequestedTheme="Light" FontSize="20"
+                  FontWeight="Bold" VerticalAlignment="Center" 
+                  x:Name="TimePickerField" Background="#efefef" 
+                  Foreground="#00A8C6" BorderThickness="0"                   
+                  TimeChanged="TimePickerField_DateChanged"/>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Accept" Click="Accept_Click"/>
+            <AppBarButton Icon="Cancel" Click="Cancel_Click"/>
+
+
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

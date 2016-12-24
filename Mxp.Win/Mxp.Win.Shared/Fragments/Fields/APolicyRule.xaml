@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Mxp.Win.APolicyRule"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Mxp.Win"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <Grid HorizontalAlignment="Left">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Image Margin="5,0,5,0"
+               Grid.Column="0"
+               x:Name="ImagePolicyRule"
+               Height="40"
+               Width="40"
+               HorizontalAlignment="Left" />
+
+        <TextBlock   Grid.Column="1"
+                     x:Name="TextBlockField"
+                     HorizontalAlignment="Left"
+                     TextWrapping="WrapWholeWords"
+                     VerticalAlignment="Center"
+                     TextTrimming="CharacterEllipsis"
+                     FontSize="16"
+                     Margin="5,0,0,0"
+                     Height="25"
+                     Style="{StaticResource TitleTextBlockStyle}" />
+
+    </Grid>
+
+</UserControl>

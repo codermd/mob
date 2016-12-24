@@ -1,0 +1,85 @@
+﻿<Page x:Class="Mxp.Win.ALookupFromTextBlock"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Mxp.Win"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Page.Resources>
+
+        <ResourceDictionary>
+            <local:TypeToNameConverter x:Key="TypeToNameConverter" />
+
+            <!--Text="{Binding , Converter={StaticResource  TypeToNameConverter}}"-->
+
+            <DataTemplate x:Key="NotifyItemTemplate">
+                <Grid  Background="#efefef"
+                       Margin="0,0,0,10"
+                       Tapped="ItemTapped"
+                       HorizontalAlignment="Stretch">
+                    <TextBlock Margin="10"
+                               Text="{Binding  Converter={StaticResource  TypeToNameConverter}}"
+                               Style="{ThemeResource BodyTextBlockStyle}"
+                               HorizontalAlignment="Stretch" />
+             
+                </Grid>
+            </DataTemplate>
+         
+           
+            <CollectionViewSource x:Name="ViewSourceItemsByGroup"
+                                  Source="{Binding ItemsByGroup}" />
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="White"
+          Name="contentRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Background="#00A8C6">
+            <TextBlock x:Name="Title"
+                       Foreground="White"
+                       Margin="20,5,20,10"
+                       Style="{StaticResource SubheaderTextBlockStyle}" />
+        </Grid>
+        <TextBox Margin="10"
+                 Grid.Row="1"
+                 Name="TBListFilter"
+                 TextChanged="TBListFilter_TextChanged" />
+        <ListView Margin="0,10,0,0"
+                  Grid.Row="2"
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Stretch"
+                  ItemsSource="{Binding Source={StaticResource ViewSourceItemsByGroup} }"
+                  ItemTemplate="{StaticResource NotifyItemTemplate}"
+                  ScrollViewer.IsHorizontalScrollChainingEnabled="False">
+           
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="FontFamily"
+                            Value="Segoe UI" />
+                    <Setter Property="Margin"
+                            Value="3" />
+                    <Setter Property="Padding"
+                            Value="0" />
+                    <Setter Property="HorizontalContentAlignment"
+                            Value="Stretch" />
+                    <Setter Property="VerticalContentAlignment"
+                            Value="Top" />
+                    <Setter Property="BorderThickness"
+                            Value="0" />
+                    <Setter Property="TabNavigation"
+                            Value="Local" />
+                    <Setter Property="Width"
+                            Value="{Binding ActualWidth, ElementName=contentRoot}" />
+                </Style>
+            </ListView.ItemContainerStyle>
+
+        </ListView>
+
+    </Grid>
+</Page>

@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Mxp.Win.DetailField"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Mxp.Win"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             HorizontalContentAlignment="Stretch">
+    <Grid  x:Name="FieldsGrid"
+           HorizontalAlignment="Stretch"
+           Height="Auto"
+           MinHeight="60"
+           Background="White"
+           Tapped="FieldsGrid_Tapped">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="100" />
+            <ColumnDefinition Width="*"
+                              MaxWidth="300" />
+        </Grid.ColumnDefinitions>
+        <Grid   Grid.Column="0"
+                HorizontalAlignment="Stretch"
+                x:Name="LeftGrid"
+                VerticalAlignment="Center" />
+        <Grid   Grid.Column="1"
+                HorizontalAlignment="Stretch"
+                x:Name="RightGrid"
+                Width="Auto"
+                VerticalAlignment="Center" />
+        <Grid Grid.ColumnSpan="2"
+              Name="PolicyGrid"
+              Visibility="Collapsed" />
+    </Grid>
+</UserControl>

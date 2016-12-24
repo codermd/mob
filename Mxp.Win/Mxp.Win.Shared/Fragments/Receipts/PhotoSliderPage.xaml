@@ -1,0 +1,56 @@
+﻿<Page x:Class="Mxp.Win.PhotoSliderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Mxp.Win"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto" />
+            <RowDefinition  x:Name="ListRow" />
+        </Grid.RowDefinitions>
+        <Grid Background="#00A8C6"
+              Grid.Row="0">
+            <TextBlock x:Name="Title"
+                       Foreground="White"
+                       Margin="20,5,20,10"
+                       Style="{StaticResource SubheaderTextBlockStyle}" />
+        </Grid>
+        <Grid  Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+            <ListBox x:Name="listview"
+                     Background="White"
+                     ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                     ScrollViewer.HorizontalScrollMode="Enabled"
+                     SelectionMode="Single"
+                     VerticalAlignment="Center"
+                     VerticalContentAlignment="Center"
+                     HorizontalAlignment="Center"
+                     ScrollViewer.ZoomMode="Enabled"
+                     SelectionChanged="listview_SelectionChanged">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <local:SafeImage SafePath="{Binding ImageUrl}"
+                                         Height="{Binding ActualHeight, ElementName=ListRow}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Delete"
+                          Label="Delete"
+                          Click="DeleteButton_Click"
+                          Visibility="Collapsed"
+                          Name="DeleteButton" />
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

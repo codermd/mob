@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ApprovalTravelComment">
+            <connections>
+                <outlet property="CancelButton" destination="QuA-O6-Fvf" id="gRx-IH-C69"/>
+                <outlet property="CommentLabel" destination="SUG-vF-3r2" id="S9T-jx-ede"/>
+                <outlet property="ProcessButton" destination="Rez-x2-iJp" id="hiD-Hh-TnG"/>
+                <outlet property="ScrollView" destination="dI4-AB-Lxf" id="Udj-Ww-zo1"/>
+                <outlet property="TextView" destination="dEg-RO-HoJ" id="7OG-B7-Fu4"/>
+                <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dI4-AB-Lxf">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grE-iq-AnY">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUG-vF-3r2">
+                                    <rect key="frame" x="25" y="20" width="76" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="tp2-14-HAO"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEg-RO-HoJ">
+                                    <rect key="frame" x="20" y="43" width="280" height="239"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="239" id="3bP-g6-j9s"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6o-lv-jaX">
+                                    <rect key="frame" x="80" y="282" width="160" height="58"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rez-x2-iJp">
+                                            <rect key="frame" x="52" y="14" width="56" height="30"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                            <state key="normal" title="Process">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="ClickOnProcess:" destination="-1" eventType="touchUpInside" id="gx7-uM-C8A"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.070588235289999995" green="0.59607843140000005" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="58" id="BEi-cI-QWj"/>
+                                        <constraint firstAttribute="width" constant="160" id="EKg-GT-Byi"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuA-O6-Fvf">
+                                    <rect key="frame" x="0.0" y="350" width="320" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="bbs-Oj-bg8"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" red="0.95294123890000004" green="0.31764706970000001" blue="0.33333334329999997" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="ClickOnCancel:" destination="-1" eventType="touchUpInside" id="TPH-RC-oU7"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="n6o-lv-jaX" firstAttribute="top" secondItem="dEg-RO-HoJ" secondAttribute="bottom" id="51A-GY-6kQ"/>
+                                <constraint firstAttribute="trailing" secondItem="QuA-O6-Fvf" secondAttribute="trailing" id="8Ey-b1-gp9"/>
+                                <constraint firstItem="dEg-RO-HoJ" firstAttribute="leading" secondItem="grE-iq-AnY" secondAttribute="leading" constant="20" id="BOi-ks-sfd"/>
+                                <constraint firstAttribute="trailing" secondItem="dEg-RO-HoJ" secondAttribute="trailing" constant="20" id="Bsm-FO-gPd"/>
+                                <constraint firstItem="QuA-O6-Fvf" firstAttribute="top" secondItem="n6o-lv-jaX" secondAttribute="bottom" constant="10" id="FT9-wa-4sR"/>
+                                <constraint firstItem="QuA-O6-Fvf" firstAttribute="leading" secondItem="grE-iq-AnY" secondAttribute="leading" id="PTt-Wq-hUy"/>
+                                <constraint firstItem="SUG-vF-3r2" firstAttribute="leading" secondItem="grE-iq-AnY" secondAttribute="leading" constant="25" id="WW3-2Z-VbS"/>
+                                <constraint firstItem="SUG-vF-3r2" firstAttribute="top" secondItem="grE-iq-AnY" secondAttribute="top" constant="20" id="iFI-Nr-WTW"/>
+                                <constraint firstAttribute="centerX" secondItem="n6o-lv-jaX" secondAttribute="centerX" id="t05-7k-PXu"/>
+                                <constraint firstItem="dEg-RO-HoJ" firstAttribute="top" secondItem="SUG-vF-3r2" secondAttribute="bottom" constant="2" id="vXg-Mr-D8T"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="grE-iq-AnY" secondAttribute="bottom" id="1Pe-w9-woB"/>
+                        <constraint firstItem="grE-iq-AnY" firstAttribute="leading" secondItem="dI4-AB-Lxf" secondAttribute="leading" id="Gv6-IZ-4RL"/>
+                        <constraint firstAttribute="trailing" secondItem="grE-iq-AnY" secondAttribute="trailing" id="SiK-Ns-KXo"/>
+                        <constraint firstAttribute="height" secondItem="grE-iq-AnY" secondAttribute="height" id="W2J-8U-LEy"/>
+                        <constraint firstItem="grE-iq-AnY" firstAttribute="top" secondItem="dI4-AB-Lxf" secondAttribute="top" id="eWG-tw-590"/>
+                        <constraint firstAttribute="width" secondItem="grE-iq-AnY" secondAttribute="width" id="xJG-Pj-Tcr"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dI4-AB-Lxf" secondAttribute="trailing" id="2aj-AE-sv4"/>
+                <constraint firstItem="dI4-AB-Lxf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3sk-hM-wHR"/>
+                <constraint firstItem="dI4-AB-Lxf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Y43-RG-boj"/>
+                <constraint firstAttribute="bottom" secondItem="dI4-AB-Lxf" secondAttribute="bottom" id="yTJ-NM-8kR"/>
+            </constraints>
+            <point key="canvasLocation" x="78" y="416"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

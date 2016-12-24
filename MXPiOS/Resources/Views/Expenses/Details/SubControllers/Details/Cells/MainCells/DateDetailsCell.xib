@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateDetailsCell" id="mdv-Ic-apN" customClass="DateDetailsCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mdv-Ic-apN" id="nem-7O-7Xq">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WkG-Me-kTy">
+                        <rect key="frame" x="8" y="9" width="304" height="27"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhD-2R-E6U">
+                                <rect key="frame" x="0.0" y="2" width="37" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXi-tC-dod">
+                                <rect key="frame" x="262" y="2" width="42" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="148" id="m8q-SZ-JxJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FXi-tC-dod" secondAttribute="trailing" id="2iS-o5-lce"/>
+                            <constraint firstAttribute="width" constant="304" id="JOn-WI-SdQ"/>
+                            <constraint firstAttribute="height" constant="27" id="Qe1-qM-y5b"/>
+                            <constraint firstItem="zhD-2R-E6U" firstAttribute="leading" secondItem="WkG-Me-kTy" secondAttribute="leading" id="RKS-JC-orE"/>
+                            <constraint firstAttribute="centerY" secondItem="FXi-tC-dod" secondAttribute="centerY" id="hR0-VF-4IX"/>
+                            <constraint firstAttribute="centerY" secondItem="zhD-2R-E6U" secondAttribute="centerY" id="xUz-51-fXM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="WkG-Me-kTy" secondAttribute="trailing" id="4zm-zv-UNp"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="WkG-Me-kTy" secondAttribute="bottom" id="W2s-HX-Rjp"/>
+                    <constraint firstItem="WkG-Me-kTy" firstAttribute="top" secondItem="nem-7O-7Xq" secondAttribute="topMargin" id="lkr-zK-LIA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="DateComponent" destination="XfO-vp-joL" id="HBb-ka-uKp"/>
+                <outlet property="DatePicker" destination="HAP-0Y-iaB" id="mlW-Km-rQY"/>
+            </connections>
+            <point key="canvasLocation" x="349" y="387"/>
+        </tableViewCell>
+        <view contentMode="scaleToFill" id="HAP-0Y-iaB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qjb-4Z-kkR">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <barButtonItem style="done" systemItem="done" id="LwY-n5-hfk">
+                            <color key="tintColor" red="0.12941176469999999" green="0.16862745100000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="clickOnDone:" destination="mdv-Ic-apN" id="tYI-jS-gUm"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </toolbar>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="XfO-vp-joL">
+                    <rect key="frame" x="0.0" y="44" width="320" height="162"/>
+                    <date key="date" timeIntervalSinceReferenceDate="439220381.17101902">
+                        <!--2014-12-02 13:39:41 +0000-->
+                    </date>
+                    <connections>
+                        <action selector="dateChange:" destination="mdv-Ic-apN" eventType="valueChanged" id="wMo-uk-MIf"/>
+                    </connections>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XfO-vp-joL" secondAttribute="bottom" id="9MQ-g1-eXZ"/>
+                <constraint firstItem="qjb-4Z-kkR" firstAttribute="top" secondItem="HAP-0Y-iaB" secondAttribute="top" id="T0c-ti-zMO"/>
+                <constraint firstItem="qjb-4Z-kkR" firstAttribute="leading" secondItem="HAP-0Y-iaB" secondAttribute="leading" id="dl5-cz-Btz"/>
+                <constraint firstItem="XfO-vp-joL" firstAttribute="top" secondItem="qjb-4Z-kkR" secondAttribute="bottom" id="kP8-Mc-Szj"/>
+                <constraint firstAttribute="trailing" secondItem="XfO-vp-joL" secondAttribute="trailing" id="oHq-so-emf"/>
+                <constraint firstItem="XfO-vp-joL" firstAttribute="leading" secondItem="HAP-0Y-iaB" secondAttribute="leading" id="oVz-Ak-5L9"/>
+                <constraint firstAttribute="trailing" secondItem="qjb-4Z-kkR" secondAttribute="trailing" id="v4f-pM-3Nu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="339" y="178"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

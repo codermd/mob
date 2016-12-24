@@ -1,0 +1,50 @@
+﻿<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+
+        <!-- colorPrimary is used for the default action bar background -->
+		<item name="colorPrimary">@color/blue</item>
+ 
+        <!-- colorPrimaryDark is used for the status bar -->
+		<item name="colorPrimaryDark">@color/blue_dark</item>
+ 
+        <!-- colorAccent is used as the default value for colorControlActivated
+             which is used to tint widgets -->
+		<item name="colorAccent">@color/blue</item>
+
+		<!-- <item name="colorControlNormal">@color/white</item>-->
+ 
+        <!-- You can also set colorControlNormal, colorControlActivated
+             colorControlHighlight, colorSwitchThumbNormal. -->
+
+		<item name="android:statusBarColor">@color/blue</item>
+   </style>
+
+   <style name="Widget.Design.TabLayout.Saga" parent="Widget.Design.TabLayout">
+		<item name="tabIndicatorColor">@android:color/white</item>
+	</style>
+
+	<style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+		<item name="android:windowNoTitle">true</item>
+		<item name="windowActionBar">false</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+
+		<item name="colorAccent">@color/blue</item>
+	</style>
+
+</resources>

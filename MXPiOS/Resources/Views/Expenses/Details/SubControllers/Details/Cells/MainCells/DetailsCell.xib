@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cxk-wN-pdQ" customClass="DetailsCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GiC-Kq-913">
+                        <rect key="frame" x="8" y="9" width="304" height="27"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxT-7n-Evn">
+                                <rect key="frame" x="0.0" y="3" width="42" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14n-pc-nf2">
+                                <rect key="frame" x="242" y="2" width="42" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="134" id="EL9-xj-iVR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="CellArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="qAT-R7-Jjf">
+                                <rect key="frame" x="287" y="7" width="15" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="fYk-6m-usa"/>
+                                    <constraint firstAttribute="height" constant="16" id="pno-ZA-pVB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="304" id="1NH-Q0-H8v"/>
+                            <constraint firstAttribute="trailing" secondItem="14n-pc-nf2" secondAttribute="trailing" constant="20" id="6bs-vN-Xup"/>
+                            <constraint firstItem="xxT-7n-Evn" firstAttribute="leading" secondItem="GiC-Kq-913" secondAttribute="leading" id="JZ9-2j-472"/>
+                            <constraint firstAttribute="trailing" secondItem="qAT-R7-Jjf" secondAttribute="trailing" constant="2" id="Oks-XR-ZeB"/>
+                            <constraint firstAttribute="height" constant="27" id="bjc-hK-Rnc"/>
+                            <constraint firstAttribute="centerY" secondItem="14n-pc-nf2" secondAttribute="centerY" id="hY4-I3-BNS"/>
+                            <constraint firstAttribute="centerY" secondItem="qAT-R7-Jjf" secondAttribute="centerY" id="vcs-Dm-0H4"/>
+                            <constraint firstAttribute="centerY" secondItem="xxT-7n-Evn" secondAttribute="centerY" id="ygN-17-Kpj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GiC-Kq-913" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" id="1q6-uO-f1T"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="GiC-Kq-913" secondAttribute="trailing" id="F8E-IM-9k5"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="GiC-Kq-913" secondAttribute="bottom" id="lR9-2K-NAJ"/>
+                    <constraint firstItem="GiC-Kq-913" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" id="zoK-uU-Ufm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="KeyLabel" destination="xxT-7n-Evn" id="sjm-l7-2MV"/>
+                <outlet property="ValueLabel" destination="14n-pc-nf2" id="cH0-zU-emu"/>
+                <outlet property="keyLabel" destination="xxT-7n-Evn" id="6ID-yY-dSl"/>
+                <outlet property="valueLabel" destination="14n-pc-nf2" id="Gec-HY-ARe"/>
+            </connections>
+            <point key="canvasLocation" x="243" y="440"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="CellArrow.png" width="9" height="16"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

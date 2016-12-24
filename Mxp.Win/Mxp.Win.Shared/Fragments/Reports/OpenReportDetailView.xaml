@@ -1,0 +1,172 @@
+﻿<Page
+    x:Class="Mxp.Win.OpenReportDetailView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mxp.Win"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="#00A8C6" >
+            <TextBlock x:Name="Title" Foreground ="White" Margin="20,5,20,10" Style="{StaticResource SubheaderTextBlockStyle}"/>
+        </Grid>
+        <local:SelectionHub  Grid.Row="1"
+            x:Name="HubReport" Margin="0,25,0,0"
+            SectionsInViewChanged="HubReport_SectionsInViewChanged">
+
+
+            <HubSection  Tag="0"  Foreground="Black" x:Name="DetailsSection"   >
+                <HubSection.Header>
+                    <TextBlock x:Name="DetailsHeader" Style="{StaticResource HeaderTextBlockStyle}"/>
+                </HubSection.Header>
+                <HubSection.Resources>
+                    <CollectionViewSource x:Name="DetailFieldsSource" IsSourceGrouped="true" ItemsPath="ItemsField"/>
+                </HubSection.Resources>
+                <DataTemplate>
+                    <ListView x:Name="FieldsListView" 
+                              Loaded="FieldListLoaded"
+                              Margin="0 -40 0 0"
+                              ShowsScrollingPlaceholders="True" 
+                              VerticalAlignment="Top"
+                              HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                              SelectionMode="None"    
+                              ItemContainerStyle="{StaticResource StretchedListViewItemStyle}"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden" 
+                              ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                              ItemsSource="{Binding Source={StaticResource DetailFieldsSource}}">
+                        <ListView.GroupStyle>
+                            <GroupStyle>
+                                <GroupStyle.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Margin="0,40,0,0" Text="{Binding Key}" Style="{StaticResource SubheaderTextBlockStyle}" />
+                                    </DataTemplate>
+                                </GroupStyle.HeaderTemplate>
+                            </GroupStyle>
+                        </ListView.GroupStyle>
+                        <ListView.ItemTemplate >
+                            <DataTemplate>
+                                <local:DetailField HorizontalContentAlignment="Stretch" />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Tag="1" Foreground="Black" x:Name="ExpensesSection">
+                <HubSection.Header>
+                    <TextBlock x:Name="ExpensesHeader" Style="{StaticResource HeaderTextBlockStyle}"/>
+                </HubSection.Header>
+                <HubSection.Resources>
+                    <CollectionViewSource x:Name="ExpensesSource" IsSourceGrouped="true" ItemsPath="Items"/>
+                </HubSection.Resources>
+                <DataTemplate>
+                    <ListView x:Name="ExpensesList" 
+                          Loaded="ExpensesList_Loaded"
+                  ShowsScrollingPlaceholders="True" 
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Stretch" 
+                  SelectionMode="None"
+                  ItemContainerStyle="{StaticResource ListExpenseItemStyle}" 
+                  ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                  ItemsSource="{Binding Source={StaticResource ExpensesSource}}">
+                        <ListView.GroupStyle>
+                            <GroupStyle>
+                                <GroupStyle.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock  Text="{Binding Key}" Margin="15,15,0,5" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                                    </DataTemplate>
+                                </GroupStyle.HeaderTemplate>
+                            </GroupStyle>
+                        </ListView.GroupStyle>
+                        <ListView.ItemTemplate >
+                            <DataTemplate>
+                                <local:ExpenseGrayListElement />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Tag="3" Foreground="Black" x:Name="ReceiptsSection">
+                <HubSection.Header>
+                    <TextBlock x:Name="ReceiptsHeader" Style="{StaticResource HeaderTextBlockStyle}"/>
+                </HubSection.Header>
+                <DataTemplate>
+                    <Grid>
+                        <ScrollViewer>
+                        <StackPanel>
+                            <Image Source="/Assets/icons/add.png"
+                                   Height="50"
+                                   Tapped="AddReceipt_Tapped"
+                                   Loaded="AddReceiptButton_Loaded"
+                                   Name="AddReceiptButton"
+                                   Margin="4" />
+                            <local:ReceiptsGallery x:Name="ReceiptsGallery"
+                                                   Loaded="ReceiptsGallery_Loaded" />
+                        </StackPanel>
+                    </ScrollViewer>
+                    <Grid Background="Transparent"
+                          x:Name="ReceiptsProgressGrid"
+                          Visibility="Collapsed"
+                          Loaded="ReceiptsProgressGrid_Loaded"
+                          Tapped="Grid_Tapped">
+                        <ProgressRing  Foreground="#00A8C6"
+                                       Grid.Row="1"
+                                       x:Name="ReceiptsProgressRing"
+                                       Loaded="ReceiptsProgressRing_Loaded" />
+                    </Grid>
+    </Grid>
+    </DataTemplate>
+            </HubSection>
+
+            <HubSection Tag="4" Foreground="Black" x:Name="HistorySection" Visibility="Collapsed" >
+                <HubSection.Header>
+                    <TextBlock x:Name="HistoryHeader" Style="{StaticResource HeaderTextBlockStyle}"/>
+                </HubSection.Header>
+               
+                <DataTemplate>
+                    <ListView x:Name="HistoryList" 
+                          Loaded="HistoryList_Loaded"
+                  ShowsScrollingPlaceholders="True" 
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Stretch" 
+                  SelectionMode="None"
+                  ItemContainerStyle="{StaticResource ListExpenseItemStyle}" 
+                  ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+          >
+                        <ListView.ItemTemplate >
+                            <DataTemplate>
+                                <StackPanel Background="#efefef">
+                                    <TextBlock Margin="5"  Text="{Binding Line}" FontSize="20" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                                    <TextBlock Margin="5"  Text="{Binding Comment}" FontSize="20" Style="{StaticResource SubheaderTextBlockStyle}" FontStyle="Italic"/>
+                             
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+        </local:SelectionHub>
+        <Grid Grid.Row="1"
+              Background="Transparent"
+              x:Name="ProgressGrid"
+              Visibility="Collapsed"
+              Tapped="Grid_Tapped">
+            <ProgressRing  Foreground="#00A8C6"
+                           Grid.Row="1"
+                           x:Name="ProgressRing" />
+        </Grid>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar Name="CommandBar">
+            <AppBarButton Icon="Delete" Margin="0,0,0,10" Label="Delete Report" Click="DeleteReport_Click"  Name="DeleteReport_Button"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

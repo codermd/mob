@@ -1,0 +1,183 @@
+﻿<Page
+    x:Class="Mxp.Win.ApprovalTravelDetailView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mxp.Win"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="#00A8C6" >
+            <TextBlock x:Name="Title" Foreground ="White" Margin="20,5,20,10" Style="{StaticResource SubheaderTextBlockStyle}"/>
+        </Grid>
+        <Hub Grid.Row="1" Margin="0,25,0,0" x:Name="HubReport"  SectionsInViewChanged="HubReport_SectionsInViewChanged">
+            <HubSection  Tag="0"  Foreground="Black" x:Name="HubSection1"   >
+                <HubSection.Header>
+                    <TextBlock x:Name="DetailsHeader"  Style="{StaticResource HeaderTextBlockStyle}"/>
+                </HubSection.Header>
+                <HubSection.Resources>
+                    <CollectionViewSource x:Name="DetailFieldsSource" IsSourceGrouped="true" ItemsPath="ItemsField"/>
+                </HubSection.Resources>
+                <DataTemplate>
+                    <ListView x:Name="FieldsListView" 
+                              Loaded="FieldListLoaded"
+                              Margin="0 -40 0 0"
+                              ShowsScrollingPlaceholders="True" 
+                              VerticalAlignment="Top"
+                              HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                              SelectionMode="None"    
+                              ItemContainerStyle="{StaticResource StretchedListViewItemStyle}"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden" 
+                              ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                              ItemsSource="{Binding Source={StaticResource DetailFieldsSource}}">
+                        <ListView.GroupStyle>
+                            <GroupStyle>
+                                <GroupStyle.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Margin="0,40,0,0" Text="{Binding Key}" Style="{StaticResource SubheaderTextBlockStyle}" />
+                                    </DataTemplate>
+                                </GroupStyle.HeaderTemplate>
+                            </GroupStyle>
+                        </ListView.GroupStyle>
+                        <ListView.ItemTemplate >
+                            <DataTemplate>
+                                <local:DetailField HorizontalContentAlignment="Stretch" />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+            
+            <HubSection Tag="1" Foreground="Black" x:Name="HubSection2">
+                <HubSection.Header>
+                    <TextBlock x:Name="FlightHeader" Style="{StaticResource HeaderTextBlockStyle}"/>
+                </HubSection.Header>
+                <HubSection.Resources>
+                    <CollectionViewSource x:Name="FlightsFieldsSource" IsSourceGrouped="true" ItemsPath="ItemsField"/>
+                </HubSection.Resources>
+                <DataTemplate>
+                    <ListView x:Name="FlightsListView" 
+                              Loaded="FlightsListLoaded"
+                              Margin="0 -40 0 0"
+                              ShowsScrollingPlaceholders="True" 
+                              VerticalAlignment="Top"
+                              HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                              SelectionMode="None"    
+                              ItemContainerStyle="{StaticResource StretchedListViewItemStyle}"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden" 
+                              ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                              ItemsSource="{Binding Source={StaticResource FlightsFieldsSource}}">
+                        <ListView.GroupStyle>
+                            <GroupStyle>
+                                <GroupStyle.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Margin="0,40,0,0" Text="{Binding Key}" Style="{StaticResource SubheaderTextBlockStyle}" />
+                                    </DataTemplate>
+                                </GroupStyle.HeaderTemplate>
+                            </GroupStyle>
+                        </ListView.GroupStyle>
+                        <ListView.ItemTemplate >
+                            <DataTemplate>
+                                <local:DetailField HorizontalContentAlignment="Stretch" />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Tag="2" Foreground="Black" x:Name="HubSection3">
+                <HubSection.Header>
+                    <TextBlock x:Name="StayHeader"  Style="{StaticResource HeaderTextBlockStyle}"/>
+                </HubSection.Header>
+                <HubSection.Resources>
+                    <CollectionViewSource x:Name="StayFieldsSource" IsSourceGrouped="true" ItemsPath="ItemsField"/>
+                </HubSection.Resources>
+                <DataTemplate>
+                    <ListView x:Name="StayListView" 
+                              Loaded="StayListLoaded"
+                              Margin="0 -40 0 0"
+                              ShowsScrollingPlaceholders="True" 
+                              VerticalAlignment="Top"
+                              HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                              SelectionMode="None"    
+                              ItemContainerStyle="{StaticResource StretchedListViewItemStyle}"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden" 
+                              ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                              ItemsSource="{Binding Source={StaticResource StayFieldsSource}}">
+                        <ListView.GroupStyle>
+                            <GroupStyle>
+                                <GroupStyle.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Margin="0,40,0,0" Text="{Binding Key}" Style="{StaticResource SubheaderTextBlockStyle}" />
+                                    </DataTemplate>
+                                </GroupStyle.HeaderTemplate>
+                            </GroupStyle>
+                        </ListView.GroupStyle>
+                        <ListView.ItemTemplate >
+                            <DataTemplate>
+                                <local:DetailField HorizontalContentAlignment="Stretch" />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Tag="3" Foreground="Black" x:Name="HubSection4">
+                <HubSection.Header>
+                    <TextBlock x:Name="CarHeader" Style="{StaticResource HeaderTextBlockStyle}"/>
+                </HubSection.Header>
+                <HubSection.Resources>
+                    <CollectionViewSource x:Name="RentalCarFieldsSource" IsSourceGrouped="true" ItemsPath="ItemsField"/>
+                </HubSection.Resources>
+                <DataTemplate>
+                    <ListView x:Name="RentalCarListView" 
+                              Loaded="RentalCarListLoaded"
+                              Margin="0 -40 0 0"
+                              ShowsScrollingPlaceholders="True" 
+                              VerticalAlignment="Top"
+                              HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                              SelectionMode="None"    
+                              ItemContainerStyle="{StaticResource StretchedListViewItemStyle}"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden" 
+                              ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                              ItemsSource="{Binding Source={StaticResource RentalCarFieldsSource}}">
+                        <ListView.GroupStyle>
+                            <GroupStyle>
+                                <GroupStyle.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Margin="0,40,0,0" Text="{Binding Key}" Style="{StaticResource SubheaderTextBlockStyle}" />
+                                    </DataTemplate>
+                                </GroupStyle.HeaderTemplate>
+                            </GroupStyle>
+                        </ListView.GroupStyle>
+                        <ListView.ItemTemplate >
+                            <DataTemplate>
+                                <local:DetailField HorizontalContentAlignment="Stretch" />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
+        <Grid Grid.Row="1"
+              Background="Transparent"
+              x:Name="ProgressGrid"
+              Visibility="Collapsed"
+              Tapped="Grid_Tapped">
+            <ProgressRing  Foreground="#00A8C6"
+                           Grid.Row="1"
+                           x:Name="ProgressRing" />
+        </Grid>
+
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Go" Label="Approove" Name="ApprooveButton" Click="Approove_Clicked"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

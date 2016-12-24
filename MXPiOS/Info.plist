@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>MobileXpense</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.mobileexpense.com</string>
+	<key>CFBundleShortVersionString</key>
+	<string>3.5.1</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>7.0</string>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>XSAppIconAssets</key>
+	<string>Resources/Images.xcassets/AppIcons.appiconset</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>XSLaunchImageAssets</key>
+	<string>Resources/Images.xcassets/LaunchImage.launchimage</string>
+	<key>NSAllowsArbitraryLoads</key>
+	<true/>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.mobileexpense.com</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>mobilexpense</string>
+			</array>
+		</dict>
+	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Please allow MobileXpense app to access your current location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow MobileXpense app to access your current location</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Please allow MobileXpense app to access your current location</string>
+	<key>kTCCServiceMediaLibrary</key>
+	<string>Please allow MobileXpense app to access your media library</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please allow MobileXpense app to access your photo library</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Please allow MobileXpense app to access your camera</string>
+</dict>
+</plist>

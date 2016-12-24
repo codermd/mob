@@ -1,0 +1,29 @@
+﻿<UserControl
+    x:Class="Mxp.Win.SettingsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mxp.Win"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" >
+    <Grid Background="White">
+        <StackPanel>
+            <UserControl Tapped="Icons_Tapped">
+            <Grid Background="#efefef" Margin="20,10,20,10" Height="45"  >
+                <TextBlock Margin="10" x:Name="IconsLabel" Text="Légende des icones" VerticalAlignment="Center"  Style="{StaticResource TitleTextBlockStyle}"/>
+            </Grid>
+            </UserControl>
+            <Grid Background="#efefef" Margin="20,10,20,10" Height="45" Tapped="Desktop_Tapped">
+                <TextBlock Margin="10" x:Name="DesktopLabel" Text="Website" VerticalAlignment="Center" Style="{StaticResource TitleTextBlockStyle}"/>
+            </Grid>
+            <Grid Background="#efefef" Margin="20,10,20,10" Height="45"  Tapped="Logout_tapped">
+                <TextBlock Margin="10" x:Name="LogoutLabel" Text="Déconnexion" VerticalAlignment="Center" Style="{StaticResource TitleTextBlockStyle}"/>
+            </Grid>
+                <Grid Background="#efefef" Margin="20,10,20,10" Height="45" >
+                <TextBlock Margin="10" x:Name="VersionLabel" Text="V.3.1.1." VerticalAlignment="Center" Style="{StaticResource TitleTextBlockStyle}" />
+               </Grid>
+        </StackPanel>
+        <ProgressRing Name="ProgressRing" Foreground="#00A8C6"/>
+
+    </Grid>
+</UserControl>

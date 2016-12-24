@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HCOViewController">
+            <connections>
+                <outlet property="SearchButton" destination="uN9-DY-nYQ" id="vba-zW-88P"/>
+                <outlet property="TableView" destination="2KB-1u-TkP" id="amM-EA-Ayw"/>
+                <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2KB-1u-TkP">
+                    <rect key="frame" x="0.0" y="8" width="320" height="514"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uN9-DY-nYQ">
+                    <rect key="frame" x="8" y="530" width="304" height="30"/>
+                    <color key="backgroundColor" red="0.17254901959999999" green="0.2274509804" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="c3i-QM-ETk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                    <state key="normal" title="Search">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="ClickOnSearch:" destination="-1" eventType="touchUpInside" id="4Pz-hf-R0R"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="uN9-DY-nYQ" firstAttribute="top" secondItem="2KB-1u-TkP" secondAttribute="bottom" constant="8" id="M5s-ui-2H9"/>
+                <constraint firstItem="2KB-1u-TkP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UWh-a7-otj"/>
+                <constraint firstAttribute="bottomMargin" secondItem="uN9-DY-nYQ" secondAttribute="bottomMargin" constant="8" id="YRa-BN-lKi"/>
+                <constraint firstItem="2KB-1u-TkP" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="fjX-1d-phC"/>
+                <constraint firstAttribute="trailingMargin" secondItem="uN9-DY-nYQ" secondAttribute="trailing" id="pJl-9i-vsN"/>
+                <constraint firstItem="uN9-DY-nYQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="qmI-Au-hvX"/>
+                <constraint firstItem="2KB-1u-TkP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="vIJ-xi-PRu"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

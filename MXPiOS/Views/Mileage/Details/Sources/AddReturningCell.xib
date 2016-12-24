@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cxk-wN-pdQ" customClass="AddReturningCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SegmentArrow" translatesAutoresizingMaskIntoConstraints="NO" id="fHg-eT-PWH">
+                        <rect key="frame" x="11" y="12" width="20" height="20"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Mw3-Dq-GR9"/>
+                            <constraint firstAttribute="width" constant="20" id="kJz-hK-kgG"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0i-i1-pWn">
+                        <rect key="frame" x="31" y="11" width="281" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="bV6-wH-Elp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="E0i-i1-pWn" firstAttribute="leading" secondItem="fHg-eT-PWH" secondAttribute="trailing" id="8ia-Og-kMs"/>
+                    <constraint firstAttribute="centerY" secondItem="E0i-i1-pWn" secondAttribute="centerY" id="C19-F8-6Kg"/>
+                    <constraint firstItem="E0i-i1-pWn" firstAttribute="trailing" secondItem="YTl-1W-gDM" secondAttribute="trailingMargin" id="epn-xF-0aq"/>
+                    <constraint firstAttribute="centerY" secondItem="fHg-eT-PWH" secondAttribute="centerY" id="j7o-fO-MLx"/>
+                    <constraint firstItem="fHg-eT-PWH" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" constant="3" id="ops-yi-aAF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="TitleLabel" destination="E0i-i1-pWn" id="K0f-Eo-GXC"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="SegmentArrow" width="61" height="61"/>
+    </resources>
+</document>

@@ -1,0 +1,55 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mxp.Win">
+<!--appbarbutton colors-->
+    <SolidColorBrush x:Key="AppBarItemBackgroundThemeBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="AppBarItemDisabledForegroundThemeBrush" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="AppBarItemForegroundThemeBrush" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="AppBarItemPointerOverBackgroundThemeBrush" Color="#3D000000" />
+    <SolidColorBrush x:Key="AppBarItemPointerOverForegroundThemeBrush" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="AppBarItemPressedForegroundThemeBrush" Color="#FF00A8C6" />
+
+    <!--appbartogglebutton colors-->
+    <SolidColorBrush x:Key="AppBarToggleButtonCheckedBackgroundThemeBrush" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="AppBarToggleButtonCheckedBorderThemeBrush" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="AppBarToggleButtonCheckedDisabledBackgroundThemeBrush" Color="#66000000" />
+    <SolidColorBrush x:Key="AppBarToggleButtonCheckedDisabledBorderThemeBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="AppBarToggleButtonCheckedDisabledForegroundThemeBrush" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush" Color="#99000000" />
+    <SolidColorBrush x:Key="AppBarToggleButtonCheckedPointerOverBorderThemeBrush" Color="#99000000" />
+    <SolidColorBrush x:Key="AppBarToggleButtonCheckedPressedBackgroundThemeBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="AppBarToggleButtonCheckedPressedBorderThemeBrush" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="AppBarToggleButtonCheckedPressedForegroundThemeBrush" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="AppBarToggleButtonCheckedForegroundThemeBrush" Color="#FF00A8C6" />
+    <SolidColorBrush x:Key="AppBarToggleButtonPointerOverBackgroundThemeBrush" Color="#3D000000" />
+
+    <SolidColorBrush x:Key="AppBarBackgroundThemeBrush" Color="#00F0F0F0" />
+    <SolidColorBrush x:Key="AppBarBorderThemeBrush" Color="#00F0F0F0" />
+
+
+
+
+    <SolidColorBrush x:Key="TextBoxBorderThemeBrush" Color="#00A8C6" />
+    <SolidColorBrush x:Key="TextBoxButtonBorderThemeBrush" Color="#00A8C6" />
+    <SolidColorBrush x:Key="TextBoxButtonPointerOverBorderThemeBrush" Color="#00A8C6" />
+    <SolidColorBrush x:Key="TextBoxButtonPressedBorderThemeBrush" Color="#00A8C6" />
+    <SolidColorBrush x:Key="TextBoxDisabledBorderThemeBrush" Color="#5500A8C6" />
+
+    <SolidColorBrush x:Key="TextSelectionHighlightColorThemeBrush" Color="#00A8C6" />
+    <SolidColorBrush x:Key="PhoneAccentBrush" Color="#00A8C6" />
+    <SolidColorBrush x:Key="TextBoxBackgroundThemeBrush" Color="#efefef" />
+
+    <SolidColorBrush x:Key="ToggleSwitchCurtainBackgroundThemeBrush" Color="#00A8C6" />
+    <SolidColorBrush x:Key="ToggleSwitchCurtainPointerOverBackgroundThemeBrush" Color="#00A8C6" />
+    <SolidColorBrush x:Key="ToggleSwitchCurtainPressedBackgroundThemeBrush" Color="#00A8C6" />
+
+    <SolidColorBrush x:Key="DatePickerHeaderForegroundThemeBrush" Color="#00A8C6" />
+    <SolidColorBrush x:Key="DatePickerForegroundThemeBrush" Color="#00A8C6" />
+
+<!--Background Colors-->
+    <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#00A8C6" />
+    <SolidColorBrush x:Key="ApplicationPageForegroundThemeBrush" Color="White" />
+
+
+</ResourceDictionary>

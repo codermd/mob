@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:minHeight="?attr/listPreferredItemHeight">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/Main_title"
+            android:text="Entertainment - Entertainment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/Amounts"
+            android:textColor="@color/text_color_black"
+            android:textSize="24dp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+        <LinearLayout
+            android:id="@+id/Amounts"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="right"
+            android:layout_alignParentRight="true">
+            <TextView
+                android:id="@+id/AmountLC"
+                android:text="5 GBP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_grey"
+                android:textSize="18dp" />
+            <TextView
+                android:id="@+id/AmountCC"
+                android:text="2 EUR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_grey"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/Items"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/Date"
+            android:text="3 juillet"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dip"
+            android:textColor="@color/blue"
+            android:paddingTop="10dp"
+            android:layout_weight="1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right">
+            <ImageView
+                android:id="@+id/ReceiptIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitEnd"
+                android:paddingLeft="3dp"
+                android:src="@drawable/report_pending" />
+            <ImageView
+                android:id="@+id/AttendeeIcon"
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:scaleType="fitCenter"
+                android:paddingLeft="3dp"
+                android:src="@drawable/ic_action_ic_attendee_expense_cell" />
+            <ImageView
+                android:id="@+id/CreditCardIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:paddingLeft="1dp"
+                android:src="@drawable/ic_action_ic_expense_card_icon" />
+            <ImageView
+                android:id="@+id/PolicyIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitCenter"
+                android:paddingLeft="3dp"
+                android:src="@drawable/expense_is_comliant" />
+            <ImageView
+                android:id="@+id/StatusIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitEnd"
+                android:paddingLeft="3dp"
+                android:src="@drawable/report_approved" />
+            <ImageView
+                android:id="@+id/FlagIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:paddingLeft="3dp"
+                android:src="@drawable/NoFlag" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

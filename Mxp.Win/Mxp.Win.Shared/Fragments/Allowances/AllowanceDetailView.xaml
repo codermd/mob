@@ -1,0 +1,109 @@
+﻿<Page x:Class="Mxp.Win.AllowanceDetailView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Mxp.Win"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Background="#00A8C6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
+
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Title"
+                       Foreground="White"
+                       Margin="20,5,20,10"
+                       Style="{StaticResource SubheaderTextBlockStyle}" />
+            <TextBlock x:Name="TotalTB"
+                       Grid.Column="1"
+                       FontSize="20"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Bottom"
+                       Foreground="White"
+                       Margin="20,5,20,10"
+                       Style="{StaticResource SubheaderTextBlockStyle}"/>
+        </Grid>
+
+
+
+        <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                      Grid.Row="1">
+            <StackPanel>
+                <Grid   Margin="0,15,0,0">
+                    <ListView x:Name="SegmentsListView"
+                              ShowsScrollingPlaceholders="True"
+                              VerticalAlignment="Top"
+                              HorizontalContentAlignment="Stretch"
+                              VerticalContentAlignment="Stretch"
+                              SelectionMode="None"
+                              ItemContainerStyle="{StaticResource StretchedListViewItemStyle}"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                              ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <local:AllowanceSegmentUC HorizontalContentAlignment="Stretch"
+                                                          Margin="20,5,20,5" />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+                <Grid  Margin="20">
+                    <ListView x:Name="FieldsListView"
+                              ShowsScrollingPlaceholders="True"
+                              VerticalAlignment="Top"
+                              HorizontalContentAlignment="Stretch"
+                              VerticalContentAlignment="Stretch"
+                              SelectionMode="None"
+                              ItemContainerStyle="{StaticResource StretchedListViewItemStyle}"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                              ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <local:DetailField HorizontalContentAlignment="Stretch" />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+        <Grid Grid.Row="1"
+              Background="Transparent"
+              x:Name="ProgressGrid"
+              Visibility="Collapsed"
+              Tapped="Grid_Tapped">
+            <ProgressRing  Foreground="#00A8C6"
+                           Grid.Row="1"
+                           x:Name="ProgressRing" />
+        </Grid>
+
+
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Delete"
+                          Label="Delete"
+                          x:Name="DeleteButton"
+                          Click="DeleteButton_Click"
+                          Visibility="Collapsed" />
+            <AppBarButton Icon="Accept"
+                          Label="Save"
+                          x:Name="SaveButton"
+                          Click="SaveButtonClick"
+                          Visibility="Collapsed" />
+            <AppBarButton Icon="Cancel"
+                          Label="Discard"
+                          x:Name="DiscardButton"
+                          Click="DiscardButton_Click"
+                          Visibility="Collapsed" />
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

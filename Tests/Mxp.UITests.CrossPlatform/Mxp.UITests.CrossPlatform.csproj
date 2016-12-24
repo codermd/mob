@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D90C2582-0887-462C-B9B5-ADCF0F3FA0BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Mxp.UITests.CrossPlatform</RootNamespace>
+    <AssemblyName>Mxp.UITests.CrossPlatform</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.core, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.util, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnitTestAdapter.2.0.0\lib\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnitTestAdapter.2.0.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TechTalk.SpecFlow, Version=1.9.0.77, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions.Core">
+      <HintPath>..\..\packages\FluentAssertions.4.13.0\lib\net45\FluentAssertions.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentAssertions">
+      <HintPath>..\..\packages\FluentAssertions.4.13.0\lib\net45\FluentAssertions.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.UITest">
+      <HintPath>..\..\packages\Xamarin.UITest.1.3.15\lib\Xamarin.UITest.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppInitializer.cs" />
+    <Compile Include="CreateAllowance.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateAllowance.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CreateExpense.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateExpense.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CreateMileage1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateMileage.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CreateRestaurantExpenseWithAttendees.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateRestaurantExpenseWithAttendees.feature</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteExpense.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeleteExpense.feature</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteReport.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeleteReport.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CreateAllowanceFeature.cs" />
+    <Compile Include="Features\CreateExpenseFeature.cs" />
+    <Compile Include="Features\CreateMileageFeature.cs" />
+    <Compile Include="Features\CreateRestaurantExpenseWithAttendeesFeature.cs" />
+    <Compile Include="Features\DeleteExpenseFeature.cs" />
+    <Compile Include="Features\DeleteReportFeature.cs" />
+    <Compile Include="Features\ModifyMileageKMFeature.cs" />
+    <Compile Include="Features\PullToRefreshExpenseListFeature.cs" />
+    <Compile Include="Features\UpdateMileageEndOdometerFeature.cs" />
+    <Compile Include="Features\UpdateMileageEndOdometerSmallerThanStartFeature.cs" />
+    <Compile Include="Features\UpdateMileageSetStartEndOdometerThenChangeStartFeature.cs" />
+    <Compile Include="Features\UpdateMileageStartOdometerFeature.cs" />
+    <Compile Include="Features\UpdateMileageWithEndOdometerChangePrivateKMAndCommutingKMFeature.cs" />
+    <Compile Include="Features\UpdateMileageWithEndOdometerChangePrivateKMFeature.cs" />
+    <Compile Include="Helpers\Requests\AddBusinessRelationRequest.cs" />
+    <Compile Include="Helpers\Requests\AddExpenseToReportRequest.cs" />
+    <Compile Include="Helpers\Requests\AddHealthCareOrganizationRequest.cs" />
+    <Compile Include="Helpers\Requests\AddHealthCareProviderRequest.cs" />
+    <Compile Include="Helpers\Requests\AddSpouseRequest.cs" />
+    <Compile Include="Helpers\Requests\AddUnrecognizedHealthCareProviderRequest.cs" />
+    <Compile Include="Helpers\Requests\AllowanceIsSavedRequest.cs" />
+    <Compile Include="Helpers\Requests\CheckAttendeeIconRequest.cs" />
+    <Compile Include="Helpers\Requests\CheckIconVisibilityAndCounterRequest.cs" />
+    <Compile Include="Helpers\Requests\CheckReceiptIconRequest.cs" />
+    <Compile Include="Helpers\Requests\CreateAllowanceRequest.cs" />
+    <Compile Include="Helpers\Requests\CreateAMilleageRequest.cs" />
+    <Compile Include="Helpers\Requests\EnterAutocompleteValueRequest.cs" />
+    <Compile Include="Helpers\Requests\EnterLoginDataRequest.cs" />
+    <Compile Include="Helpers\Requests\CreateAnExpenseRequest.cs" />
+    <Compile Include="Helpers\Requests\EnterNumericValueRequest.cs" />
+    <Compile Include="Helpers\Requests\EnterTextRequest.cs" />
+    <Compile Include="Helpers\Requests\EnterValueRequest.cs" />
+    <Compile Include="Helpers\Requests\ExpenseIsDeletedRequest.cs" />
+    <Compile Include="Helpers\Requests\ExpenseIsSavedRequest.cs" />
+    <Compile Include="Helpers\Requests\GetAttendeeCountRequest.cs" />
+    <Compile Include="Helpers\Requests\GetDistanceRequest.cs" />
+    <Compile Include="Helpers\Requests\GetIconStateRequest.cs" />
+    <Compile Include="Helpers\Requests\GetListCountRequest.cs" />
+    <Compile Include="Helpers\Requests\GetSwitchStateRequest.cs" />
+    <Compile Include="Helpers\Requests\GetValueRequest.cs" />
+    <Compile Include="Helpers\Requests\IsElementExistsRequest.cs" />
+    <Compile Include="Helpers\Requests\LogingRequest.cs" />
+    <Compile Include="Helpers\Requests\MileageIsSavedRequest.cs" />
+    <Compile Include="Helpers\Requests\QueryAppRequest.cs" />
+    <Compile Include="Helpers\Requests\ReportExpenseReceiptSavedRequest.cs" />
+    <Compile Include="Helpers\Requests\ReportIsDeletedRequest.cs" />
+    <Compile Include="Helpers\Requests\ReportIsSavedRequest.cs" />
+    <Compile Include="Helpers\Requests\SelectExpenseRequest.cs" />
+    <Compile Include="Helpers\Requests\SelectReportRequest.cs" />
+    <Compile Include="Helpers\Requests\SelectValueRequest.cs" />
+    <Compile Include="Helpers\Requests\SetDistanceRequest.cs" />
+    <Compile Include="Helpers\Requests\TapButtonRequest.cs" />
+    <Compile Include="Helpers\Requests\ToggleSwitchRequest.cs" />
+    <Compile Include="Helpers\Requests\WaitForElementRequest.cs" />
+    <Compile Include="Keys.cs" />
+    <Compile Include="Features\FeatureBase.cs" />
+    <Compile Include="Features\LoginFeature.cs" />
+    <Compile Include="Features\UploadExpenseReceiptFeature.cs" />
+    <Compile Include="Features\UploadReportExpenseReceiptFeature.cs" />
+    <Compile Include="Features\UploadReportReceiptFeature.cs" />
+    <Compile Include="Helpers\AndroidTestHelper.cs" />
+    <Compile Include="Helpers\iOSSimulator.cs" />
+    <Compile Include="Helpers\iOSSimulatorsHelpers.cs" />
+    <Compile Include="Helpers\iOSTestHelper.cs" />
+    <Compile Include="Helpers\TestHelperBase.cs" />
+    <Compile Include="Login.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyMileageKM.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModifyMileageKM.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PullToRefreshExpenseList.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PullToRefreshExpenseList.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SimulatorsNames.cs" />
+    <Compile Include="Steps\AllowanceSteps.cs" />
+    <Compile Include="Steps\CreateAMileageSteps.cs" />
+    <Compile Include="Steps\DeleteReportSteps.cs" />
+    <Compile Include="Steps\ExpenseSteps.cs" />
+    <Compile Include="Steps\GeneralSteps.cs" />
+    <Compile Include="Steps\ModifyMileageKMSteps.cs" />
+    <Compile Include="Steps\StepsBase.cs" />
+    <Compile Include="Steps\LoginSteps.cs" />
+    <Compile Include="Steps\UploadExpenseReceiptSteps.cs" />
+    <Compile Include="Steps\UploadReportExpenseReceiptSteps.cs" />
+    <Compile Include="Steps\UploadReportReceiptSteps.cs" />
+    <Compile Include="UpdateMileageEndOdometer.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateMileageEndOdometer.feature</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMileageEndOdometerSmallerThanStart.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateMileageEndOdometerSmallerThanStart.feature</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMileageSetStartEndOdometerThenChangeStart.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateMileageSetStartEndOdometerThenChangeStart.feature</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMileageStartOdometer.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateMileageStartOdometer.feature</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMileageWithEndOdometerChangePrivateKM.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateMileageWithEndOdometerChangePrivateKM.feature</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMileageWithEndOdometerChangePrivateKMAndCommutingKM.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateMileageWithEndOdometerChangePrivateKMAndCommutingKM.feature</DependentUpon>
+    </Compile>
+    <Compile Include="UploadExpenseReceipt2.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadExpenseReceipt.feature</DependentUpon>
+    </Compile>
+    <Compile Include="UploadReportExpenseReceipt2.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadReportExpenseReceipt.feature</DependentUpon>
+    </Compile>
+    <Compile Include="UploadReportReceipt2.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadReportReceipt.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Requests\SelectAutocompleteValueRequest.cs" />
+    <Compile Include="Helpers\Requests\SelectBaseRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CreateAllowance.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateAllowance.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CreateExpense.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateExpense.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CreateMileage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateMileage1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CreateRestaurantExpenseWithAttendees.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateRestaurantExpenseWithAttendees.feature.cs</LastGenOutput>
+    </None>
+    <None Include="DeleteExpense.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DeleteExpense.feature.cs</LastGenOutput>
+    </None>
+    <None Include="DeleteReport.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DeleteReport.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Login.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Login.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ModifyMileageKM.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ModifyMileageKM.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PullToRefreshExpenseList.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PullToRefreshExpenseList.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateMileageEndOdometer.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UpdateMileageEndOdometer.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateMileageEndOdometerSmallerThanStart.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UpdateMileageEndOdometerSmallerThanStart.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateMileageSetStartEndOdometerThenChangeStart.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UpdateMileageSetStartEndOdometerThenChangeStart.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateMileageStartOdometer.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UpdateMileageStartOdometer.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateMileageWithEndOdometerChangePrivateKM.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UpdateMileageWithEndOdometerChangePrivateKM.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateMileageWithEndOdometerChangePrivateKMAndCommutingKM.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UpdateMileageWithEndOdometerChangePrivateKMAndCommutingKM.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UploadExpenseReceipt.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UploadExpenseReceipt2.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UploadReportExpenseReceipt.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UploadReportExpenseReceipt2.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UploadReportReceipt.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UploadReportReceipt2.feature.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Android\Mxp.Android.csproj">
+      <Project>{9897e0a7-4672-4013-aa53-20b9380f8819}</Project>
+      <Name>Mxp.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MXPiOS\iOS.csproj">
+      <Project>{70BE484D-B691-474A-89EC-8331E985D7E9}</Project>
+      <Name>iOS</Name>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

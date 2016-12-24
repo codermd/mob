@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/Rounded_corner_login">
+                <EditText
+                    android:id="@+id/Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/blue" />
+                <TextView
+                    android:text="The company login only works for companies connecting to Mobilexpense with single sign-on through SAML standard."
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_black"
+                    android:gravity="center"
+                    android:textStyle="normal"
+                    android:textSize="12dp" />
+                <CheckBox
+                    android:id="@+id/RememberMe"
+                    android:text="Remember me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/blue"
+                    android:buttonTint="@color/blue"
+                    android:checked="true" />
+                <Button
+                    android:id="@+id/Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Login through company"
+                    android:background="@drawable/Rounded_blue_button"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/background_light" />
+                <TextView
+                    android:text="© 2015 - Made by Sagacify"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/grey"
+                    android:gravity="center"
+                    android:textStyle="normal"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+</RelativeLayout>

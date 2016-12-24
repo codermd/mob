@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2B28E56-EB59-4461-860E-8D466D0E3793}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mxp.Win</RootNamespace>
+    <AssemblyName>Mxp.Win</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{76F1466A-8B6D-4E39-A767-685A06062A39};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>arm</AppxBundlePlatforms>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Fragments\Attendees\ALookUpPageAttendee.xaml.cs">
+      <DependentUpon>ALookUpPageAttendee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\Attendees\AttendeesListPage.xaml.cs">
+      <DependentUpon>AttendeesListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\Attendees\HCPAttendeesListPage.xaml.cs">
+      <DependentUpon>HCPAttendeesListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\Expenses\ALookUpPageExpense.xaml.cs">
+      <DependentUpon>ALookUpPageExpense.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\Expenses\ApprovalExpenseDetailView.xaml.cs">
+      <DependentUpon>ApprovalExpenseDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\Expenses\ExpenseDetailView.xaml.cs">
+      <DependentUpon>ExpenseDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\Expenses\ExpensesView.xaml.cs">
+      <DependentUpon>ExpensesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\Mileages\MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\Mileages\MapPin.xaml.cs">
+      <DependentUpon>MapPin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\Mileages\MileageDetailView.xaml.cs">
+      <DependentUpon>MileageDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\Mileages\MileageSegmentUC.xaml.cs">
+      <DependentUpon>MileageSegmentUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\Mileages\NewMileageSegmentPage.xaml.cs">
+      <DependentUpon>NewMileageSegmentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\flags\AD.png" />
+    <Content Include="Assets\flags\AE.png" />
+    <Content Include="Assets\flags\AF.png" />
+    <Content Include="Assets\flags\AG.png" />
+    <Content Include="Assets\flags\AI.png" />
+    <Content Include="Assets\flags\AL.png" />
+    <Content Include="Assets\flags\AM.png" />
+    <Content Include="Assets\flags\AN.png" />
+    <Content Include="Assets\flags\AO.png" />
+    <Content Include="Assets\flags\AQ.png" />
+    <Content Include="Assets\flags\AR.png" />
+    <Content Include="Assets\flags\AS.png" />
+    <Content Include="Assets\flags\AT.png" />
+    <Content Include="Assets\flags\AU.png" />
+    <Content Include="Assets\flags\AW.png" />
+    <Content Include="Assets\flags\AX.png" />
+    <Content Include="Assets\flags\AZ.png" />
+    <Content Include="Assets\flags\BA.png" />
+    <Content Include="Assets\flags\BB.png" />
+    <Content Include="Assets\flags\BD.png" />
+    <Content Include="Assets\flags\BE.png" />
+    <Content Include="Assets\flags\BF.png" />
+    <Content Include="Assets\flags\BG.png" />
+    <Content Include="Assets\flags\BH.png" />
+    <Content Include="Assets\flags\BI.png" />
+    <Content Include="Assets\flags\BJ.png" />
+    <Content Include="Assets\flags\BM.png" />
+    <Content Include="Assets\flags\BN.png" />
+    <Content Include="Assets\flags\BO.png" />
+    <Content Include="Assets\flags\BR.png" />
+    <Content Include="Assets\flags\BS.png" />
+    <Content Include="Assets\flags\BT.png" />
+    <Content Include="Assets\flags\BW.png" />
+    <Content Include="Assets\flags\BY.png" />
+    <Content Include="Assets\flags\BZ.png" />
+    <Content Include="Assets\flags\CA.png" />
+    <Content Include="Assets\flags\CC.png" />
+    <Content Include="Assets\flags\CD.png" />
+    <Content Include="Assets\flags\CF.png" />
+    <Content Include="Assets\flags\CG.png" />
+    <Content Include="Assets\flags\CH.png" />
+    <Content Include="Assets\flags\CI.png" />
+    <Content Include="Assets\flags\CK.png" />
+    <Content Include="Assets\flags\CL.png" />
+    <Content Include="Assets\flags\CM.png" />
+    <Content Include="Assets\flags\CN.png" />
+    <Content Include="Assets\flags\CO.png" />
+    <Content Include="Assets\flags\CR.png" />
+    <Content Include="Assets\flags\CU.png" />
+    <Content Include="Assets\flags\CV.png" />
+    <Content Include="Assets\flags\CW.png" />
+    <Content Include="Assets\flags\CX.png" />
+    <Content Include="Assets\flags\CY.png" />
+    <Content Include="Assets\flags\CZ.png" />
+    <Content Include="Assets\flags\DE.png" />
+    <Content Include="Assets\flags\DJ.png" />
+    <Content Include="Assets\flags\DK.png" />
+    <Content Include="Assets\flags\DM.png" />
+    <Content Include="Assets\flags\DO.png" />
+    <Content Include="Assets\flags\DZ.png" />
+    <Content Include="Assets\flags\EC.png" />
+    <Content Include="Assets\flags\EE.png" />
+    <Content Include="Assets\flags\EG.png" />
+    <Content Include="Assets\flags\EH.png" />
+    <Content Include="Assets\flags\ER.png" />
+    <Content Include="Assets\flags\ES.png" />
+    <Content Include="Assets\flags\ET.png" />
+    <Content Include="Assets\flags\EU.png" />
+    <Content Include="Assets\flags\FI.png" />
+    <Content Include="Assets\flags\FJ.png" />
+    <Content Include="Assets\flags\FK.png" />
+    <Content Include="Assets\flags\FM.png" />
+    <Content Include="Assets\flags\FO.png" />
+    <Content Include="Assets\flags\FR.png" />
+    <Content Include="Assets\flags\GA.png" />
+    <Content Include="Assets\flags\GB.png" />
+    <Content Include="Assets\flags\GD.png" />
+    <Content Include="Assets\flags\GE.png" />
+    <Content Include="Assets\flags\GG.png" />
+    <Content Include="Assets\flags\GH.png" />
+    <Content Include="Assets\flags\GI.png" />
+    <Content Include="Assets\flags\GL.png" />
+    <Content Include="Assets\flags\GM.png" />
+    <Content Include="Assets\flags\GN.png" />
+    <Content Include="Assets\flags\GQ.png" />
+    <Content Include="Assets\flags\GR.png" />
+    <Content Include="Assets\flags\GS.png" />
+    <Content Include="Assets\flags\GT.png" />
+    <Content Include="Assets\flags\GU.png" />
+    <Content Include="Assets\flags\GW.png" />
+    <Content Include="Assets\flags\GY.png" />
+    <Content Include="Assets\flags\HK.png" />
+    <Content Include="Assets\flags\HN.png" />
+    <Content Include="Assets\flags\HR.png" />
+    <Content Include="Assets\flags\HT.png" />
+    <Content Include="Assets\flags\HU.png" />
+    <Content Include="Assets\flags\IC.png" />
+    <Content Include="Assets\flags\ID.png" />
+    <Content Include="Assets\flags\IE.png" />
+    <Content Include="Assets\flags\IL.png" />
+    <Content Include="Assets\flags\IM.png" />
+    <Content Include="Assets\flags\IND.png" />
+    <Content Include="Assets\flags\IN.png" />
+    <Content Include="Assets\flags\IQ.png" />
+    <Content Include="Assets\flags\IR.png" />
+    <Content Include="Assets\flags\IS.png" />
+    <Content Include="Assets\flags\IT.png" />
+    <Content Include="Assets\flags\JE.png" />
+    <Content Include="Assets\flags\JM.png" />
+    <Content Include="Assets\flags\JO.png" />
+    <Content Include="Assets\flags\JP.png" />
+    <Content Include="Assets\flags\KE.png" />
+    <Content Include="Assets\flags\KG.png" />
+    <Content Include="Assets\flags\KH.png" />
+    <Content Include="Assets\flags\KI.png" />
+    <Content Include="Assets\flags\KM.png" />
+    <Content Include="Assets\flags\KN.png" />
+    <Content Include="Assets\flags\KP.png" />
+    <Content Include="Assets\flags\KR.png" />
+    <Content Include="Assets\flags\KW.png" />
+    <Content Include="Assets\flags\KY.png" />
+    <Content Include="Assets\flags\KZ.png" />
+    <Content Include="Assets\flags\LA.png" />
+    <Content Include="Assets\flags\LB.png" />
+    <Content Include="Assets\flags\LC.png" />
+    <Content Include="Assets\flags\LI.png" />
+    <Content Include="Assets\flags\LK.png" />
+    <Content Include="Assets\flags\LR.png" />
+    <Content Include="Assets\flags\LS.png" />
+    <Content Include="Assets\flags\LT.png" />
+    <Content Include="Assets\flags\LU.png" />
+    <Content Include="Assets\flags\LV.png" />
+    <Content Include="Assets\flags\LY.png" />
+    <Content Include="Assets\flags\MA.png" />
+    <Content Include="Assets\flags\MC.png" />
+    <Content Include="Assets\flags\MD.png" />
+    <Content Include="Assets\flags\ME.png" />
+    <Content Include="Assets\flags\MF.png" />
+    <Content Include="Assets\flags\MG.png" />
+    <Content Include="Assets\flags\MH.png" />
+    <Content Include="Assets\flags\MK.png" />
+    <Content Include="Assets\flags\ML.png" />
+    <Content Include="Assets\flags\MM.png" />
+    <Content Include="Assets\flags\MN.png" />
+    <Content Include="Assets\flags\MO.png" />
+    <Content Include="Assets\flags\MP.png" />
+    <Content Include="Assets\flags\MQ.png" />
+    <Content Include="Assets\flags\MR.png" />
+    <Content Include="Assets\flags\MS.png" />
+    <Content Include="Assets\flags\MT.png" />
+    <Content Include="Assets\flags\MU.png" />
+    <Content Include="Assets\flags\MV.png" />
+    <Content Include="Assets\flags\MW.png" />
+    <Content Include="Assets\flags\MX.png" />
+    <Content Include="Assets\flags\MY.png" />
+    <Content Include="Assets\flags\MZ.png" />
+    <Content Include="Assets\flags\NA.png" />
+    <Content Include="Assets\flags\NC.png" />
+    <Content Include="Assets\flags\NE.png" />
+    <Content Include="Assets\flags\NF.png" />
+    <Content Include="Assets\flags\NG.png" />
+    <Content Include="Assets\flags\NI.png" />
+    <Content Include="Assets\flags\NL.png" />
+    <Content Include="Assets\flags\NO.png" />
+    <Content Include="Assets\flags\NoFlag.png" />
+    <Content Include="Assets\flags\NP.png" />
+    <Content Include="Assets\flags\NR.png" />
+    <Content Include="Assets\flags\NU.png" />
+    <Content Include="Assets\flags\NZ.png" />
+    <Content Include="Assets\flags\OM.png" />
+    <Content Include="Assets\flags\PA.png" />
+    <Content Include="Assets\flags\PE.png" />
+    <Content Include="Assets\flags\PF.png" />
+    <Content Include="Assets\flags\PG.png" />
+    <Content Include="Assets\flags\PH.png" />
+    <Content Include="Assets\flags\PK.png" />
+    <Content Include="Assets\flags\PL.png" />
+    <Content Include="Assets\flags\PN.png" />
+    <Content Include="Assets\flags\PR.png" />
+    <Content Include="Assets\flags\PS.png" />
+    <Content Include="Assets\flags\PT.png" />
+    <Content Include="Assets\flags\PW.png" />
+    <Content Include="Assets\flags\PY.png" />
+    <Content Include="Assets\flags\QA.png" />
+    <Content Include="Assets\flags\RO.png" />
+    <Content Include="Assets\flags\RS.png" />
+    <Content Include="Assets\flags\RU.png" />
+    <Content Include="Assets\flags\RW.png" />
+    <Content Include="Assets\flags\SA.png" />
+    <Content Include="Assets\flags\SB.png" />
+    <Content Include="Assets\flags\SC.png" />
+    <Content Include="Assets\flags\SD.png" />
+    <Content Include="Assets\flags\SE.png" />
+    <Content Include="Assets\flags\SG.png" />
+    <Content Include="Assets\flags\SH.png" />
+    <Content Include="Assets\flags\SI.png" />
+    <Content Include="Assets\flags\SK.png" />
+    <Content Include="Assets\flags\SL.png" />
+    <Content Include="Assets\flags\SM.png" />
+    <Content Include="Assets\flags\SO.png" />
+    <Content Include="Assets\flags\SR.png" />
+    <Content Include="Assets\flags\SS.png" />
+    <Content Include="Assets\flags\ST.png" />
+    <Content Include="Assets\flags\SV.png" />
+    <Content Include="Assets\flags\SY.png" />
+    <Content Include="Assets\flags\SZ.png" />
+    <Content Include="Assets\flags\TC.png" />
+    <Content Include="Assets\flags\TD.png" />
+    <Content Include="Assets\flags\TF.png" />
+    <Content Include="Assets\flags\TG.png" />
+    <Content Include="Assets\flags\TH.png" />
+    <Content Include="Assets\flags\TJ.png" />
+    <Content Include="Assets\flags\TK.png" />
+    <Content Include="Assets\flags\TL.png" />
+    <Content Include="Assets\flags\TM.png" />
+    <Content Include="Assets\flags\TN.png" />
+    <Content Include="Assets\flags\TO.png" />
+    <Content Include="Assets\flags\TR.png" />
+    <Content Include="Assets\flags\TT.png" />
+    <Content Include="Assets\flags\TV.png" />
+    <Content Include="Assets\flags\TW.png" />
+    <Content Include="Assets\flags\TZ.png" />
+    <Content Include="Assets\flags\UA.png" />
+    <Content Include="Assets\flags\UG.png" />
+    <Content Include="Assets\flags\US.png" />
+    <Content Include="Assets\flags\UY.png" />
+    <Content Include="Assets\flags\UZ.png" />
+    <Content Include="Assets\flags\VA.png" />
+    <Content Include="Assets\flags\VC.png" />
+    <Content Include="Assets\flags\VE.png" />
+    <Content Include="Assets\flags\VG.png" />
+    <Content Include="Assets\flags\VI.png" />
+    <Content Include="Assets\flags\VN.png" />
+    <Content Include="Assets\flags\VU.png" />
+    <Content Include="Assets\flags\WF.png" />
+    <Content Include="Assets\flags\WS.png" />
+    <Content Include="Assets\flags\YE.png" />
+    <Content Include="Assets\flags\YT.png" />
+    <Content Include="Assets\flags\ZA.png" />
+    <Content Include="Assets\flags\ZM.png" />
+    <Content Include="Assets\flags\ZW.png" />
+    <Content Include="Assets\InnerCircle.png" />
+    <Content Include="Assets\Logo.scale-240.png" />
+    <Content Include="Assets\OuterCircle.png" />
+    <Content Include="Assets\SmallLogo.scale-240.png" />
+    <Content Include="Assets\SplashScreen.scale-240.png" />
+    <Content Include="Assets\Square71x71Logo.scale-240.png" />
+    <Content Include="Assets\StoreLogo.scale-240.png" />
+    <Content Include="Assets\WideLogo.scale-240.png" />
+    <TransformFile Include="RestSharp.Portable.rd.xml" />
+    <Content Include="StoreManifest.xml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro, Version=2.0.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Caliburn.Micro.Core.3.0.0\lib\portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0\Caliburn.Micro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform, Version=2.0.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Caliburn.Micro.3.0.0\lib\wpa81\Caliburn.Micro.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform.Core, Version=2.0.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Caliburn.Micro.3.0.0\lib\wpa81\Caliburn.Micro.Platform.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Coding4Fun.Toolkit, Version=2.0.8.0, Culture=neutral, PublicKeyToken=c5fd7b72b1a17ce4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Coding4Fun.Toolkit.Controls.2.1.0\lib\wpa81\Coding4Fun.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Coding4Fun.Toolkit.Controls, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Coding4Fun.Toolkit.Controls.2.1.0\lib\wpa81\Coding4Fun.Toolkit.Controls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Interactions, Version=12.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Caliburn.Micro.3.0.0\lib\wpa81\Microsoft.Xaml.Interactions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Interactivity, Version=12.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Caliburn.Micro.3.0.0\lib\wpa81\Microsoft.Xaml.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ModernHttpClient, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp.Portable, Version=2.4.0.0, Culture=neutral, PublicKeyToken=be81bb0f53eab22f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FubarCoder.RestSharp.Portable.2.4.5\lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\RestSharp.Portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\wpa81\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\wpa81\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Validation, Version=2.2.0.0, Culture=neutral, PublicKeyToken=2fc06f0d701809a7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Validation.2.2.8\lib\dotnet\Validation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.2.0.45\lib\wpa81\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.2.0.45\lib\wpa81\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.WinRT, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.2.0.45\lib\wpa81\Xamarin.Forms.Platform.WinRT.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.WinRT.Phone, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.2.0.45\lib\wpa81\Xamarin.Forms.Platform.WinRT.Phone.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.2.0.45\lib\wpa81\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Fragments\Attendees\ALookUpPageAttendee.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fragments\Attendees\AttendeesListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fragments\Attendees\HCPAttendeesListPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fragments\Expenses\ALookUpPageExpense.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fragments\Expenses\ApprovalExpenseDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fragments\Expenses\ExpenseDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fragments\Expenses\ExpensesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fragments\Mileages\MapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fragments\Mileages\MapPin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fragments\Mileages\MileageDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fragments\Mileages\MileageSegmentUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fragments\Mileages\NewMileageSegmentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="BehaviorsXamlSDKManaged, version=12.0">
+      <Name>Behaviors SDK %28XAML%29</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mxp.Core\Mxp.Core.csproj">
+      <Project>{3263bf25-058f-4a81-932c-ad2527512f74}</Project>
+      <Name>Mxp.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+  </PropertyGroup>
+  <Import Project="..\Mxp.Win.Shared\Mxp.Win.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.2.0.45\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.2.0.31\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\Xamarin.Forms.2.2.0.45\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.2.0.31\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="$(XamlSpyInstallPath)MSBuild\FirstFloor.XamlSpy.WindowsPhone.targets" Condition="'$(XamlSpyInstallPath)' != '' and '$(Configuration)' == 'DEBUG'" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

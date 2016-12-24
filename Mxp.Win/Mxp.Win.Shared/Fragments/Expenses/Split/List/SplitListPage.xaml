@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="Mxp.Win.SplitListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mxp.Win"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="#00A8C6" Grid.Row="0" >
+            <TextBlock x:Name="Title" Foreground ="White" Margin="20,5,20,10" Style="{StaticResource SubheaderTextBlockStyle}"/>
+        </Grid>
+        <StackPanel Grid.Row="1">        
+            <ListView x:Name="ItemsList" 
+                  ShowsScrollingPlaceholders="True" 
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Stretch" 
+                  SelectionMode="None"
+                  ItemContainerStyle="{StaticResource ListExpenseItemStyle}" 
+                  ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                  >
+
+                <ListView.ItemTemplate >
+                    <DataTemplate>
+                        <local:SplitListElement  DeleteInnerRequest="DeleteInner_Tapped" EditInnerRequest="SplitListElement_Tapped" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+        <ProgressRing  Foreground="#00A8C6" x:Name="ProgressRing" />
+
+
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Label="Accept" Icon="Accept" Click="Accept_Click"/>
+
+            <AppBarButton Label="Cancel" Icon="Cancel" Click="Cancel_Click"/>
+            <AppBarButton Label="Add" Icon="Add" Click="Add_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

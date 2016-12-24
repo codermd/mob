@@ -1,0 +1,40 @@
+﻿<Page x:Class="Mxp.Win.AttendeeDetailView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Mxp.Win"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Background="#00A8C6"
+              Grid.Row="0"
+              Grid.ColumnSpan="2">
+            <TextBlock x:Name="Title"
+                       Foreground="White"
+                       Margin="20,5,20,10"
+                       Style="{StaticResource SubheaderTextBlockStyle}" />
+        </Grid>
+        <ListView x:Name="FieldsListView"
+                  Margin="20"
+                  Grid.Row="1"
+                  ShowsScrollingPlaceholders="True"
+                  VerticalAlignment="Top"
+                  HorizontalContentAlignment="Stretch"
+                  VerticalContentAlignment="Stretch"
+                  SelectionMode="None"
+                  ItemContainerStyle="{StaticResource StretchedListViewItemStyle}"
+                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                  ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:DetailField HorizontalContentAlignment="Stretch" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">MobileXpense</string>
+	<string name="title_progress_dialog">Please wait</string>
+	<string name="message_progress_dialog">Loading...</string>
+	<string name="ok">Ok</string>
+	<string name="cancel">Cancel</string>
+	<string name="auth_title">Authentication Required</string>
+	<string name="auth_message">%1$s requires a username and password.</string>
+	<string name="auth_login">Log in</string>
+	<string name="error_no_pdf_activity">There is no PDF reader</string>
+	<string name="error_launch_pdf">Error launching the PDF</string>
+</resources>

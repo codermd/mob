@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>14da9d5e-5210-404a-9402-1667176101fc</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Mxp.Win</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\GooglePlacesSuggestions.xaml.cs">
+      <DependentUpon>GooglePlacesSuggestions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\GooglePlacesTextbox.xaml.cs">
+      <DependentUpon>GooglePlacesTextbox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\ApprovalToNameConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\AttendeeToBitmapConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\AttendeeGTPToBitmapConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\BoolToCollapsedConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\BoolToImageConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\CountryToBitmapConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\ExpenseFundingToColorConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\InvertBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\NullToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\PolicyReportToBitmapConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\SearchItemWeightConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\TypeToNameConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\TransactionToBitmapConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\CreditCardToBitmapConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\AttendeeTypeToBitmapConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\PolicyExpenseToBitmapConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\SelectedProductToColorConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\ReceiptStatusToBitmapConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\ApprovalStatusToBitmapConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\NameToImageConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\StatusToBitmapConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\StatusToBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Allowances\AllowanceDetailView.xaml.cs">
+      <DependentUpon>AllowanceDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Allowances\AllowanceSegmentDetails.xaml.cs">
+      <DependentUpon>AllowanceSegmentDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Allowances\AllowanceSegmentUC.xaml.cs">
+      <DependentUpon>AllowanceSegmentUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Allowances\Creation\AllowanceCreation.xaml.cs">
+      <DependentUpon>AllowanceCreation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Amount\AmountPage.xaml.cs">
+      <DependentUpon>AmountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Approvals\AcceptApprovalPage.xaml.cs">
+      <DependentUpon>AcceptApprovalPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Approvals\ApprovalsView.xaml.cs">
+      <DependentUpon>ApprovalsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Approvals\List\ReportApprovalListElement.xaml.cs">
+      <DependentUpon>ReportApprovalListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Approvals\ApprovalReportDetailView.xaml.cs">
+      <DependentUpon>ApprovalReportDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Approvals\ApprovalTravelDetailView.xaml.cs">
+      <DependentUpon>ApprovalTravelDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Approvals\List\TravelApprovalListElement.xaml.cs">
+      <DependentUpon>TravelApprovalListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Attendees\AttendeeDetailView.xaml.cs">
+      <DependentUpon>AttendeeDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Attendees\AttendeesGallery.xaml.cs">
+      <DependentUpon>AttendeesGallery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Attendees\BusinessFormViewController.xaml.cs">
+      <DependentUpon>BusinessFormViewController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Attendees\HCOViewController.xaml.cs">
+      <DependentUpon>HCOViewController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Attendees\HCPViewController.xaml.cs">
+      <DependentUpon>HCPViewController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Attendees\HCUViewController.xaml.cs">
+      <DependentUpon>HCUViewController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Attendees\List\ActionsListElement.xaml.cs">
+      <DependentUpon>ActionsListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Attendees\List\AttendeeListElement.xaml.cs">
+      <DependentUpon>AttendeeListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Attendees\List\HCPListElement.xaml.cs">
+      <DependentUpon>HCPListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Attendees\List\RecentlyUserListElement.xaml.cs">
+      <DependentUpon>RecentlyUserListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Attendees\RecentlyUserTableViewController.xaml.cs">
+      <DependentUpon>RecentlyUserTableViewController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Attendees\SpouseViewController.xaml.cs">
+      <DependentUpon>SpouseViewController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Authentication\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Controls\SelectionHub.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Details\DetailView.xaml.cs">
+      <DependentUpon>DetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Creation\AAmountUC.xaml.cs">
+      <DependentUpon>AAmountUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Creation\AListBoxUC.xaml.cs">
+      <DependentUpon>AListBoxUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Creation\ExpenseCreation.xaml.cs">
+      <DependentUpon>ExpenseCreation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Expenses\List\ExpenseDeletableListElement.xaml.cs">
+      <DependentUpon>ExpenseDeletableListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Expenses\List\ExpenseGrayListElement.xaml.cs">
+      <DependentUpon>ExpenseGrayListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Expenses\List\ExpenseListElement.xaml.cs">
+      <DependentUpon>ExpenseListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Expenses\List\ExpenseSelectableItemListElement.xaml.cs">
+      <DependentUpon>ExpenseSelectableItemListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Expenses\List\SelectableListElement.xaml.cs">
+      <DependentUpon>SelectableListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Split\CreationControls\AAmountSplitUC.xaml.cs">
+      <DependentUpon>AAmountSplitUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Split\CreationControls\ACategorySplitUC.xaml.cs">
+      <DependentUpon>ACategorySplitUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Split\ExpenseSplitPage.xaml.cs">
+      <DependentUpon>ExpenseSplitPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Split\List\SplitListElement.xaml.cs">
+      <DependentUpon>SplitListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Split\List\SplitListPage.xaml.cs">
+      <DependentUpon>SplitListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\AAmountFromTextBox.xaml.cs">
+      <DependentUpon>AAmountFromTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\ACheckBox.xaml.cs">
+      <DependentUpon>ACheckBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\AComboBox.xaml.cs">
+      <DependentUpon>AComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\ACurrencyChooser.xaml.cs">
+      <DependentUpon>ACurrencyChooser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\ADatePicker.xaml.cs">
+      <DependentUpon>ADatePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\ADateTimePicker.xaml.cs">
+      <DependentUpon>ADateTimePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\AFullTextBlock.xaml.cs">
+      <DependentUpon>AFullTextBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\AIntegerTextBox.xaml.cs">
+      <DependentUpon>AIntegerTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\AListFromTextBox.xaml.cs">
+      <DependentUpon>AListFromTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\ALongTextBox.xaml.cs">
+      <DependentUpon>ALongTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\ALookupFromTextBlock.xaml.cs">
+      <DependentUpon>ALookupFromTextBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\APolicyRule.xaml.cs">
+      <DependentUpon>APolicyRule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\ASplitedList.xaml.cs">
+      <DependentUpon>ASplitedList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\ATextBlock.xaml.cs">
+      <DependentUpon>ATextBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\ATextBlockToObject.xaml.cs">
+      <DependentUpon>ATextBlockToObject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\ATextBox.xaml.cs">
+      <DependentUpon>ATextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Fields\DetailField.xaml.cs">
+      <DependentUpon>DetailField.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Main\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Receipts\PhotoSliderPage.xaml.cs">
+      <DependentUpon>PhotoSliderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Receipts\ReceiptsGallery.xaml.cs">
+      <DependentUpon>ReceiptsGallery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Reports\AddReportPage.xaml.cs">
+      <DependentUpon>AddReportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Reports\ClosedReportDetailView.xaml.cs">
+      <DependentUpon>ClosedReportDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Reports\List\ClosedReportListElement.xaml.cs">
+      <DependentUpon>ClosedReportListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Reports\List\OpenReportListElement.xaml.cs">
+      <DependentUpon>OpenReportListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Reports\List\DraftReportListElement.xaml.cs">
+      <DependentUpon>DraftReportListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Reports\DraftReportDetailView.xaml.cs">
+      <DependentUpon>DraftReportDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Reports\OpenReportDetailView.xaml.cs">
+      <DependentUpon>OpenReportDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Reports\ReportsView.xaml.cs">
+      <DependentUpon>ReportsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Settings\IconLegendListElement.xaml.cs">
+      <DependentUpon>IconLegendListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Settings\IconsPage.xaml.cs">
+      <DependentUpon>IconsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\Settings\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\SpendCatcher\SpendCatcherListElement.xaml.cs">
+      <DependentUpon>SpendCatcherListElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\SpendCatcher\SpendCatcherPage.xaml.cs">
+      <DependentUpon>SpendCatcherPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\SpendCatcher\SpendCatcherReceiptPage.xaml.cs">
+      <DependentUpon>SpendCatcherReceiptPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Fragments\SpendCatcher\SpendCatcherSection.xaml.cs">
+      <DependentUpon>SpendCatcherSection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\AsyncSynchronizationContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\DebugListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\DirectionsExtentions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ExpenseItemCreator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ExpenseItemToSplit.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\CategoriesFromExpenseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ExceptionHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\LookupItemsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\MyPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\PopMessages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\PredictionResultItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\LookupResultItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\CategoriesViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\CurrenciesViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\BitmapHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\LoggedUserFileIO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\FieldFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\FieldGroup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Group.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\CountriesViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ReceiptsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\SafeImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\SchemeActions\CommandsFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\SchemeActions\Commands\OpenObjectCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\SchemeActions\Commands\SAMLCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ServiceAppVersion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\UriItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\VirtualizingStackPanel_CleanUpVirtualizedItemEvent_1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LaunchPage.xaml.cs">
+      <DependentUpon>LaunchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MainController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Assets\approvalIcon.svg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\creditCard.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\add.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\AddMapMileage.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\AttendeeGTPNotShown.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\CreditCardIcon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\goBack.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\approvalIconTab.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\AttendeeExpenseCell.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\backButton.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\BedIcon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\BedIconSelected.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\BreakfastICon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\BreakfastIConSelected.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\CloseICon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\cross.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\delete96.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\DinnerIcon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\DinnerIconSelected.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\dislike.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\DocumentExpenseCell.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\EmptyIcon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\expenseIconTab.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ExpenseIsCompliant.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ExpenseNotCompliant.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ExpenseNotCompliantPolicy.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ic_action_ic_moon_icon_data.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ic_action_ic_moon_icon_data_selected.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ic_business_attendee.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ic_employee_attendee.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ic_merge.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ic_split.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\InformationsIcon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\InformationsIconSelected.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\LunchIcon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\LunchIconSelected.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\MoonIcon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\MoonIconSelected.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\PinMap.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Icons\powered_by_google_on_white_hdpi.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ReportAcceptedByController.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ReportApprovalIsPending.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ReportHasBeenApproved.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ReportHasBeenOrange.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ReportHasBeenRefused.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ReportIsPending.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\ReportRejectedByController.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\reportsIconTab.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\return.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\SegmentArrow.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\settingsIconTab.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icons\like.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\login_logo@mobilexpense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\GooglePlacesSuggestions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\GooglePlacesTextbox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Allowances\AllowanceDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Allowances\AllowanceSegmentDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Allowances\AllowanceSegmentUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Allowances\Creation\AllowanceCreation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Amount\AmountPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Approvals\AcceptApprovalPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Approvals\ApprovalsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Approvals\List\ReportApprovalListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Approvals\ApprovalReportDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Approvals\ApprovalTravelDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Approvals\List\TravelApprovalListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Attendees\AttendeeDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Attendees\AttendeesGallery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Attendees\BusinessFormViewController.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Attendees\HCOViewController.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Attendees\HCPViewController.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Attendees\HCUViewController.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Attendees\List\ActionsListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Attendees\List\AttendeeListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Attendees\List\HCPListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Attendees\List\RecentlyUserListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Attendees\RecentlyUserTableViewController.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Attendees\SpouseViewController.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Authentication\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Details\DetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Creation\AAmountUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Creation\AListBoxUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Creation\ExpenseCreation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Expenses\List\ExpenseDeletableListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Expenses\List\ExpenseGrayListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Expenses\List\ExpenseListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Expenses\List\ExpenseSelectableItemListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Expenses\List\SelectableListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Split\CreationControls\AAmountSplitUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Split\CreationControls\ACategorySplitUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Split\ExpenseSplitPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Split\List\SplitListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Expenses\Split\List\SplitListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\AAmountFromTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\ACheckBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\AComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\ACurrencyChooser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\ADatePicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\ADateTimePicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\AFullTextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\AIntegerTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\AListFromTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\ALongTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\ALookupFromTextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\APolicyRule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\ASplitedList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\ATextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\ATextBlockToObject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\ATextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Fields\DetailField.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Main\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Receipts\PhotoSliderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Receipts\ReceiptsGallery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Reports\AddReportPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Reports\ClosedReportDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Reports\List\ClosedReportListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Reports\List\OpenReportListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Reports\List\DraftReportListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Reports\DraftReportDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Reports\OpenReportDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Reports\ReportsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Settings\IconLegendListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Settings\IconsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\Settings\SettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\SpendCatcher\SpendCatcherListElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\SpendCatcher\SpendCatcherPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\SpendCatcher\SpendCatcherReceiptPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Fragments\SpendCatcher\SpendCatcherSection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)LaunchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Themes\ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Themes\Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Themes\TextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Themes\TextBlockStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Themes\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductsViewController">
+            <connections>
+                <outlet property="SearchBar" destination="xh5-8e-4sC" id="Mdh-cc-MqF"/>
+                <outlet property="SegmentBottomMargin" destination="KsM-3q-Hdp" id="eC7-02-0eG"/>
+                <outlet property="SegmentHeight" destination="ST7-V3-dr6" id="JBl-vS-wWo"/>
+                <outlet property="SegmentTopMargin" destination="hKs-Ie-b8e" id="aq2-08-Awi"/>
+                <outlet property="SegmentedControl" destination="Ra1-nQ-ie1" id="WF4-Wj-FDA"/>
+                <outlet property="TableView" destination="vg6-5C-2Ur" id="QfL-6p-jIG"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ra1-nQ-ie1">
+                    <rect key="frame" x="5" y="5" width="590" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="ST7-V3-dr6"/>
+                    </constraints>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                    <color key="tintColor" red="0.17254901959999999" green="0.2274509804" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vg6-5C-2Ur">
+                    <rect key="frame" x="0.0" y="38" width="600" height="562"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <searchBar key="tableHeaderView" contentMode="redraw" id="xh5-8e-4sC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </searchBar>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ra1-nQ-ie1" secondAttribute="trailing" id="1Ew-JR-Scs"/>
+                <constraint firstAttribute="trailing" secondItem="vg6-5C-2Ur" secondAttribute="trailing" id="9ON-s6-7Xz"/>
+                <constraint firstItem="Ra1-nQ-ie1" firstAttribute="top" secondItem="2" secondAttribute="top" id="F49-Q7-UDx"/>
+                <constraint firstAttribute="bottom" secondItem="vg6-5C-2Ur" secondAttribute="bottom" id="JZz-uB-yO2"/>
+                <constraint firstItem="vg6-5C-2Ur" firstAttribute="top" secondItem="Ra1-nQ-ie1" secondAttribute="bottom" constant="5" id="KsM-3q-Hdp"/>
+                <constraint firstItem="Ra1-nQ-ie1" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="5" id="Vdk-PQ-jnR"/>
+                <constraint firstItem="Ra1-nQ-ie1" firstAttribute="top" secondItem="2" secondAttribute="top" constant="5" id="hKs-Ie-b8e"/>
+                <constraint firstAttribute="trailing" secondItem="Ra1-nQ-ie1" secondAttribute="trailing" constant="5" id="iOa-eg-97i"/>
+                <constraint firstItem="vg6-5C-2Ur" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="s7s-OS-9X4"/>
+                <constraint firstItem="Ra1-nQ-ie1" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="wqK-HS-qTA"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="1Ew-JR-Scs"/>
+                    <exclude reference="F49-Q7-UDx"/>
+                    <exclude reference="wqK-HS-qTA"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="374" y="450"/>
+        </view>
+    </objects>
+</document>

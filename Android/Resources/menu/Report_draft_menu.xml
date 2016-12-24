@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item android:id="@+id/Action_submit"
+		android:icon="@drawable/ic_action_launch"
+		android:title="Submit"
+		app:showAsAction="ifRoom" />
+
+	<item android:id="@+id/Action_delete"
+		android:icon="@drawable/ic_action_delete"
+		android:title="Delete"
+		app:showAsAction="ifRoom" />
+
+</menu>

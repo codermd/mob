@@ -1,0 +1,135 @@
+﻿<UserControl x:Class="Mxp.Win.AllowanceSegmentUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Mxp.Win"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="400">
+    <Grid  Background="#efefef"
+           Tapped="SegmentTapped">
+        <Grid.Resources>
+            <local:BoolToImageConverter x:Key="BoolToImageConverter" />
+            <local:CountryToBitmapConverter x:Key="CountryToBitmapConverter" />
+            <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0"
+              Grid.Column="0">
+            <TextBlock Text="{Binding Comment}"
+                       Margin="10,5,20,5"
+                       x:Name="DescriptionTextBlock"
+                       TextWrapping="WrapWholeWords"
+                       FontSize="24"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       Style="{StaticResource TitleTextBlockStyle}" />
+        </Grid>
+        <Grid Grid.Row="0"
+              Grid.Column="1">
+            <TextBlock Text="{Binding VAmount}"
+                       x:Name="PriceTextBlock"
+                       Margin="20,10,20,5"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Top"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       FontSize="20" />
+        </Grid>
+        <Grid Grid.Row="1"
+              Grid.Column="0">
+            <TextBlock Text="{Binding VDateFrom}"
+                       x:Name="DateFromTextBlock"
+                       Margin="10,20,5,10"
+                       FontSize="15"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Bottom"
+                       Foreground="#00A8C6" />
+        </Grid>
+        <Grid Grid.Row="2"
+              Grid.Column="0">
+            <TextBlock Text="{Binding VDateTo}"
+                       Margin="10,5,10,10"
+                       x:Name="DateToTextBlock"
+                       FontSize="15"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top"
+                       Foreground="#00A8C6" />
+        </Grid>
+        <Grid Grid.Row="1"
+              Grid.Column="1"
+              Margin="0,5,15,0"
+              VerticalAlignment="Center"
+              HorizontalAlignment="Right">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Image  Grid.Column="0"
+                    x:Name="ImageBreakfast"
+                    Height="24"
+                    Margin="3,0,3,0"
+                    Source="{Binding Breakfast, Converter={StaticResource BoolToImageConverter}, ConverterParameter='breakfast'}"
+                    Visibility="{Binding CanShowBreakfast, Converter={StaticResource BoolToVisibilityConverter}}" />
+
+
+            <Image  Grid.Column="1"
+                    x:Name="ImageLunch"
+                    Height="24"
+                    Margin="3,0,3,0"
+                    Source="{Binding Lunch, Converter={StaticResource BoolToImageConverter}, ConverterParameter='lunch'}"
+                    Visibility="{Binding CanShowLunch, Converter={StaticResource BoolToVisibilityConverter}}" />
+
+            <Image  Grid.Column="2"
+                    x:Name="ImageDinner"
+                    Height="24"
+                    Margin="3,0,3,0"
+                    Source="{Binding Dinner, Converter={StaticResource BoolToImageConverter}, ConverterParameter='dinner'}"
+                    Visibility="{Binding CanShowDinner, Converter={StaticResource BoolToVisibilityConverter}}" />
+
+            <Image  Grid.Column="3"
+                    x:Name="ImageBed"
+                    Height="24"
+                    Margin="3,0,3,0"
+                    Source="{Binding Lodging, Converter={StaticResource BoolToImageConverter}, ConverterParameter='bed'}"
+                    Visibility="{Binding CanShowLodging, Converter={StaticResource BoolToVisibilityConverter}}" />
+
+            <Image  Grid.Column="4"
+                    x:Name="ImageInfo"
+                    Height="24"
+                    Margin="3,0,3,0"
+                    Source="{Binding Info, Converter={StaticResource BoolToImageConverter}, ConverterParameter='info'}"
+                    Visibility="{Binding CanShowInfo, Converter={StaticResource BoolToVisibilityConverter}}" />
+            <Image  Grid.Column="5"
+                    x:Name="ImageMoon"
+                    Height="24"
+                    Margin="3,0,3,0"
+                    Source="{Binding WorkNight, Converter={StaticResource BoolToImageConverter}, ConverterParameter='moon'}"
+                    Visibility="{Binding CanShowWorkNight, Converter={StaticResource BoolToVisibilityConverter}}" />
+
+        </Grid>
+        <Grid Grid.Row="2"
+              Grid.Column="1">
+            <Image  Margin="0,10,20,20"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    x:Name="ImageFlag"
+                    Height="24"
+                    Source="{Binding Country.VFormattedResourceName, Converter={StaticResource CountryToBitmapConverter}}" />
+
+
+        </Grid>
+    </Grid>
+</UserControl>

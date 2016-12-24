@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="Mxp.Win.HCPListElement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Mxp.Win"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+
+    <Grid Background="#e3e3e3"
+          Margin="10"
+          Tapped="Grid_Tapped"
+          HorizontalAlignment="Stretch">
+
+        <Grid.Resources>
+            <local:AttendeeTypeToBitmapConverter x:Key="AttendeeTypeToBitmapConverter" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock x:Name="Title"
+                   Margin="10,5,20,5"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Text="{Binding VName}"
+                   Style="{StaticResource TitleTextBlockStyle}"
+                   FontSize="20"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   TextTrimming="CharacterEllipsis" />
+        <TextBlock x:Name="Reference"
+                   Margin="10,5,20,5"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Text="{Binding Reference}"
+                   Style="{StaticResource TitleTextBlockStyle}"
+                   FontSize="20"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   TextTrimming="CharacterEllipsis" />
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal">
+            <TextBlock x:Name="City"
+                       Margin="10,0,0,10"
+                       Text="{Binding City}"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       FontSize="20"
+                       FontStyle="Oblique"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top" />
+            <TextBlock Text=",  "
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       FontSize="20"
+                       FontStyle="Oblique"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top" />
+            <TextBlock x:Name="Zip"
+                       Margin="10,0,0,10"
+                       FontStyle="Oblique"
+                       Text="{Binding ZipCode}"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       FontSize="20"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top" />
+            <TextBlock Text=",  "
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       FontSize="20"
+                       FontStyle="Oblique"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top" />
+            <TextBlock x:Name="State"
+                       Margin="10,0,20,10"
+                       FontStyle="Oblique"
+                       Text="{Binding State}"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       FontSize="20"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top" />
+        </StackPanel>
+
+    </Grid>
+</UserControl>

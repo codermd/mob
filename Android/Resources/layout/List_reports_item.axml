@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:minHeight="?attr/listPreferredItemHeight">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/Title"
+            android:text="Very very awesome long name for my report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/Price"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:textColor="@color/text_color_black"
+            android:textSize="24dp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+        <TextView
+            android:id="@+id/Price"
+            android:text="20 EUR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_grey"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dip"
+            android:textColor="@color/blue"
+            android:paddingTop="10dp" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right">
+            <ImageView
+                android:id="@+id/ApprovalIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitCenter"
+                android:paddingLeft="3dp"
+                android:src="@drawable/report_approved" />
+            <ImageView
+                android:id="@+id/AcceptanceIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitCenter"
+                android:paddingLeft="3dp"
+                android:src="@drawable/report_accepted" />
+            <ImageView
+                android:id="@+id/PolicyIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitCenter"
+                android:paddingLeft="3dp"
+                android:src="@drawable/expense_is_comliant" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

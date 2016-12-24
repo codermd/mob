@@ -1,0 +1,40 @@
+﻿<UserControl
+    x:Class="Mxp.Win.AAmountUC"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mxp.Win"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:primitives="using:Coding4Fun.Toolkit.Controls">
+    <Grid Background="White">
+        <Grid.Resources>
+            <CollectionViewSource x:Name="DetailFieldsSource"
+                                  ItemsPath="ItemsField" />
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <ListView Grid.Row="0"
+                  x:Name="FieldsListView"
+                  ShowsScrollingPlaceholders="True"
+                  VerticalAlignment="Top"
+                  HorizontalContentAlignment="Stretch"
+                  VerticalContentAlignment="Stretch"
+                  SelectionMode="None"
+                  ItemContainerStyle="{StaticResource StretchedListViewItemStyle}"
+                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                  ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:DetailField HorizontalContentAlignment="Stretch"
+                                       Margin="20,10,20,10" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Name="CreateButton" Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Margin="20"  BorderBrush="#00A8C6" Foreground="#00A8C6" Click="CreateEXpense_Click"/>
+    </Grid>
+</UserControl>

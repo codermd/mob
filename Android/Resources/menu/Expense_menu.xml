@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item android:id="@+id/Action_split"
+		android:icon="@drawable/ic_action_split"
+		android:title="Split expense"
+		app:showAsAction="ifRoom" />
+
+	<item android:id="@+id/Action_unsplit"
+		android:icon="@drawable/ic_action_unsplit"
+		android:title="Unsplit expense"
+		app:showAsAction="ifRoom" />
+
+	<item android:id="@+id/Action_delete"
+		android:icon="@drawable/ic_action_delete"
+		android:title="Delete expense"
+		app:showAsAction="ifRoom" />
+
+	<item android:id="@+id/Action_copy"
+		app:showAsAction="never" />
+
+	<item android:id="@+id/Action_change_type"
+		app:showAsAction="never" />
+
+</menu>

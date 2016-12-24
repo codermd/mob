@@ -1,0 +1,150 @@
+﻿<Page x:Class="Mxp.Win.MileageDetailView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Mxp.Win"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    </Page.Resources>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Background="#00A8C6"
+              Name="TitleGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center"
+                       x:Name="Title"
+                       Foreground="White"
+                       Margin="20,5,20,10"
+                       Style="{StaticResource SubheaderTextBlockStyle}" />
+            <AppBarButton Name="MapButton"
+                          Grid.Column="1"
+                          Icon="Map"
+                          VerticalAlignment="Stretch"
+                          Height="{Binding ActualHeight, ElementName=TitleGrid}"
+                          Click="MapButton_Clicked" />
+        </Grid>
+        <Grid Row="1"
+              Margin="20">
+            <Grid.Resources>
+                <CollectionViewSource x:Name="DetailFieldsSource"
+                                      IsSourceGrouped="true"
+                                      ItemsPath="ItemsField" />
+            </Grid.Resources>
+            <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                <StackPanel>
+                    <TextBlock  x:Name="SegmentDetails"
+                                Style="{StaticResource SubheaderTextBlockStyle}" />
+                    <ListView x:Name="SegmentsListView"
+                              ShowsScrollingPlaceholders="True"
+                              VerticalAlignment="Top"
+                              HorizontalContentAlignment="Stretch"
+                              VerticalContentAlignment="Stretch"
+                              SelectionMode="None"
+                              ItemContainerStyle="{StaticResource StretchedListViewItemStyle}"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                              ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+                        <!--ItemsSource="{Binding Source={StaticResource DetailFieldsSource}}"-->
+                        <!--<ListView.ItemTemplate >
+                        <DataTemplate>
+                            <local:MileageSegmentUC HorizontalContentAlignment="Stretch" DeleteSegmentRequest="DeleteSegment" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>-->
+                    </ListView>
+                    <Grid Grid.Column="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0"
+                                x:Name="ButtonAddLocation"
+                                Height="20"
+                                BorderBrush="#00A8C6"
+                                Foreground="#00A8C6"
+                                Content="+ Location"
+                                HorizontalAlignment="Stretch"
+                                Margin="20"
+                                Click="AddLocation_Click" />
+                        <Button  Grid.Column="1"
+                                 Foreground="#00A8C6"
+                                 Height="20"
+                                 BorderBrush="Transparent"
+                                 HorizontalAlignment="Stretch"
+                                 Margin="20"
+                                 Click="GoBack_Click">
+                            <Image Source="/Assets/icons/return.png" />
+                        </Button>
+                    </Grid>
+                    <ListView x:Name="FieldsListView"
+                              ShowsScrollingPlaceholders="True"
+                              VerticalAlignment="Top"
+                              HorizontalContentAlignment="Stretch"
+                              VerticalContentAlignment="Stretch"
+                              SelectionMode="None"
+                              ItemContainerStyle="{StaticResource StretchedListViewItemStyle}"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                              ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                              ItemsSource="{Binding Source={StaticResource DetailFieldsSource}}">
+                        <ListView.GroupStyle>
+                            <GroupStyle>
+                                <GroupStyle.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Margin="0,40,0,0"
+                                                   Text="{Binding Key}"
+                                                   Style="{StaticResource SubheaderTextBlockStyle}" />
+                                    </DataTemplate>
+                                </GroupStyle.HeaderTemplate>
+                            </GroupStyle>
+                        </ListView.GroupStyle>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <local:DetailField HorizontalContentAlignment="Stretch" />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </ScrollViewer>
+            <Grid Grid.Row="1"
+                  Background="Transparent"
+                  x:Name="ProgressGrid"
+                  Visibility="Collapsed"
+                  Tapped="Grid_Tapped">
+                <ProgressRing  Foreground="#00A8C6"
+                               IsActive="True"
+                               Grid.Row="1"
+                               x:Name="ProgressRing" />
+            </Grid>
+
+        
+        </Grid>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Delete"
+                          Label="Delete"
+                          x:Name="DeleteButton"
+                          Click="DeleteButton_Click" 
+                          Visibility="Collapsed"/>
+            <AppBarButton Icon="Accept"
+                          Label="Save"
+                          x:Name="SaveButton"
+                          IsEnabled="False"
+                          Visibility="Collapsed"
+                          Click="SaveButtonClick" />
+            <AppBarButton Icon="Cancel"
+                          Label="Discard"
+                          IsEnabled="False"
+                          Visibility="Collapsed"
+                          x:Name="DiscardButton"
+                          Click="DiscardButton_Click" />
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

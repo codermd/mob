@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="cxk-wN-pdQ" customClass="AutocompleteStringFieldCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yXe-2O-gla">
+                        <rect key="frame" x="8" y="8" width="152" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="phc-uk-k0j"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Value" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="duV-sd-LnK">
+                        <rect key="frame" x="51" y="8" width="261" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="8cE-96-WQb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="yXe-2O-gla" secondAttribute="trailing" id="2NX-hb-zxm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="duV-sd-LnK" secondAttribute="bottom" id="Vir-0V-PHI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="duV-sd-LnK" secondAttribute="trailing" id="aDr-pk-Rqc"/>
+                    <constraint firstItem="yXe-2O-gla" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" id="gHZ-4h-J27"/>
+                    <constraint firstItem="duV-sd-LnK" firstAttribute="leading" secondItem="yXe-2O-gla" secondAttribute="trailing" id="l7R-Ei-Rne"/>
+                    <constraint firstItem="yXe-2O-gla" firstAttribute="bottom" secondItem="YTl-1W-gDM" secondAttribute="bottomMargin" id="pbo-rh-h6L"/>
+                    <constraint firstItem="duV-sd-LnK" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" id="sye-7U-0UH"/>
+                    <constraint firstItem="yXe-2O-gla" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" id="wBb-We-Spm"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="2NX-hb-zxm"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="TitleLabel" destination="yXe-2O-gla" id="rF9-nr-ojl"/>
+                <outlet property="ValueLabel" destination="duV-sd-LnK" id="mND-Gr-Fpp"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/listPreferredItemHeight"
+    android:padding="10dp">
+    <ImageView
+        android:id="@+id/Receipt"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="8dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_black"
+            android:textSize="24dp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/Category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/Icons"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="14dp"
+                android:textColor="@color/blue"
+                android:paddingTop="10dp" />
+            <LinearLayout
+                android:id="@+id/Icons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_alignParentRight="true"
+                android:gravity="right">
+                <ImageView
+                    android:id="@+id/CreditCardIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitEnd"
+                    android:paddingLeft="3dp"
+                    android:src="@drawable/ic_action_ic_expense_card_icon" />
+                <ImageView
+                    android:id="@+id/FlagIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitEnd"
+                    android:paddingLeft="3dp"
+                    android:src="@drawable/NoFlag" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

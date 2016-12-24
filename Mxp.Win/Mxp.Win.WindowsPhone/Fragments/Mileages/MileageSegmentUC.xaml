@@ -1,0 +1,33 @@
+﻿<UserControl
+    x:Class="Mxp.Win.MileageSegmentUC"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mxp.Win"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    
+    <Grid Background="#efefef" Margin="0,5,0,5" Loaded="GridLoaded">
+        <Grid.Resources>
+            <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <AutoSuggestBox 
+            Background="#efefef" BorderBrush="Transparent" 
+            Margin="20,5,20,5" Grid.Column="0" 
+            VerticalAlignment="Center" Foreground="#00A8C6"          
+            x:Name="SearchTB" FontSize="24"  
+            TextChanged="SearchTB_TextChanged"
+            SuggestionChosen ="SearchTB_SuggestionChosen"
+            Style="{StaticResource AutoSuggestBoxStyle1}"
+            />
+        <Image Grid.Column="1"  Source="/Assets/icons/PinMap.png"  Tapped="Image_Tapped"/>
+        <Image Grid.Column="2"  Margin="5" Source="/Assets/icons/delete96.png" Tapped="DeleteSegment_Click" x:Name="DeleteButton"/>
+    </Grid>
+</UserControl>

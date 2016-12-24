@@ -1,0 +1,209 @@
+﻿<Page x:Class="Mxp.Win.ExpenseDetailView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Mxp.Win"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      RequestedTheme="light"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="White">
+        <Grid.Resources>
+            <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Background="#00A8C6">
+            <TextBlock x:Name="Title"
+                       Foreground="White"
+                       Margin="20,5,20,10"
+                       Style="{StaticResource SubheaderTextBlockStyle}" />
+        </Grid>
+        <local:SelectionHub Grid.Row="1"
+                            Background="White"
+                            SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}"
+                            x:Name="HubExpense"
+                            Margin="0 25 0 0"
+                            SectionsInViewChanged="HubExpense_SectionsInViewChanged">
+            <HubSection  Tag="0"
+                         Foreground="Black"
+                         x:Name="DetailsSection">
+                <HubSection.Header>
+                    <TextBlock Style="{StaticResource HeaderTextBlockStyle}"
+                               x:Name="DetailsHeader" />
+                </HubSection.Header>
+                <HubSection.Resources>
+                    <CollectionViewSource x:Name="DetailFieldsSource"
+                                          IsSourceGrouped="true"
+                                          ItemsPath="ItemsField" />
+                </HubSection.Resources>
+                <DataTemplate>
+                    <Grid>
+                        <ListView x:Name="FieldsListView"
+                                  ScrollViewer.IsScrollInertiaEnabled="False"
+                                  ScrollViewer.IsDeferredScrollingEnabled="False"
+                                  Loaded="FieldListLoaded"
+                                  Margin="0 -40 0 0"
+                                  ShowsScrollingPlaceholders="True"
+                                  VirtualizingStackPanel.VirtualizationMode="Standard"
+                                  VerticalAlignment="Top"
+                                  HorizontalContentAlignment="Stretch"
+                                  VerticalContentAlignment="Stretch"
+                                  SelectionMode="None"
+                                  ItemContainerStyle="{StaticResource StretchedListViewItemStyle}"
+                                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                                  ItemsSource="{Binding Source={StaticResource DetailFieldsSource}}">
+                            <ListView.GroupStyle>
+                                <GroupStyle>
+                                    <GroupStyle.HeaderTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="0,40,0,0"
+                                                       Text="{Binding Key}"
+                                                       Style="{StaticResource SubheaderTextBlockStyle}" />
+                                        </DataTemplate>
+                                    </GroupStyle.HeaderTemplate>
+                                </GroupStyle>
+                            </ListView.GroupStyle>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <local:DetailField Margin="0,4,0,4" />
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            <HubSection Tag="1"
+                        Foreground="Black"
+                        x:Name="ReceiptsSection"
+                        Visibility="{Binding CanShowReceipts, Converter={StaticResource BoolToVisibilityConverter}}">
+                <HubSection.Header>
+                    <TextBlock  Style="{StaticResource HeaderTextBlockStyle}"
+                                x:Name="ReceiptsHeader" />
+                </HubSection.Header>
+                <DataTemplate>
+                    <Grid>
+                        <ScrollViewer>
+                            <StackPanel>
+                                <Image Source="/Assets/icons/add.png"
+                                       Height="50"
+                                       Tapped="AddReceipt_Tapped"
+                                       Name="AddReceiptButton"
+                                       Loaded="AddReceiptButton_Loaded"
+                                       Margin="4" />
+                                <local:ReceiptsGallery x:Name="ReceiptsGallery"
+                                                       Loaded="ReceiptsGallery_Loaded" />
+                            </StackPanel>
+                        </ScrollViewer>
+                        <Grid Background="Transparent"
+                              x:Name="ReceiptsProgressGrid"
+                              Visibility="Collapsed"
+                              Loaded="ReceiptsProgressGrid_Loaded"
+                              Tapped="Grid_Tapped">
+                            <ProgressRing  Foreground="#00A8C6"
+                                           Grid.Row="1"
+                                           x:Name="ReceiptsProgressRing"
+                                           Loaded="ReceiptsProgressRing_Loaded" />
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            <HubSection Tag="2"
+                        Foreground="Black"
+                        x:Name="AttendeesSection"
+                        Visibility="{Binding CanShowAttendees, Converter={StaticResource BoolToVisibilityConverter}}">
+                <HubSection.Header>
+                    <TextBlock Style="{StaticResource HeaderTextBlockStyle}"
+                               x:Name="AttendeesHeader" />
+                </HubSection.Header>
+                <DataTemplate>
+                    <ScrollViewer>
+                        <StackPanel>
+                            <TextBlock  Name="AttendeesLabel"
+                                        Loaded="SpendCatcherLabel_Loaded"
+                                        Foreground="Black"
+                                        TextWrapping="WrapWholeWords"
+                                        FontSize="20" />
+                            <Image Source="/Assets/icons/add.png"
+                                   Height="50"
+                                   Name="AddAttendeeButton"
+                                   Loaded="AddAttendeeButton_Loaded"
+                                   Tapped="AddAttendee_Tapped"
+                                   Margin="4" />
+                            <local:AttendeesGallery x:Name="AttendeesGallery"
+                                                    Loaded="AttendeesGallery_Loaded" />
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </DataTemplate>
+            </HubSection>
+        </local:SelectionHub>
+        <Grid Grid.Row="1"
+              Background="Transparent"
+              x:Name="ProgressGrid"
+              Visibility="Collapsed"
+              Tapped="Grid_Tapped">
+            <ProgressRing  Foreground="#00A8C6"
+                           Grid.Row="1"
+                           x:Name="ExpProgressRing" />
+        </Grid>
+
+
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+            <AppBarButton  Label="Split"
+                           Visibility="Collapsed"
+                           Click="SplitExpense_Click"
+                           x:Name="SplitButton">
+                <AppBarButton.Icon>
+                    <PathIcon  Data="M29.3600006103516,25.6300010681152L25.5899982452393,23.4199981689453 25.5899982452393,24.7199974060059 25.0699977874756,24.7199974060059 23.0224990844727,23.8587493896484 21.1699981689453,22.1199989318848 20.9099998474121,21.8600006103516 19.2199993133545,20.1699981689453 18.8299999237061,19.9099998474121 19.2199993133545,19.6499996185303 20.9099998474121,17.9600009918213 22.0799999237061,16.7899990081787 23.4124984741211,15.814998626709 24.939998626709,15.2299995422363 25.4599990844727,15.2299995422363 25.4599990844727,16.3999996185303 29.2299995422363,14.189998626709 25.4599990844727,11.9799995422363 25.4599990844727,13.1499996185303 25.0699977874756,13.1499996185303 23.3028106689453,13.56640625 21.8524990081787,14.3362493515015 19.6100006103516,16.3999996185303 19.4799995422363,16.5299987792969 18.5212497711182,17.5862503051758 17.6599998474121,18.3499984741211 16.7337493896484,18.8699989318848 15.7100009918213,19 9.59999942779541,19 9.59999942779541,21.0799999237061 15.7100009918213,21.0799999237061 16.6362495422363,21.2587490081787 17.6599998474121,21.7299995422363 19.3499984741211,23.2899971008301 20.6499996185303,24.7199974060059 22.7137489318848,26.1987476348877 25.0699977874756,26.7999992370605 25.4599990844727,26.7999992370605 25.4599990844727,27.9699974060059 29.3600006103516,25.6300010681152" />
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton  Label="Merge"
+                           Visibility="Collapsed"
+                           Click="UnsplitExpense_Click"
+                           x:Name="UnsplitButton">
+                <AppBarButton.Icon>
+                    <PathIcon Data="M31.8299980163574,19.6499996185303L27.5399971008301,16.9199981689453 27.5399971008301,18.3499984741211 25.7199974060059,18.3499984741211 24.6149978637695,18.1549987792969 23.5100002288818,17.5699977874756 22.5999984741211,16.8062496185303 21.689998626709,15.75 20.1299991607666,14.189998626709 17.4812488555908,12.3699989318848 14.5399990081787,11.7199993133545 9.59999942779541,11.7199993133545 9.59999942779541,14.0599994659424 14.5399990081787,14.0599994659424 16.1934375762939,14.3078117370605 17.5299987792969,14.9699993133545 19.7399978637695,17.0499992370605 20,17.3099994659424 21.9499988555908,19.2600002288818 22.3399982452393,19.6499996185303 21.9499988555908,20.0399971008301 20,21.9899978637695 18.6999988555908,23.2899971008301 16.9287490844727,24.5900001525879 14.6699981689453,25.1100006103516 9.72999954223633,25.1100006103516 9.72999954223633,27.4499969482422 14.6699981689453,27.4499969482422 16.8799991607666,27.1189041137695 18.6999988555908,26.2637481689453 21.5599994659424,23.8099994659424 22.6649990081787,22.6237487792969 23.769998550415,21.7299995422363 24.875,21.144998550415 25.9799995422363,20.9499988555908 27.7999992370605,20.9499988555908 27.7999992370605,22.1199989318848 31.8299980163574,19.6499996185303" />
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton Icon="Delete"
+                          Label="Delete"
+                          HorizontalAlignment="Left"
+                          Visibility="Collapsed"
+                          Click="DeleteExpense_Click"
+                          x:Name="DeleteButton" />
+            <AppBarButton Icon="Accept"
+                          Label="Accept"
+                          HorizontalAlignment="Left"
+                          Click="SaveChanges_Click"
+                          x:Name="SaveExpenseButton"
+                          Visibility="Collapsed" />
+            <AppBarButton Icon="Cancel"
+                          Label="Discard"
+                          HorizontalAlignment="Left"
+                          Click="DiscardChanges_Click"
+                          x:Name="DiscardExpenseButton"
+                          Visibility="Collapsed" />
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Discard"
+                              HorizontalAlignment="Left"
+                              Click="ConvertExpenseButton_OnClick"
+                              x:Name="ConvertExpenseButton"
+                              Visibility="Collapsed" />
+                <AppBarButton Label="Copy"
+                              HorizontalAlignment="Left"
+                              Click="CopyExpense_Click"
+                              x:Name="CopyExpenseButton" />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

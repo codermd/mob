@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="?attr/selectableItemBackground">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/PolicyIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/expense_is_comliant" />
+        <ImageView
+            android:id="@+id/StatusIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitEnd"
+            android:paddingLeft="3dp"
+            android:src="@drawable/report_approved" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/Title"
+                android:text="Very long and awesome category name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/Amounts"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/text_color_black"
+                android:textSize="20dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textStyle="italic" />
+            <LinearLayout
+                android:id="@+id/Amounts"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="right"
+                android:layout_alignParentRight="true">
+                <TextView
+                    android:id="@+id/AmountLC"
+                    android:text="20 GBP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_grey"
+                    android:textSize="16dp" />
+                <TextView
+                    android:id="@+id/AmountCC"
+                    android:text="20 EUR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_grey"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

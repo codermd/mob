@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="74" id="cxk-wN-pdQ" customClass="HistoryCommentCell">
+            <rect key="frame" x="0.0" y="0.0" width="182" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="182" height="73"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHa-tC-sIf">
+                        <rect key="frame" x="8" y="8" width="166" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="DJ7-FB-Lzc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztg-h7-2nq">
+                        <rect key="frame" x="8" y="29" width="166" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="nWe-vg-liE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5C-v1-5hU">
+                        <rect key="frame" x="8" y="53" width="166" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="OVl-n5-J4R"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
+                        <color key="textColor" red="0.29411764709999999" green="0.5450980392" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="i5C-v1-5hU" firstAttribute="top" secondItem="Ztg-h7-2nq" secondAttribute="bottom" id="97x-es-N1f"/>
+                    <constraint firstItem="i5C-v1-5hU" firstAttribute="bottom" secondItem="YTl-1W-gDM" secondAttribute="bottomMargin" id="TD4-bw-D6k"/>
+                    <constraint firstItem="bHa-tC-sIf" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" id="Ucw-hK-sdE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="bHa-tC-sIf" secondAttribute="trailing" id="Yvp-T2-XLn"/>
+                    <constraint firstItem="bHa-tC-sIf" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" id="jQ2-x2-YTV"/>
+                    <constraint firstItem="i5C-v1-5hU" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" id="mGw-Xz-sSt"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Ztg-h7-2nq" secondAttribute="trailing" id="qFX-jW-H5A"/>
+                    <constraint firstItem="Ztg-h7-2nq" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" id="sM8-In-f1C"/>
+                    <constraint firstItem="Ztg-h7-2nq" firstAttribute="top" secondItem="bHa-tC-sIf" secondAttribute="bottom" id="vYV-yu-FUB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="i5C-v1-5hU" secondAttribute="trailing" id="wBS-dI-8QU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="CommentHeightConstraint" destination="nWe-vg-liE" id="z5Q-DO-evD"/>
+                <outlet property="CommentLabel" destination="Ztg-h7-2nq" id="XSd-xU-NHP"/>
+                <outlet property="DateLabel" destination="i5C-v1-5hU" id="mci-6U-Bn8"/>
+                <outlet property="TitleHeightConstraint" destination="DJ7-FB-Lzc" id="64M-BH-Fbs"/>
+                <outlet property="TitleLabel" destination="bHa-tC-sIf" id="cUw-ZP-duB"/>
+            </connections>
+            <point key="canvasLocation" x="282" y="333"/>
+        </tableViewCell>
+    </objects>
+</document>

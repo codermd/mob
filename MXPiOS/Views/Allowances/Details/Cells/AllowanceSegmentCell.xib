@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllowanceSegmentCell" rowHeight="97" id="cxk-wN-pdQ" customClass="AllowanceSegmentCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlI-24-JUl">
+                        <rect key="frame" x="8" y="8" width="304" height="80"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BreakfastIcon" highlightedImage="BreakfastIconSelected" translatesAutoresizingMaskIntoConstraints="NO" id="OBz-5y-yNI">
+                                <rect key="frame" x="164" y="54" width="22" height="18"/>
+                                <color key="tintColor" red="0.070588235289999995" green="0.59607843140000005" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="DEq-Sz-Ozv"/>
+                                    <constraint firstAttribute="height" constant="18" id="nMm-nk-Q8U"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LunchIcon" highlightedImage="LunchIconSelected" translatesAutoresizingMaskIntoConstraints="NO" id="8RD-b9-I5y">
+                                <rect key="frame" x="186" y="54" width="22" height="18"/>
+                                <color key="tintColor" red="0.070588235289999995" green="0.59607843140000005" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="9RH-0a-2Xr"/>
+                                    <constraint firstAttribute="height" constant="18" id="zTw-8e-XWB"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DinnerICon" highlightedImage="DinnerIConSelected" translatesAutoresizingMaskIntoConstraints="NO" id="pOg-DK-fe3">
+                                <rect key="frame" x="208" y="54" width="22" height="18"/>
+                                <color key="tintColor" red="0.070588235289999995" green="0.59607843140000005" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="9e9-AQ-7DO"/>
+                                    <constraint firstAttribute="height" constant="18" id="psH-s3-AWx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BedICon" highlightedImage="BedIConSelected" translatesAutoresizingMaskIntoConstraints="NO" id="lX4-eK-KeD">
+                                <rect key="frame" x="230" y="54" width="22" height="18"/>
+                                <color key="tintColor" red="0.070588235289999995" green="0.59607843140000005" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="vXN-3a-HsA"/>
+                                    <constraint firstAttribute="width" constant="22" id="yWT-9f-Bdf"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InformationsIcon" highlightedImage="InformationsIconSelected" translatesAutoresizingMaskIntoConstraints="NO" id="QEl-fI-RYN">
+                                <rect key="frame" x="252" y="54" width="22" height="18"/>
+                                <color key="tintColor" red="0.070588235289999995" green="0.59607843140000005" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="3Yw-en-Ysv"/>
+                                    <constraint firstAttribute="height" constant="18" id="TeB-gK-VGO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoonIcon" highlightedImage="MoonIconSelected" translatesAutoresizingMaskIntoConstraints="NO" id="QdG-mZ-hgb">
+                                <rect key="frame" x="274" y="54" width="22" height="18"/>
+                                <color key="tintColor" red="0.070588235289999995" green="0.59607843140000005" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="OOG-1d-08G"/>
+                                    <constraint firstAttribute="height" constant="18" id="wGP-EA-Svs"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c22-oU-keB">
+                                <rect key="frame" x="5" y="5" width="294" height="31"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86H-Aj-fY1">
+                                <rect key="frame" x="5" y="52" width="27" height="16"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="11"/>
+                                <color key="textColor" red="0.070588235289999995" green="0.59607843140000005" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzk-GH-HrG">
+                                <rect key="frame" x="5" y="36" width="27" height="16"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="11"/>
+                                <color key="textColor" red="0.070588235289999995" green="0.59607843140000005" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BE.png" translatesAutoresizingMaskIntoConstraints="NO" id="fls-dR-Bav">
+                                <rect key="frame" x="284" y="0.0" width="20" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="Ucu-Bn-abJ"/>
+                                    <constraint firstAttribute="width" constant="20" id="q50-fS-UxX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QEl-fI-RYN" firstAttribute="leading" secondItem="lX4-eK-KeD" secondAttribute="trailing" id="00f-Wo-XVY"/>
+                            <constraint firstItem="OBz-5y-yNI" firstAttribute="top" secondItem="8RD-b9-I5y" secondAttribute="top" id="01d-R8-g7D"/>
+                            <constraint firstItem="8RD-b9-I5y" firstAttribute="leading" secondItem="OBz-5y-yNI" secondAttribute="trailing" id="4lP-6s-wda"/>
+                            <constraint firstAttribute="trailing" secondItem="c22-oU-keB" secondAttribute="trailing" constant="5" id="BNM-II-8xQ"/>
+                            <constraint firstItem="OBz-5y-yNI" firstAttribute="top" secondItem="QEl-fI-RYN" secondAttribute="top" id="BfR-bq-8G6"/>
+                            <constraint firstItem="Hzk-GH-HrG" firstAttribute="top" secondItem="c22-oU-keB" secondAttribute="bottom" id="DQM-Ye-iyc"/>
+                            <constraint firstItem="c22-oU-keB" firstAttribute="top" secondItem="jlI-24-JUl" secondAttribute="top" constant="5" id="G6F-eB-vcT"/>
+                            <constraint firstAttribute="height" constant="80" id="RFt-Su-kcm"/>
+                            <constraint firstItem="lX4-eK-KeD" firstAttribute="leading" secondItem="pOg-DK-fe3" secondAttribute="trailing" id="TMi-Da-Tqm"/>
+                            <constraint firstAttribute="trailing" secondItem="QdG-mZ-hgb" secondAttribute="trailing" constant="8" id="TRs-ox-BvT"/>
+                            <constraint firstItem="c22-oU-keB" firstAttribute="leading" secondItem="jlI-24-JUl" secondAttribute="leading" constant="5" id="VrL-7p-8HO"/>
+                            <constraint firstItem="fls-dR-Bav" firstAttribute="top" secondItem="jlI-24-JUl" secondAttribute="top" id="W9s-cl-ExI"/>
+                            <constraint firstItem="QdG-mZ-hgb" firstAttribute="leading" secondItem="QEl-fI-RYN" secondAttribute="trailing" id="WDU-CD-aUu"/>
+                            <constraint firstAttribute="trailing" secondItem="fls-dR-Bav" secondAttribute="trailing" id="WTh-e8-oqO"/>
+                            <constraint firstItem="OBz-5y-yNI" firstAttribute="top" secondItem="pOg-DK-fe3" secondAttribute="top" id="f4O-Hz-YFW"/>
+                            <constraint firstItem="c22-oU-keB" firstAttribute="leading" secondItem="Hzk-GH-HrG" secondAttribute="leading" id="jYF-73-Iml"/>
+                            <constraint firstItem="OBz-5y-yNI" firstAttribute="top" secondItem="lX4-eK-KeD" secondAttribute="top" id="jgm-BY-ksy"/>
+                            <constraint firstItem="OBz-5y-yNI" firstAttribute="top" secondItem="QdG-mZ-hgb" secondAttribute="top" id="sZj-Fr-wjg"/>
+                            <constraint firstAttribute="bottom" secondItem="QdG-mZ-hgb" secondAttribute="bottom" constant="8" id="szt-9m-Dyb"/>
+                            <constraint firstItem="pOg-DK-fe3" firstAttribute="leading" secondItem="8RD-b9-I5y" secondAttribute="trailing" id="uyV-pa-NXM"/>
+                            <constraint firstItem="86H-Aj-fY1" firstAttribute="leading" secondItem="Hzk-GH-HrG" secondAttribute="leading" id="xAr-MO-mMJ"/>
+                            <constraint firstItem="86H-Aj-fY1" firstAttribute="top" secondItem="Hzk-GH-HrG" secondAttribute="bottom" id="yKs-RV-myZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="jlI-24-JUl" secondAttribute="bottom" id="3hx-Z3-zCh"/>
+                    <constraint firstItem="jlI-24-JUl" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" id="LBg-Sp-4Dj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jlI-24-JUl" secondAttribute="trailing" id="SpQ-E3-8vX"/>
+                    <constraint firstItem="jlI-24-JUl" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" id="UMH-a7-bpP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="AllowanceContainerBox" destination="jlI-24-JUl" id="ZdU-bh-1VL"/>
+                <outlet property="AmoutLabel" destination="c22-oU-keB" id="IO6-z0-yBg"/>
+                <outlet property="BedWidth" destination="yWT-9f-Bdf" id="Kmp-Ju-8uI"/>
+                <outlet property="BreakfastImage" destination="OBz-5y-yNI" id="3gX-wc-eac"/>
+                <outlet property="BreakfastWidth" destination="DEq-Sz-Ozv" id="2by-t8-Chv"/>
+                <outlet property="CountryImage" destination="fls-dR-Bav" id="rjN-N5-UiZ"/>
+                <outlet property="DinnerImage" destination="pOg-DK-fe3" id="pju-0E-elr"/>
+                <outlet property="DinnerWidth" destination="9e9-AQ-7DO" id="F7c-7l-hA5"/>
+                <outlet property="FromLabel" destination="Hzk-GH-HrG" id="TFx-0Q-7GR"/>
+                <outlet property="InfoImage" destination="QEl-fI-RYN" id="4Cg-MJ-oq3"/>
+                <outlet property="InformationWidth" destination="3Yw-en-Ysv" id="og4-6g-Pvc"/>
+                <outlet property="LodgingImage" destination="lX4-eK-KeD" id="pA6-Sm-jZb"/>
+                <outlet property="LunchImage" destination="8RD-b9-I5y" id="a51-M8-9EC"/>
+                <outlet property="LunchWidth" destination="9RH-0a-2Xr" id="BGz-Cg-ilU"/>
+                <outlet property="MoonWidth" destination="OOG-1d-08G" id="suP-EQ-hnK"/>
+                <outlet property="ToLabel" destination="86H-Aj-fY1" id="ejZ-p6-PXi"/>
+                <outlet property="WorkNightImage" destination="QdG-mZ-hgb" id="pZr-8x-rpP"/>
+            </connections>
+            <point key="canvasLocation" x="340" y="467.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="BE.png" width="15" height="10"/>
+        <image name="BedICon" width="20" height="20"/>
+        <image name="BedIConSelected" width="20" height="20"/>
+        <image name="BreakfastIcon" width="20" height="20"/>
+        <image name="BreakfastIconSelected" width="20" height="20"/>
+        <image name="DinnerICon" width="20" height="20"/>
+        <image name="DinnerIConSelected" width="20" height="20"/>
+        <image name="InformationsIcon" width="20" height="20"/>
+        <image name="InformationsIconSelected" width="20" height="20"/>
+        <image name="LunchIcon" width="20" height="20"/>
+        <image name="LunchIconSelected" width="20" height="20"/>
+        <image name="MoonIcon" width="20" height="20"/>
+        <image name="MoonIconSelected" width="20" height="20"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="Mxp.Win.ReceiptsGallery"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Mxp.Win"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+
+    <!--<UserControl.Resources>
+        <DataTemplate x:Key="ImageGalleryDataTemplate">
+            <Border Background="#FFFFFF"
+                    Margin="5">
+                <Image x:Name="Img"
+                       Width="150"
+                       Height="150"
+                       Stretch="UniformToFill"
+                       Source="{Binding}"
+                       Tapped="Img_Tapped" />
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>-->
+    <Grid>
+
+        <GridView x:Name="ImageGalleryGrid"
+                  Width="350"
+                  VirtualizingStackPanel.VirtualizationMode="Recycling"
+                  SelectionMode="Single"
+                  IsItemClickEnabled="True">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Border Width="150"
+                            Height="150"
+                            Margin="4">
+                        <local:SafeImage SafePath="{Binding ImageUrl}"
+                                         Tapped="SafeImage_Tapped" />
+                    </Border>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        <ProgressRing Foreground="#00A8C6"
+                      Name="ProgressRing" />
+    </Grid>
+</UserControl>

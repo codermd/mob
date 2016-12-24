@@ -1,0 +1,1888 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{70BE484D-B691-474A-89EC-8331E985D7E9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MXPiOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>MXPiOS</AssemblyName>
+    <XamarinInsightsApiKey>b843b42daee013c2f25dddfcd15bc9df560fb7e1</XamarinInsightsApiKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchExtraArgs>--linkskip=Mxp.Core --linkskip=MXPiOS --linkskip=SpendCatcher</MtouchExtraArgs>
+    <MtouchFloat32>true</MtouchFloat32>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType></DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchFloat32>true</MtouchFloat32>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchExtraArgs>--linkskip=Mxp.Core --linkskip=MXPiOS --linkskip=SpendCatcher</MtouchExtraArgs>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchLink>Full</MtouchLink>
+    <IpaPackageName>
+    </IpaPackageName>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType></DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchExtraArgs>--linkskip=Mxp.Core --linkskip=MXPiOS --linkskip=SpendCatcher</MtouchExtraArgs>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchFloat32>true</MtouchFloat32>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchExtraArgs>--linkskip=Mxp.Core --linkskip=MXPiOS --linkskip=SpendCatcher</MtouchExtraArgs>
+    <MtouchExtraArgs>--linkskip=Mxp.Core --linkskip=MXPiOS --linkskip=SpendCatcher</MtouchExtraArgs>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchLink>Full</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Ad-Hoc</OutputPath>
+    <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <MtouchExtraArgs>--linkskip=Mxp.Core --linkskip=MXPiOS --linkskip=SpendCatcher</MtouchExtraArgs>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <MtouchExtraArgs>--linkskip=Mxp.Core --linkskip=MXPiOS --linkskip=SpendCatcher</MtouchExtraArgs>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.11.2\lib\Xamarin.iOS10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="PLCrashReporterUnifiedBinding">
+      <HintPath>..\packages\Xamarin.Insights.1.11.2\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CSharp" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows" />
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.1.5.1.6471\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.1.5.1.6471\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.1.5.1.6471\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.1.5.1.6471\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="SDWebImage">
+      <HintPath>..\packages\Xamarin.SDWebImage.3.7.5\lib\Xamarin.iOS\SDWebImage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.19.2\lib\Xamarin.iOS10\Calabash.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AddMapMileage.imageset\AddMapMileage.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AddMapMileage.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ApprovalsIconTab.imageset\approvalIconTab.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ApprovalsIconTab.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AttendeeExpenseCell.imageset\AttendeeExpenseCell.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\BedICon.imageset\BedIcon.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\BedICon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\BedIConSelected.imageset\BedIconSelected.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\BedIConSelected.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\BreakfastIcon.imageset\BreakfastICon.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\BreakfastIcon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\BreakfastIconSelected.imageset\BreakfastIConSelected.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\BreakfastIconSelected.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\CheckmarkSelected.imageset\CheckmarkSelected.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\CheckmarkSelected.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\CheckmarkUnselected.imageset\CheckmarkUnselected.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\CheckmarkUnselected.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\CloseICon.imageset\CloseICon.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\CloseICon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\CreditCardIcon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\CreditCardIcon.imageset\CreditCardIcon.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\DinnerICon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\DinnerICon.imageset\DinnerIcon.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\DinnerIConSelected.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\DinnerIConSelected.imageset\DinnerIconSelected.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\DocumentExpenseCell.imageset\DocumentExpenseCell.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\EmptyIcon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\EmptyIcon.imageset\EmptyIcon.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ExpenseIsCompliant.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ExpenseIsCompliant.imageset\ExpenseIsCompliant.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ExpenseNotCompliant.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ExpenseNotCompliant.imageset\ExpenseNotCompliant.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ExpenseNotCompliantPolicy.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ExpenseNotCompliantPolicy.imageset\ExpenseNotCompliantPolicy.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ExpensesIconTab.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ExpensesIconTab.imageset\expenseIconTab.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\InformationsIcon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\InformationsIcon.imageset\InformationsIcon.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\InformationsIconSelected.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\InformationsIconSelected.imageset\InformationsIconSelected.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LoadingImage.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LoadingImage.imageset\LoadingView.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LunchIcon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LunchIcon.imageset\LunchIcon.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LunchIconSelected.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LunchIconSelected.imageset\LunchIconSelected.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\MoonIcon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\MoonIcon.imageset\MoonIcon.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\MoonIconSelected.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\MoonIconSelected.imageset\MoonIconSelected.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\PinMap.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\PinMap.imageset\PinMap.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportAcceptedByController.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportAcceptedByController.imageset\ReportAcceptedByController.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportApprovalIsPending.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportApprovalIsPending.imageset\ReportApprovalIsPending.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportHasBeenApproved.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportHasBeenApproved.imageset\ReportHasBeenApproved.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportHasBeenOrange.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportHasBeenOrange.imageset\ReportHasBeenOrange.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportHasBeenRefused.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportHasBeenRefused.imageset\ReportHasBeenRefused.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportIsPending.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportIsPending.imageset\ReportIsPending.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportRejectedByController.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportRejectedByController.imageset\ReportRejectedByController.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportsIconTab.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ReportsIconTab.imageset\reportsIconTab.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\SegmentArrow.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\SegmentArrow.imageset\SegmentArrow.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\SettingsIconTab.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\SettingsIconTab.imageset\settingsIconTab.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\1024-748.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\1024-768.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\152-152.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\1536-2008.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\1536-2048.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\2048-1536.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\2084-1469.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\76-76.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\768-1004.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\768-1024.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-568h%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Landscape.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Landscape%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Portrait.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Portrait%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Views\Allowances\Details\AllowanceViewController.xib" />
+    <InterfaceDefinition Include="Views\Allowances\Details\Cells\AllowanceSegmentCell.xib" />
+    <InterfaceDefinition Include="Views\Allowances\Details\Segment\AllowanceSegmentViewController.xib" />
+    <InterfaceDefinition Include="Views\Approvals\Details\ReportApprovalViewController.xib" />
+    <InterfaceDefinition Include="Views\Approvals\Details\Travels\ApprovalTravelComment.xib" />
+    <InterfaceDefinition Include="Views\Approvals\Details\Travels\TravelViewController.xib" />
+    <InterfaceDefinition Include="Views\Approvals\List\Cells\ReportApprovalCell.xib" />
+    <InterfaceDefinition Include="Views\Approvals\List\Cells\TravelApprovalCell.xib" />
+    <InterfaceDefinition Include="Views\Auth\WebViewController.xib" />
+    <InterfaceDefinition Include="Views\Expenses\Details\iPhone\ExpenseDetailsStoryboard.storyboard" />
+    <InterfaceDefinition Include="Views\Expenses\List\ExpenseCell.xib" />
+    <InterfaceDefinition Include="Views\Expenses\List\ExpenseItemCell.xib" />
+    <InterfaceDefinition Include="Views\Expenses\Split\SplitExpenceItemCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\AmountFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\BooleanFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\CategoryFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\ComboFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\CountryFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\CurrencyFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\DateFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\DecimalFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\IntegerFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\LongStringFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\LookupFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\PolicyTipFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\StringFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\SubViewControllers\AmountTableViewController.xib" />
+    <InterfaceDefinition Include="Views\Fields\SubViewControllers\LongStringViewController.xib" />
+    <InterfaceDefinition Include="Views\Fields\SubViewControllers\LookupViewController.xib" />
+    <InterfaceDefinition Include="Views\Main\IPadMainStoryBoard.storyboard" />
+    <InterfaceDefinition Include="Views\Main\MainStoryBoard.storyboard" />
+    <InterfaceDefinition Include="Views\Main\SplashScreenViewController.xib" />
+    <InterfaceDefinition Include="Views\Mileage\Details\MileageViewController.xib" />
+    <InterfaceDefinition Include="Views\Mileage\Details\SearchLocationViewController.xib" />
+    <InterfaceDefinition Include="Views\Mileage\Details\SegmentsMapViewController.xib" />
+    <InterfaceDefinition Include="Views\Mileage\Details\Sources\AddReturningCell.xib" />
+    <InterfaceDefinition Include="Views\Mileage\Details\Sources\CurrentLocationCell.xib" />
+    <InterfaceDefinition Include="Views\Mileage\Details\Sources\MileageAddSegmentCell.xib" />
+    <InterfaceDefinition Include="Views\Mileage\Details\Sources\MileageSegmentCell.xib" />
+    <InterfaceDefinition Include="Views\Mileage\Details\Sources\MileageShowMapCell.xib" />
+    <InterfaceDefinition Include="Views\Receipts\Details\ReceiptGalleryViewController.xib" />
+    <InterfaceDefinition Include="Views\Receipts\List\Cells\AddReceiptCell.xib" />
+    <InterfaceDefinition Include="Views\Receipts\List\Cells\ReceiptCell.xib" />
+    <InterfaceDefinition Include="Views\Reports\Details\Expenses\AddExpenseCell.xib" />
+    <InterfaceDefinition Include="Views\Reports\Details\Expenses\SelectAllCell.xib" />
+    <InterfaceDefinition Include="Views\Reports\Details\History\HistoryDetailsViewController.xib" />
+    <InterfaceDefinition Include="Views\Reports\Details\ReportDetails.storyboard" />
+    <InterfaceDefinition Include="Views\Reports\Lists\Cells\ReportCell.xib" />
+    <InterfaceDefinition Include="Views\Settings\IconLegendCell.xib" />
+    <InterfaceDefinition Include="Views\SharedCells\EmptyCell.xib" />
+    <InterfaceDefinition Include="Views\Utils\DateInputView.xib" />
+    <InterfaceDefinition Include="Views\Utils\DefaultCell.xib" />
+    <InterfaceDefinition Include="Views\Utils\LoadingView.xib" />
+    <InterfaceDefinition Include="Resources\Views\Expenses\Details\iPad\IPadExpenseDetailsStoryboard.storyboard" />
+    <InterfaceDefinition Include="Resources\Views\Expenses\Details\SubControllers\Details\Cells\FieldCells\BooleanValueCell.xib" />
+    <InterfaceDefinition Include="Resources\Views\Expenses\Details\SubControllers\Details\Cells\FieldCells\ComboValueCell.xib" />
+    <InterfaceDefinition Include="Resources\Views\Expenses\Details\SubControllers\Details\Cells\FieldCells\DateValueCell.xib" />
+    <InterfaceDefinition Include="Resources\Views\Expenses\Details\SubControllers\Details\Cells\FieldCells\DecimalValueCell.xib" />
+    <InterfaceDefinition Include="Resources\Views\Expenses\Details\SubControllers\Details\Cells\FieldCells\FieldCell.xib" />
+    <InterfaceDefinition Include="Resources\Views\Expenses\Details\SubControllers\Details\Cells\MainCells\DateDetailsCell.xib" />
+    <InterfaceDefinition Include="Resources\Views\Expenses\Details\SubControllers\Details\Cells\MainCells\DetailsCell.xib" />
+    <InterfaceDefinition Include="Resources\Views\Expenses\Details\SubControllers\Details\Mileage\Cells\MileageNumberStaticCell.xib" />
+    <InterfaceDefinition Include="Resources\Views\Mileage\Details\Cells\MileageNumberStaticCell.xib" />
+    <InterfaceDefinition Include="Resources\Views\Reports\Details\ReportDetailsViewController.xib" />
+    <InterfaceDefinition Include="Resources\Views\Utils\ToolBarView.xib" />
+    <InterfaceDefinition Include="Views\Expenses\List\SpendCatcherExpenseCell.xib" />
+    <InterfaceDefinition Include="Resources\Main.storyboard" />
+    <InterfaceDefinition Include="Views\Utils\CountryCell.xib" />
+    <InterfaceDefinition Include="Views\Reports\Details\History\HistoryCommentCell.xib" />
+    <InterfaceDefinition Include="Resources\Views\Expenses\Details\Shared\SubControllers\Attendees\Cells\AttendeeCell.xib" />
+    <InterfaceDefinition Include="Views\Expenses\List\SpendCatcherViewController.xib" />
+    <InterfaceDefinition Include="Views\Expenses\List\SpendCatcherHeaderCount.xib" />
+    <InterfaceDefinition Include="Views\Expenses\Details\Shared\Attendees\Cells\AddAttendeeButtonCell.xib" />
+    <InterfaceDefinition Include="Views\Expenses\Details\Shared\Attendees\Cells\AttendeeItemCell.xib" />
+    <InterfaceDefinition Include="Views\Expenses\Details\Shared\Attendees\Lists\BusinessFormViewController.xib" />
+    <InterfaceDefinition Include="Views\Expenses\Details\Shared\Attendees\Lists\HCPAttendeeCell.xib" />
+    <InterfaceDefinition Include="Views\Expenses\Details\Shared\Attendees\Lists\HCUViewController.xib" />
+    <InterfaceDefinition Include="Views\Expenses\Details\Shared\Attendees\Lists\IPhoneHCPAttendeeCell.xib" />
+    <InterfaceDefinition Include="Views\Expenses\Details\Shared\Attendees\Lists\SpouseViewController.xib" />
+    <InterfaceDefinition Include="Views\Expenses\Details\Shared\Attendees\details\AttendeeDetailsViewController.xib" />
+    <InterfaceDefinition Include="Views\Expenses\Details\Shared\Attendees\Lists\HCRelatedAttendeeViewController.xib" />
+    <InterfaceDefinition Include="Resources\Views\Expenses\Details\Shared\Attendees\Lists\HCPViewController.xib" />
+    <InterfaceDefinition Include="Resources\Views\Expenses\Details\Shared\Attendees\Lists\HCOViewController.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\AutocompleteStringFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\SubViewControllers\AutocompleteStringViewController.xib" />
+    <InterfaceDefinition Include="Views\Fields\Cells\FullTextFieldCell.xib" />
+    <InterfaceDefinition Include="Views\Fields\SubViewControllers\ProductsViewController.xib" />
+    <InterfaceDefinition Include="Resources\Views\Fields\Wrappers\ProductsViewController.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MileageDetailsTableViewController.cs" />
+    <Compile Include="MileageDetailsTableViewController.designer.cs">
+      <DependentUpon>MileageDetailsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllowanceDetailsTableViewController.cs" />
+    <Compile Include="AllowanceDetailsTableViewController.designer.cs">
+      <DependentUpon>AllowanceDetailsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Allowances\Creation\AllowanceCreationTableViewController.cs" />
+    <Compile Include="Views\Allowances\Details\AllowanceViewController.cs" />
+    <Compile Include="Views\Allowances\Details\AllowanceViewController.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Allowances\Details\AllowanceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Allowances\Details\Cells\AllowanceSegmentCell.cs" />
+    <Compile Include="Views\Allowances\Details\Cells\AllowanceSegmentCell.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Expenses\Details\SubControllers\Details\Allowance\Cells\AllowanceSegmentCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Allowances\Details\Segment\AllowanceSegmentTableViewController.cs" />
+    <Compile Include="Views\Allowances\Details\Segment\AllowanceSegmentTableViewController.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Expenses\Details\SubControllers\Details\Allowance\Segment\AllowanceSegmentTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Allowances\Details\Segment\AllowanceSegmentViewController.cs" />
+    <Compile Include="Views\Allowances\Details\Segment\AllowanceSegmentViewController.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Allowances\Details\Segment\AllowanceSegmentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Allowances\Details\Sources\AllowanceSegmentsSource.cs" />
+    <Compile Include="Views\Approvals\Details\ReportApprovalViewController.cs" />
+    <Compile Include="Views\Approvals\Details\ReportApprovalViewController.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Approvals\Details\ReportApprovalViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Approvals\Details\Travels\ApprovalTravelComment.cs" />
+    <Compile Include="Views\Approvals\Details\Travels\ApprovalTravelComment.designer.cs" />
+    <Compile Include="Views\Approvals\Details\Travels\TravelViewController.cs" />
+    <Compile Include="Views\Approvals\Details\Travels\TravelViewController.designer.cs" />
+    <Compile Include="Views\Approvals\List\ApprovalsViewController.cs" />
+    <Compile Include="Views\Approvals\List\ApprovalsViewController.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Approvals\List\ApprovalsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Approvals\List\Cells\ReportApprovalCell.cs" />
+    <Compile Include="Views\Approvals\List\Cells\ReportApprovalCell.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Approvals\List\Cells\ReportApprovalCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Approvals\List\Cells\TravelApprovalCell.cs" />
+    <Compile Include="Views\Approvals\List\Cells\TravelApprovalCell.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Approvals\List\Cells\TravelApprovalCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Approvals\Master\IPadApprovalsSplitViewController.cs" />
+    <Compile Include="Views\Approvals\Master\IPadApprovalsSplitViewController.designer.cs" />
+    <Compile Include="Views\Auth\ForgotPasswordViewController.cs" />
+    <Compile Include="Views\Auth\ForgotPasswordViewController.designer.cs">
+      <DependentUpon>..\..\..\iOS\Views\Auth\ForgotPasswordViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Auth\LoginViewController.cs" />
+    <Compile Include="Views\Auth\LoginViewController.designer.cs">
+      <DependentUpon>..\..\..\iOS\Views\Auth\LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Auth\WebViewController.cs" />
+    <Compile Include="Views\Auth\WebViewController.designer.cs">
+      <DependentUpon>..\..\..\iOS\Views\Auth\WebViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Expenses\Creation\ChooseAmoutViewController.cs" />
+    <Compile Include="Views\Expenses\Creation\ChooseCategoryTableViewControllerController.cs" />
+    <Compile Include="Views\Expenses\Creation\ChooseCountryTableViewController.cs" />
+    <Compile Include="Views\Expenses\Details\iPad\IPadExpenseDetailsTableViewController.cs" />
+    <Compile Include="Views\Expenses\Details\iPad\IPadExpenseDetailsTableViewController.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Expenses\Details\iPad\IPadExpenseDetailsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Expenses\Details\iPad\IpadExpenseDetailViewController.cs" />
+    <Compile Include="Views\Expenses\Details\iPad\IpadExpenseDetailViewController.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Expenses\Details\iPad\IpadExpenseDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Expenses\Details\iPhone\AttendeesTableViewController.cs" />
+    <Compile Include="Views\Expenses\Details\iPhone\AttendeesTableViewController.designer.cs" />
+    <Compile Include="Views\Expenses\Details\iPhone\ExpenseDetailViewController.cs" />
+    <Compile Include="Views\Expenses\Details\iPhone\ExpenseDetailViewController.designer.cs" />
+    <Compile Include="Views\Expenses\List\ExpenseCell.cs" />
+    <Compile Include="Views\Expenses\List\ExpenseCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Expenses\List\ExpenseCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Expenses\List\ExpenseItemCell.cs" />
+    <Compile Include="Views\Expenses\List\ExpenseItemCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Expenses\List\ExpenseItemCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Expenses\List\ExpensesTableViewController.cs" />
+    <Compile Include="Views\Expenses\List\ExpensesTableViewController.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Expenses\List\ExpensesTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Expenses\List\IPadExpensesTableViewController.cs" />
+    <Compile Include="Views\Expenses\Master\IPadSplitExpenseViewController.cs" />
+    <Compile Include="Views\Expenses\Master\IPadSplitExpenseViewController.designer.cs" />
+    <Compile Include="Views\Expenses\Split\CategoriesChooserSplit.cs" />
+    <Compile Include="Views\Expenses\Split\ChooseAmoutSplitViewController.cs" />
+    <Compile Include="Views\Expenses\Split\SplitExpenceItemCell.cs" />
+    <Compile Include="Views\Expenses\Split\SplitExpenceItemCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Expenses\Split\SplitExpenceItemCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Expenses\Split\SplitTableViewController.cs" />
+    <Compile Include="Views\Fields\Cells\AmountFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\AmountFieldCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\Cells\AmountFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Cells\BooleanFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\BooleanFieldCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\Cells\BooleanFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Cells\CategoryFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\CategoryFieldCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\Cells\CategoryFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Cells\ComboFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\ComboFieldCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\Cells\ComboFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Cells\CountryFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\CountryFieldCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\Cells\CountryFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Cells\CurrencyFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\CurrencyFieldCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\Cells\CurrencyFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Cells\DateFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\DateFieldCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\Cells\DateFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Cells\DecimalFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\DecimalFieldCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\Cells\DecimalFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Cells\IFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\IntegerFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\IntegerFieldCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\Cells\IntegerFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Cells\LongStringFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\LongStringFieldCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\Cells\LongStringFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Cells\LookupFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\LookupFieldCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\Cells\LookupFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Cells\PolicyTipFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\PolicyTipFieldCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\Cells\PolicyTipFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Cells\StringFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\StringFieldCell.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\Cells\StringFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\FieldFactory.cs" />
+    <Compile Include="Views\Fields\SectionedFieldsSource.cs" />
+    <Compile Include="Views\Fields\SectionFieldsSource.cs" />
+    <Compile Include="Views\Fields\SubViewControllers\AmountTableViewController.cs" />
+    <Compile Include="Views\Fields\SubViewControllers\AmountTableViewController.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\SubViewControllers\AmountTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\SubViewControllers\CountriesTableViewController.cs" />
+    <Compile Include="Views\Fields\SubViewControllers\CurrenciesTableViewController.cs" />
+    <Compile Include="Views\Fields\SubViewControllers\LongStringViewController.cs" />
+    <Compile Include="Views\Fields\SubViewControllers\LongStringViewController.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\SubViewControllers\LongStringViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\SubViewControllers\LookupViewController.cs" />
+    <Compile Include="Views\Fields\SubViewControllers\LookupViewController.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Fields\SubViewControllers\LookupViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Wrappers\AmountDataFieldCell.cs" />
+    <Compile Include="Views\Fields\Wrappers\BooleanDataFieldCell.cs" />
+    <Compile Include="Views\Fields\Wrappers\CategoryDataFieldCell.cs" />
+    <Compile Include="Views\Fields\Wrappers\ComboDataFieldCell.cs" />
+    <Compile Include="Views\Fields\Wrappers\CountriesDataFieldCell.cs" />
+    <Compile Include="Views\Fields\Wrappers\CurrencyDataFieldCell.cs" />
+    <Compile Include="Views\Fields\Wrappers\DataFieldCell.cs" />
+    <Compile Include="Views\Fields\Wrappers\DateDataFieldCell.cs" />
+    <Compile Include="Views\Fields\Wrappers\DecimalDataFieldCell.cs" />
+    <Compile Include="Views\Fields\Wrappers\IntegerDataFieldCell.cs" />
+    <Compile Include="Views\Fields\Wrappers\LongStringDataFieldCell.cs" />
+    <Compile Include="Views\Fields\Wrappers\LookupDataFieldCell.cs" />
+    <Compile Include="Views\Fields\Wrappers\PolicyTipDataFieldCell.cs" />
+    <Compile Include="Views\Fields\Wrappers\StringDataFieldCell.cs" />
+    <Compile Include="Views\Main\ApparenceConfiguration.cs" />
+    <Compile Include="Views\Main\Main.cs" />
+    <Compile Include="Views\Main\MainNavigationController.cs" />
+    <Compile Include="Views\Main\MainNavigationController.designer.cs">
+      <DependentUpon>..\..\..\iOS\Views\Main\MainNavigationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\MainTabBarControllerView.cs" />
+    <Compile Include="Views\Main\MainTabBarControllerView.designer.cs" />
+    <Compile Include="Views\Main\MXPViewController.cs" />
+    <Compile Include="Views\Mileage\Details\CreateSegmentViewController.cs" />
+    <Compile Include="Views\Mileage\Details\CreateSegmentViewController.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Mileage\Details\CreateSegmentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mileage\Details\MileageViewController.cs" />
+    <Compile Include="Views\Mileage\Details\MileageViewController.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Mileage\Details\MileageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mileage\Details\SearchLocationViewController.cs" />
+    <Compile Include="Views\Mileage\Details\SearchLocationViewController.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Mileage\Details\SearchLocationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mileage\Details\SegmentsMapViewController.cs" />
+    <Compile Include="Views\Mileage\Details\SegmentsMapViewController.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Mileage\Details\SegmentsMapViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mileage\Details\Sources\AddReturningCell.cs" />
+    <Compile Include="Views\Mileage\Details\Sources\AddReturningCell.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Mileage\Details\Sources\AddReturningCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mileage\Details\Sources\CurrentLocationCell.cs" />
+    <Compile Include="Views\Mileage\Details\Sources\CurrentLocationCell.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Mileage\Details\Sources\CurrentLocationCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mileage\Details\Sources\MileageAddSegmentCell.cs" />
+    <Compile Include="Views\Mileage\Details\Sources\MileageAddSegmentCell.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Mileage\Details\Sources\MileageAddSegmentCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mileage\Details\Sources\MileageSegmentCell.cs" />
+    <Compile Include="Views\Mileage\Details\Sources\MileageSegmentCell.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Mileage\Details\Sources\MileageSegmentCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mileage\Details\Sources\MileageShowMapCell.cs" />
+    <Compile Include="Views\Mileage\Details\Sources\MileageShowMapCell.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Mileage\Details\Sources\MileageShowMapCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mileage\Details\Sources\SegmentLocationCell.cs" />
+    <Compile Include="Views\Mileage\Details\Sources\SegmentsSource.cs" />
+    <Compile Include="Views\Receipts\Details\ReceiptGalleryViewController.cs" />
+    <Compile Include="Views\Receipts\Details\ReceiptGalleryViewController.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Receipts\Details\ReceiptGalleryViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Receipts\List\Cells\AddReceiptCell.cs" />
+    <Compile Include="Views\Receipts\List\Cells\AddReceiptCell.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Receipts\List\Cells\AddReceiptCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Receipts\List\Cells\GalleryViewController.cs" />
+    <Compile Include="Views\Receipts\List\Cells\GalleryViewController.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Receipts\List\Cells\GalleryViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Receipts\List\Cells\ReceiptCell.cs" />
+    <Compile Include="Views\Receipts\List\Cells\ReceiptCell.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Receipts\List\Cells\ReceiptCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Receipts\List\ReceiptsCollectionSource.cs" />
+    <Compile Include="Views\Receipts\List\ReceiptsFlowLayout.cs" />
+    <Compile Include="Views\Reports\Details\Details\ReportDetailsTableViewController.cs" />
+    <Compile Include="Views\Reports\Details\Details\ReportDetailsTableViewController.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Reports\Details\Details\ReportDetailsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Details\Expenses\AddExpenseCell.cs" />
+    <Compile Include="Views\Reports\Details\Expenses\AddExpenseCell.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Reports\Details\Expenses\AddExpenseCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Details\Expenses\ApprovedExpenseSectionSource.cs" />
+    <Compile Include="Views\Reports\Details\Expenses\ApproveExpensesTableViewController.cs" />
+    <Compile Include="Views\Reports\Details\Expenses\EditableExpenseSectionSource.cs" />
+    <Compile Include="Views\Reports\Details\Expenses\ExpensesManagerTableViewController.cs" />
+    <Compile Include="Views\Reports\Details\Expenses\ExpensesManagerTableViewController.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Reports\Details\Expenses\ExpensesManagerTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Details\Expenses\SelectableExpensesTableViewController.cs" />
+    <Compile Include="Views\Reports\Details\Expenses\SelectAllCell.cs" />
+    <Compile Include="Views\Reports\Details\Expenses\SelectAllCell.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Reports\Details\Expenses\SelectAllCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Details\History\HistoryDetailsViewController.cs" />
+    <Compile Include="Views\Reports\Details\History\HistoryDetailsViewController.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Reports\Details\History\HistoryDetailsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Details\History\HistoryTableViewController.cs" />
+    <Compile Include="Views\Reports\Details\History\HistoryTableViewController.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Reports\Details\History\HistoryTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Details\IReportDetailsSubController.cs" />
+    <Compile Include="Views\Reports\Details\Receipts\ReportReceiptsCollectionViewController.cs" />
+    <Compile Include="Views\Reports\Details\Receipts\ReportReceiptsCollectionViewController.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Reports\Details\Receipts\ReportReceiptsCollectionViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Details\ReportDetailsViewController.cs" />
+    <Compile Include="Views\Reports\Details\ReportDetailsViewController.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Reports\Details\ReportDetailsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Lists\Cells\ReportCell.cs" />
+    <Compile Include="Views\Reports\Lists\Cells\ReportCell.designer.cs">
+      <DependentUpon>..\..\..\..\..\iOS\Views\Reports\Cells\ReportCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Lists\ReportsTableViewSource.cs" />
+    <Compile Include="Views\Reports\Lists\ReportsViewController.cs" />
+    <Compile Include="Views\Reports\Lists\ReportsViewController.designer.cs">
+      <DependentUpon>..\..\..\..\iOS\Views\Reports\Lists\ReportsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Master\IPadReportSplitViewController.cs" />
+    <Compile Include="Views\Reports\Master\IPadReportSplitViewController.designer.cs" />
+    <Compile Include="Views\Settings\IconLegendCell.cs" />
+    <Compile Include="Views\Settings\IconLegendCell.designer.cs">
+      <DependentUpon>..\..\..\iOS\Views\Settings\IconLegendCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\IconLegendsTableSource.cs" />
+    <Compile Include="Views\Settings\IconsLegentTableViewController.cs" />
+    <Compile Include="Views\Settings\IconsLegentTableViewController.designer.cs">
+      <DependentUpon>..\..\..\iOS\Views\Settings\IconsLegentTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsViewController.cs" />
+    <Compile Include="Views\Settings\SettingsViewController.designer.cs">
+      <DependentUpon>..\..\..\iOS\Views\Settings\SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SharedCells\EmptyCell.cs" />
+    <Compile Include="Views\SharedCells\EmptyCell.designer.cs">
+      <DependentUpon>..\..\..\iOS\Views\SharedCells\EmptyCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Utils\ActionnablesWrapper.cs" />
+    <Compile Include="Views\Utils\ActionsTableView.cs" />
+    <Compile Include="Views\Utils\CategoriesSectionSource.cs" />
+    <Compile Include="Views\Utils\CountriesSectionSource.cs" />
+    <Compile Include="Views\Utils\CurrenciesSectionSource.cs" />
+    <Compile Include="Views\Utils\DateTimeExtensions.cs" />
+    <Compile Include="Views\Utils\DefaultCell.cs" />
+    <Compile Include="Views\Utils\DefaultCell.designer.cs">
+      <DependentUpon>..\..\..\iOS\Views\Utils\DefaultCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Utils\DirectionsExtentions.cs" />
+    <Compile Include="Views\Utils\DoneToolBar.cs" />
+    <Compile Include="Views\Utils\LoadingView.cs" />
+    <Compile Include="Views\Utils\LoadingView.designer.cs">
+      <DependentUpon>..\..\..\iOS\Views\Utils\LoadingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Utils\LoggedUserFileIO.cs" />
+    <Compile Include="Views\Utils\MXPDefaultCell.cs" />
+    <Compile Include="Views\Utils\ObservableTableViewSource.cs" />
+    <Compile Include="Views\Utils\SectionSource.cs" />
+    <Compile Include="Views\Utils\SegmentPinWrapper.cs" />
+    <Compile Include="Views\Utils\ServiceAppVersion.cs" />
+    <Compile Include="Views\Utils\TableSectionsSource.cs" />
+    <Compile Include="Views\Utils\UIViewControllerExtension.cs" />
+    <Compile Include="Helpers\Commands\CommandsFactory.cs" />
+    <Compile Include="Helpers\Commands\OpenObjectCommand.cs" />
+    <Compile Include="Helpers\Commands\SAMLCommand.cs" />
+    <Compile Include="SharedDataController.cs" />
+    <Compile Include="Views\Expenses\List\IPhoneExpensesTableViewController.cs" />
+    <Compile Include="Views\Expenses\List\ExpensesTableSource.cs" />
+    <Compile Include="Views\Expenses\List\SpendCatcherTableSource.cs" />
+    <Compile Include="Views\Expenses\List\SpendCatcherExpenseCell.cs" />
+    <Compile Include="Views\Utils\CountryCell.cs" />
+    <Compile Include="Views\Utils\CountryCell.designer.cs">
+      <DependentUpon>CountryCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Details\History\HistoryCommentCell.cs" />
+    <Compile Include="Views\Reports\Details\History\HistoryCommentCell.designer.cs">
+      <DependentUpon>HistoryCommentCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendeeCell.cs" />
+    <Compile Include="AttendeeCell.designer.cs">
+      <DependentUpon>AttendeeCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageString.cs" />
+    <Compile Include="FakeData.cs" />
+    <Compile Include="Views\Expenses\List\SpendCatcherViewController.cs" />
+    <Compile Include="Views\Expenses\List\SpendCatcherViewController.designer.cs">
+      <DependentUpon>SpendCatcherViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Expenses\List\SpendCatcherHeaderCount.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\ExpenseDetailsTableViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\ExpenseDetailsTableViewController.designer.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\IExpenseDetailsSubController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\ReceiptsCollectionViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\ReceiptsCollectionViewController.designer.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\AttendeesTableSectionSource.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\AttendeesTableSource.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Cells\AddAttendeeButtonCell.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Cells\AddAttendeeButtonCell.designer.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Cells\AttendeeItemCell.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Cells\AttendeeItemCell.designer.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\AttendeeFormViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\BusinessFormViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\BusinessFormViewController.designer.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\EmployeeeTableViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\HCOViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\HCPAttendeeCell.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\HCPAttendeeCell.designer.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\HCPTableViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\HCPTableViewController.designer.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\HCPTableViewSource.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\HCPViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\HCUViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\HCUViewController.designer.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\HealthCareTableViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\IPhoneHCPAttendeeCell.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\IPhoneHCPAttendeeCell.designer.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\RecentlyUserTableViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\SearchAttendeeTableViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\SearchAttendeeTableViewSource.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\SpouseViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\SpouseViewController.designer.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\details\AttendeeDetailsViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\details\AttendeeDetailsViewController.designer.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\HCRelatedAttendeeViewController.cs" />
+    <Compile Include="Views\Expenses\Details\Shared\Attendees\Lists\HCRelatedAttendeeViewController.designer.cs">
+      <DependentUpon>HCRelatedAttendeeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCPViewController.cs" />
+    <Compile Include="HCPViewController.designer.cs">
+      <DependentUpon>HCPViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HCOViewController.cs" />
+    <Compile Include="HCOViewController.designer.cs">
+      <DependentUpon>HCOViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Wrappers\AutocompleteStringDataFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\AutocompleteStringFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\AutocompleteStringFieldCell.designer.cs">
+      <DependentUpon>AutocompleteStringFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\SubViewControllers\AutocompleteStringViewController.cs" />
+    <Compile Include="Views\Fields\SubViewControllers\AutocompleteStringViewController.designer.cs">
+      <DependentUpon>AutocompleteStringViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\Wrappers\FullTextDataFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\FullTextFieldCell.cs" />
+    <Compile Include="Views\Fields\Cells\FullTextFieldCell.designer.cs">
+      <DependentUpon>FullTextFieldCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fields\SubViewControllers\ProductsViewController.cs" />
+    <Compile Include="Views\Fields\SubViewControllers\ProductsViewController.designer.cs">
+      <DependentUpon>ProductsViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Insights.1.11.2\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.2\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
+  <Import Project="..\packages\Xamarin.Forms.1.5.1.6471\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.5.1.6471\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Resources\icon\" />
+    <Folder Include="Resources\Media.xcassets\" />
+    <Folder Include="Resources\Sketch\" />
+    <Folder Include="Resources\Views\" />
+    <Folder Include="Resources\Images.xcassets\LaunchImage.launchimage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mxp.Core\Mxp.Core.csproj">
+      <Project>{3263BF25-058F-4A81-932C-AD2527512F74}</Project>
+      <Name>Mxp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpendCatcher\SpendCatcher.csproj">
+      <Project>{EA3D1106-CC25-42BA-A76A-FD3694D6DBF9}</Project>
+      <Name>SpendCatcher</Name>
+      <IsAppExtension>True</IsAppExtension>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\_abkhazia.png" />
+    <BundleResource Include="Resources\_abkhazia%402x.png" />
+    <BundleResource Include="Resources\_abkhazia%403x.png" />
+    <BundleResource Include="Resources\_basque-country.png" />
+    <BundleResource Include="Resources\_basque-country%402x.png" />
+    <BundleResource Include="Resources\_basque-country%403x.png" />
+    <BundleResource Include="Resources\_british-antarctic-territory.png" />
+    <BundleResource Include="Resources\_british-antarctic-territory%402x.png" />
+    <BundleResource Include="Resources\_british-antarctic-territory%403x.png" />
+    <BundleResource Include="Resources\_commonwealth.png" />
+    <BundleResource Include="Resources\_commonwealth%402x.png" />
+    <BundleResource Include="Resources\_commonwealth%403x.png" />
+    <BundleResource Include="Resources\_england.png" />
+    <BundleResource Include="Resources\_england%402x.png" />
+    <BundleResource Include="Resources\_england%403x.png" />
+    <BundleResource Include="Resources\_gosquared.png" />
+    <BundleResource Include="Resources\_gosquared%402x.png" />
+    <BundleResource Include="Resources\_gosquared%403x.png" />
+    <BundleResource Include="Resources\_kosovo.png" />
+    <BundleResource Include="Resources\_kosovo%402x.png" />
+    <BundleResource Include="Resources\_kosovo%403x.png" />
+    <BundleResource Include="Resources\_mars.png" />
+    <BundleResource Include="Resources\_mars%402x.png" />
+    <BundleResource Include="Resources\_mars%403x.png" />
+    <BundleResource Include="Resources\_nagorno-karabakh.png" />
+    <BundleResource Include="Resources\_nagorno-karabakh%402x.png" />
+    <BundleResource Include="Resources\_nagorno-karabakh%403x.png" />
+    <BundleResource Include="Resources\_nato.png" />
+    <BundleResource Include="Resources\_nato%402x.png" />
+    <BundleResource Include="Resources\_nato%403x.png" />
+    <BundleResource Include="Resources\_northern-cyprus.png" />
+    <BundleResource Include="Resources\_northern-cyprus%402x.png" />
+    <BundleResource Include="Resources\_northern-cyprus%403x.png" />
+    <BundleResource Include="Resources\_olympics.png" />
+    <BundleResource Include="Resources\_olympics%402x.png" />
+    <BundleResource Include="Resources\_olympics%403x.png" />
+    <BundleResource Include="Resources\_red-cross.png" />
+    <BundleResource Include="Resources\_red-cross%402x.png" />
+    <BundleResource Include="Resources\_red-cross%403x.png" />
+    <BundleResource Include="Resources\_scotland.png" />
+    <BundleResource Include="Resources\_scotland%402x.png" />
+    <BundleResource Include="Resources\_scotland%403x.png" />
+    <BundleResource Include="Resources\_somaliland.png" />
+    <BundleResource Include="Resources\_somaliland%402x.png" />
+    <BundleResource Include="Resources\_somaliland%403x.png" />
+    <BundleResource Include="Resources\_south-ossetia.png" />
+    <BundleResource Include="Resources\_south-ossetia%402x.png" />
+    <BundleResource Include="Resources\_south-ossetia%403x.png" />
+    <BundleResource Include="Resources\_united-nations.png" />
+    <BundleResource Include="Resources\_united-nations%402x.png" />
+    <BundleResource Include="Resources\_united-nations%403x.png" />
+    <BundleResource Include="Resources\_wales.png" />
+    <BundleResource Include="Resources\_wales%402x.png" />
+    <BundleResource Include="Resources\_wales%403x.png" />
+    <BundleResource Include="Resources\AD.png" />
+    <BundleResource Include="Resources\AD%402x.png" />
+    <BundleResource Include="Resources\AD%403x.png" />
+    <BundleResource Include="Resources\AE.png" />
+    <BundleResource Include="Resources\AE%402x.png" />
+    <BundleResource Include="Resources\AE%403x.png" />
+    <BundleResource Include="Resources\AF.png" />
+    <BundleResource Include="Resources\AF%402x.png" />
+    <BundleResource Include="Resources\AF%403x.png" />
+    <BundleResource Include="Resources\AG.png" />
+    <BundleResource Include="Resources\AG%402x.png" />
+    <BundleResource Include="Resources\AG%403x.png" />
+    <BundleResource Include="Resources\AI.png" />
+    <BundleResource Include="Resources\AI%402x.png" />
+    <BundleResource Include="Resources\AI%403x.png" />
+    <BundleResource Include="Resources\AL.png" />
+    <BundleResource Include="Resources\AL%402x.png" />
+    <BundleResource Include="Resources\AL%403x.png" />
+    <BundleResource Include="Resources\AM.png" />
+    <BundleResource Include="Resources\AM%402x.png" />
+    <BundleResource Include="Resources\AM%403x.png" />
+    <BundleResource Include="Resources\AN.png" />
+    <BundleResource Include="Resources\AN%402x.png" />
+    <BundleResource Include="Resources\AN%403x.png" />
+    <BundleResource Include="Resources\AO.png" />
+    <BundleResource Include="Resources\AO%402x.png" />
+    <BundleResource Include="Resources\AO%403x.png" />
+    <BundleResource Include="Resources\AQ.png" />
+    <BundleResource Include="Resources\AQ%402x.png" />
+    <BundleResource Include="Resources\AQ%403x.png" />
+    <BundleResource Include="Resources\AR.png" />
+    <BundleResource Include="Resources\AR%402x.png" />
+    <BundleResource Include="Resources\AR%403x.png" />
+    <BundleResource Include="Resources\AS.png" />
+    <BundleResource Include="Resources\AS%402x.png" />
+    <BundleResource Include="Resources\AS%403x.png" />
+    <BundleResource Include="Resources\AT.png" />
+    <BundleResource Include="Resources\AT%402x.png" />
+    <BundleResource Include="Resources\AT%403x.png" />
+    <BundleResource Include="Resources\AttendeeExpenseCell.png" />
+    <BundleResource Include="Resources\AttendeeExpenseCell%402x.png" />
+    <BundleResource Include="Resources\AttendeeExpenseCell%403x.png" />
+    <BundleResource Include="Resources\AU.png" />
+    <BundleResource Include="Resources\AU%402x.png" />
+    <BundleResource Include="Resources\AU%403x.png" />
+    <BundleResource Include="Resources\AW.png" />
+    <BundleResource Include="Resources\AW%402x.png" />
+    <BundleResource Include="Resources\AW%403x.png" />
+    <BundleResource Include="Resources\AX.png" />
+    <BundleResource Include="Resources\AX%402x.png" />
+    <BundleResource Include="Resources\AX%403x.png" />
+    <BundleResource Include="Resources\AZ.png" />
+    <BundleResource Include="Resources\AZ%402x.png" />
+    <BundleResource Include="Resources\AZ%403x.png" />
+    <BundleResource Include="Resources\BA.png" />
+    <BundleResource Include="Resources\BA%402x.png" />
+    <BundleResource Include="Resources\BA%403x.png" />
+    <BundleResource Include="Resources\BB.png" />
+    <BundleResource Include="Resources\BB%402x.png" />
+    <BundleResource Include="Resources\BB%403x.png" />
+    <BundleResource Include="Resources\BD.png" />
+    <BundleResource Include="Resources\BD%402x.png" />
+    <BundleResource Include="Resources\BD%403x.png" />
+    <BundleResource Include="Resources\BE.png" />
+    <BundleResource Include="Resources\BE%402x.png" />
+    <BundleResource Include="Resources\BE%403x.png" />
+    <BundleResource Include="Resources\BF.png" />
+    <BundleResource Include="Resources\BF%402x.png" />
+    <BundleResource Include="Resources\BF%403x.png" />
+    <BundleResource Include="Resources\BG.png" />
+    <BundleResource Include="Resources\BG%402x.png" />
+    <BundleResource Include="Resources\BG%403x.png" />
+    <BundleResource Include="Resources\BH.png" />
+    <BundleResource Include="Resources\BH%402x.png" />
+    <BundleResource Include="Resources\BH%403x.png" />
+    <BundleResource Include="Resources\BI.png" />
+    <BundleResource Include="Resources\BI%402x.png" />
+    <BundleResource Include="Resources\BI%403x.png" />
+    <BundleResource Include="Resources\BJ.png" />
+    <BundleResource Include="Resources\BJ%402x.png" />
+    <BundleResource Include="Resources\BJ%403x.png" />
+    <BundleResource Include="Resources\BL.png" />
+    <BundleResource Include="Resources\BL%402x.png" />
+    <BundleResource Include="Resources\BL%403x.png" />
+    <BundleResource Include="Resources\BM.png" />
+    <BundleResource Include="Resources\BM%402x.png" />
+    <BundleResource Include="Resources\BM%403x.png" />
+    <BundleResource Include="Resources\BN.png" />
+    <BundleResource Include="Resources\BN%402x.png" />
+    <BundleResource Include="Resources\BN%403x.png" />
+    <BundleResource Include="Resources\BO.png" />
+    <BundleResource Include="Resources\BO%402x.png" />
+    <BundleResource Include="Resources\BO%403x.png" />
+    <BundleResource Include="Resources\BR.png" />
+    <BundleResource Include="Resources\BR%402x.png" />
+    <BundleResource Include="Resources\BR%403x.png" />
+    <BundleResource Include="Resources\BS.png" />
+    <BundleResource Include="Resources\BS%402x.png" />
+    <BundleResource Include="Resources\BS%403x.png" />
+    <BundleResource Include="Resources\BT.png" />
+    <BundleResource Include="Resources\BT%402x.png" />
+    <BundleResource Include="Resources\BT%403x.png" />
+    <BundleResource Include="Resources\BW.png" />
+    <BundleResource Include="Resources\BW%402x.png" />
+    <BundleResource Include="Resources\BW%403x.png" />
+    <BundleResource Include="Resources\BY.png" />
+    <BundleResource Include="Resources\BY%402x.png" />
+    <BundleResource Include="Resources\BY%403x.png" />
+    <BundleResource Include="Resources\BZ.png" />
+    <BundleResource Include="Resources\BZ%402x.png" />
+    <BundleResource Include="Resources\BZ%403x.png" />
+    <BundleResource Include="Resources\CA.png" />
+    <BundleResource Include="Resources\CA%402x.png" />
+    <BundleResource Include="Resources\CA%403x.png" />
+    <BundleResource Include="Resources\CC.png" />
+    <BundleResource Include="Resources\CC%402x.png" />
+    <BundleResource Include="Resources\CC%403x.png" />
+    <BundleResource Include="Resources\CD.png" />
+    <BundleResource Include="Resources\CD%402x.png" />
+    <BundleResource Include="Resources\CD%403x.png" />
+    <BundleResource Include="Resources\CellArrow.png" />
+    <BundleResource Include="Resources\CellArrow%402x.png" />
+    <BundleResource Include="Resources\CellArrow%403x.png" />
+    <BundleResource Include="Resources\CF.png" />
+    <BundleResource Include="Resources\CF%402x.png" />
+    <BundleResource Include="Resources\CF%403x.png" />
+    <BundleResource Include="Resources\CG.png" />
+    <BundleResource Include="Resources\CG%402x.png" />
+    <BundleResource Include="Resources\CG%403x.png" />
+    <BundleResource Include="Resources\CH.png" />
+    <BundleResource Include="Resources\CH%402x.png" />
+    <BundleResource Include="Resources\CH%403x.png" />
+    <BundleResource Include="Resources\CI.png" />
+    <BundleResource Include="Resources\CI%402x.png" />
+    <BundleResource Include="Resources\CI%403x.png" />
+    <BundleResource Include="Resources\CK.png" />
+    <BundleResource Include="Resources\CK%402x.png" />
+    <BundleResource Include="Resources\CK%403x.png" />
+    <BundleResource Include="Resources\CL.png" />
+    <BundleResource Include="Resources\CL%402x.png" />
+    <BundleResource Include="Resources\CL%403x.png" />
+    <BundleResource Include="Resources\CM.png" />
+    <BundleResource Include="Resources\CM%402x.png" />
+    <BundleResource Include="Resources\CM%403x.png" />
+    <BundleResource Include="Resources\CN.png" />
+    <BundleResource Include="Resources\CN%402x.png" />
+    <BundleResource Include="Resources\CN%403x.png" />
+    <BundleResource Include="Resources\CO.png" />
+    <BundleResource Include="Resources\CO%402x.png" />
+    <BundleResource Include="Resources\CO%403x.png" />
+    <BundleResource Include="Resources\CR.png" />
+    <BundleResource Include="Resources\CR%402x.png" />
+    <BundleResource Include="Resources\CR%403x.png" />
+    <BundleResource Include="Resources\CU.png" />
+    <BundleResource Include="Resources\CU%402x.png" />
+    <BundleResource Include="Resources\CU%403x.png" />
+    <BundleResource Include="Resources\CV.png" />
+    <BundleResource Include="Resources\CV%402x.png" />
+    <BundleResource Include="Resources\CV%403x.png" />
+    <BundleResource Include="Resources\CW.png" />
+    <BundleResource Include="Resources\CW%402x.png" />
+    <BundleResource Include="Resources\CW%403x.png" />
+    <BundleResource Include="Resources\CX.png" />
+    <BundleResource Include="Resources\CX%402x.png" />
+    <BundleResource Include="Resources\CX%403x.png" />
+    <BundleResource Include="Resources\CY.png" />
+    <BundleResource Include="Resources\CY%402x.png" />
+    <BundleResource Include="Resources\CY%403x.png" />
+    <BundleResource Include="Resources\CZ.png" />
+    <BundleResource Include="Resources\CZ%402x.png" />
+    <BundleResource Include="Resources\CZ%403x.png" />
+    <BundleResource Include="Resources\DE.png" />
+    <BundleResource Include="Resources\DE%402x.png" />
+    <BundleResource Include="Resources\DE%403x.png" />
+    <BundleResource Include="Resources\DJ.png" />
+    <BundleResource Include="Resources\DJ%402x.png" />
+    <BundleResource Include="Resources\DJ%403x.png" />
+    <BundleResource Include="Resources\DK.png" />
+    <BundleResource Include="Resources\DK%402x.png" />
+    <BundleResource Include="Resources\DK%403x.png" />
+    <BundleResource Include="Resources\DM.png" />
+    <BundleResource Include="Resources\DM%402x.png" />
+    <BundleResource Include="Resources\DM%403x.png" />
+    <BundleResource Include="Resources\DO.png" />
+    <BundleResource Include="Resources\DO%402x.png" />
+    <BundleResource Include="Resources\DO%403x.png" />
+    <BundleResource Include="Resources\DocumentExpenseCell.png" />
+    <BundleResource Include="Resources\DocumentExpenseCell%402x.png" />
+    <BundleResource Include="Resources\DocumentExpenseCell%403x.png" />
+    <BundleResource Include="Resources\DZ.png" />
+    <BundleResource Include="Resources\DZ%402x.png" />
+    <BundleResource Include="Resources\DZ%403x.png" />
+    <BundleResource Include="Resources\EC.png" />
+    <BundleResource Include="Resources\EC%402x.png" />
+    <BundleResource Include="Resources\EC%403x.png" />
+    <BundleResource Include="Resources\EE.png" />
+    <BundleResource Include="Resources\EE%402x.png" />
+    <BundleResource Include="Resources\EE%403x.png" />
+    <BundleResource Include="Resources\EG.png" />
+    <BundleResource Include="Resources\EG%402x.png" />
+    <BundleResource Include="Resources\EG%403x.png" />
+    <BundleResource Include="Resources\EH.png" />
+    <BundleResource Include="Resources\EH%402x.png" />
+    <BundleResource Include="Resources\EH%403x.png" />
+    <BundleResource Include="Resources\ER.png" />
+    <BundleResource Include="Resources\ER%402x.png" />
+    <BundleResource Include="Resources\ER%403x.png" />
+    <BundleResource Include="Resources\ES.png" />
+    <BundleResource Include="Resources\ES%402x.png" />
+    <BundleResource Include="Resources\ES%403x.png" />
+    <BundleResource Include="Resources\ET.png" />
+    <BundleResource Include="Resources\ET%402x.png" />
+    <BundleResource Include="Resources\ET%403x.png" />
+    <BundleResource Include="Resources\EU.png" />
+    <BundleResource Include="Resources\EU%402x.png" />
+    <BundleResource Include="Resources\EU%403x.png" />
+    <BundleResource Include="Resources\ExpenseIconMenuBottom.png" />
+    <BundleResource Include="Resources\expenseMenuIconSelected.png" />
+    <BundleResource Include="Resources\expenseMenuIconSelected%402x.png" />
+    <BundleResource Include="Resources\FI.png" />
+    <BundleResource Include="Resources\FI%402x.png" />
+    <BundleResource Include="Resources\FI%403x.png" />
+    <BundleResource Include="Resources\FJ.png" />
+    <BundleResource Include="Resources\FJ%402x.png" />
+    <BundleResource Include="Resources\FJ%403x.png" />
+    <BundleResource Include="Resources\FK.png" />
+    <BundleResource Include="Resources\FK%402x.png" />
+    <BundleResource Include="Resources\FK%403x.png" />
+    <BundleResource Include="Resources\FM.png" />
+    <BundleResource Include="Resources\FM%402x.png" />
+    <BundleResource Include="Resources\FM%403x.png" />
+    <BundleResource Include="Resources\FO.png" />
+    <BundleResource Include="Resources\FO%402x.png" />
+    <BundleResource Include="Resources\FO%403x.png" />
+    <BundleResource Include="Resources\FR.png" />
+    <BundleResource Include="Resources\FR%402x.png" />
+    <BundleResource Include="Resources\FR%403x.png" />
+    <BundleResource Include="Resources\GA.png" />
+    <BundleResource Include="Resources\GA%402x.png" />
+    <BundleResource Include="Resources\GA%403x.png" />
+    <BundleResource Include="Resources\GB.png" />
+    <BundleResource Include="Resources\GB%402x.png" />
+    <BundleResource Include="Resources\GB%403x.png" />
+    <BundleResource Include="Resources\GD.png" />
+    <BundleResource Include="Resources\GD%402x.png" />
+    <BundleResource Include="Resources\GD%403x.png" />
+    <BundleResource Include="Resources\GE.png" />
+    <BundleResource Include="Resources\GE%402x.png" />
+    <BundleResource Include="Resources\GE%403x.png" />
+    <BundleResource Include="Resources\GG.png" />
+    <BundleResource Include="Resources\GG%402x.png" />
+    <BundleResource Include="Resources\GG%403x.png" />
+    <BundleResource Include="Resources\GH.png" />
+    <BundleResource Include="Resources\GH%402x.png" />
+    <BundleResource Include="Resources\GH%403x.png" />
+    <BundleResource Include="Resources\GI.png" />
+    <BundleResource Include="Resources\GI%402x.png" />
+    <BundleResource Include="Resources\GI%403x.png" />
+    <BundleResource Include="Resources\GL.png" />
+    <BundleResource Include="Resources\GL%402x.png" />
+    <BundleResource Include="Resources\GL%403x.png" />
+    <BundleResource Include="Resources\GM.png" />
+    <BundleResource Include="Resources\GM%402x.png" />
+    <BundleResource Include="Resources\GM%403x.png" />
+    <BundleResource Include="Resources\GN.png" />
+    <BundleResource Include="Resources\GN%402x.png" />
+    <BundleResource Include="Resources\GN%403x.png" />
+    <BundleResource Include="Resources\GQ.png" />
+    <BundleResource Include="Resources\GQ%402x.png" />
+    <BundleResource Include="Resources\GQ%403x.png" />
+    <BundleResource Include="Resources\GR.png" />
+    <BundleResource Include="Resources\GR%402x.png" />
+    <BundleResource Include="Resources\GR%403x.png" />
+    <BundleResource Include="Resources\GS.png" />
+    <BundleResource Include="Resources\GS%402x.png" />
+    <BundleResource Include="Resources\GS%403x.png" />
+    <BundleResource Include="Resources\GT.png" />
+    <BundleResource Include="Resources\GT%402x.png" />
+    <BundleResource Include="Resources\GT%403x.png" />
+    <BundleResource Include="Resources\GU.png" />
+    <BundleResource Include="Resources\GU%402x.png" />
+    <BundleResource Include="Resources\GU%403x.png" />
+    <BundleResource Include="Resources\GW.png" />
+    <BundleResource Include="Resources\GW%402x.png" />
+    <BundleResource Include="Resources\GW%403x.png" />
+    <BundleResource Include="Resources\GY.png" />
+    <BundleResource Include="Resources\GY%402x.png" />
+    <BundleResource Include="Resources\GY%403x.png" />
+    <BundleResource Include="Resources\HK.png" />
+    <BundleResource Include="Resources\HK%402x.png" />
+    <BundleResource Include="Resources\HK%403x.png" />
+    <BundleResource Include="Resources\HN.png" />
+    <BundleResource Include="Resources\HN%402x.png" />
+    <BundleResource Include="Resources\HN%403x.png" />
+    <BundleResource Include="Resources\HR.png" />
+    <BundleResource Include="Resources\HR%402x.png" />
+    <BundleResource Include="Resources\HR%403x.png" />
+    <BundleResource Include="Resources\HT.png" />
+    <BundleResource Include="Resources\HT%402x.png" />
+    <BundleResource Include="Resources\HT%403x.png" />
+    <BundleResource Include="Resources\HU.png" />
+    <BundleResource Include="Resources\HU%402x.png" />
+    <BundleResource Include="Resources\HU%403x.png" />
+    <BundleResource Include="Resources\IC.png" />
+    <BundleResource Include="Resources\IC%402x.png" />
+    <BundleResource Include="Resources\IC%403x.png" />
+    <BundleResource Include="Resources\ID.png" />
+    <BundleResource Include="Resources\ID%402x.png" />
+    <BundleResource Include="Resources\ID%403x.png" />
+    <BundleResource Include="Resources\IE.png" />
+    <BundleResource Include="Resources\IE%402x.png" />
+    <BundleResource Include="Resources\IE%403x.png" />
+    <BundleResource Include="Resources\IL.png" />
+    <BundleResource Include="Resources\IL%402x.png" />
+    <BundleResource Include="Resources\IL%403x.png" />
+    <BundleResource Include="Resources\IM.png" />
+    <BundleResource Include="Resources\IM%402x.png" />
+    <BundleResource Include="Resources\IM%403x.png" />
+    <BundleResource Include="Resources\IN.png" />
+    <BundleResource Include="Resources\IN%402x.png" />
+    <BundleResource Include="Resources\IN%403x.png" />
+    <BundleResource Include="Resources\IQ.png" />
+    <BundleResource Include="Resources\IQ%402x.png" />
+    <BundleResource Include="Resources\IQ%403x.png" />
+    <BundleResource Include="Resources\IR.png" />
+    <BundleResource Include="Resources\IR%402x.png" />
+    <BundleResource Include="Resources\IR%403x.png" />
+    <BundleResource Include="Resources\IS.png" />
+    <BundleResource Include="Resources\IS%402x.png" />
+    <BundleResource Include="Resources\IS%403x.png" />
+    <BundleResource Include="Resources\IT.png" />
+    <BundleResource Include="Resources\IT%402x.png" />
+    <BundleResource Include="Resources\IT%403x.png" />
+    <BundleResource Include="Resources\JE.png" />
+    <BundleResource Include="Resources\JE%402x.png" />
+    <BundleResource Include="Resources\JE%403x.png" />
+    <BundleResource Include="Resources\JM.png" />
+    <BundleResource Include="Resources\JM%402x.png" />
+    <BundleResource Include="Resources\JM%403x.png" />
+    <BundleResource Include="Resources\JO.png" />
+    <BundleResource Include="Resources\JO%402x.png" />
+    <BundleResource Include="Resources\JO%403x.png" />
+    <BundleResource Include="Resources\JP.png" />
+    <BundleResource Include="Resources\JP%402x.png" />
+    <BundleResource Include="Resources\JP%403x.png" />
+    <BundleResource Include="Resources\KE.png" />
+    <BundleResource Include="Resources\KE%402x.png" />
+    <BundleResource Include="Resources\KE%403x.png" />
+    <BundleResource Include="Resources\KG.png" />
+    <BundleResource Include="Resources\KG%402x.png" />
+    <BundleResource Include="Resources\KG%403x.png" />
+    <BundleResource Include="Resources\KH.png" />
+    <BundleResource Include="Resources\KH%402x.png" />
+    <BundleResource Include="Resources\KH%403x.png" />
+    <BundleResource Include="Resources\KI.png" />
+    <BundleResource Include="Resources\KI%402x.png" />
+    <BundleResource Include="Resources\KI%403x.png" />
+    <BundleResource Include="Resources\KM.png" />
+    <BundleResource Include="Resources\KM%402x.png" />
+    <BundleResource Include="Resources\KM%403x.png" />
+    <BundleResource Include="Resources\KN.png" />
+    <BundleResource Include="Resources\KN%402x.png" />
+    <BundleResource Include="Resources\KN%403x.png" />
+    <BundleResource Include="Resources\KP.png" />
+    <BundleResource Include="Resources\KP%402x.png" />
+    <BundleResource Include="Resources\KP%403x.png" />
+    <BundleResource Include="Resources\KR.png" />
+    <BundleResource Include="Resources\KR%402x.png" />
+    <BundleResource Include="Resources\KR%403x.png" />
+    <BundleResource Include="Resources\KW.png" />
+    <BundleResource Include="Resources\KW%402x.png" />
+    <BundleResource Include="Resources\KW%403x.png" />
+    <BundleResource Include="Resources\KY.png" />
+    <BundleResource Include="Resources\KY%402x.png" />
+    <BundleResource Include="Resources\KY%403x.png" />
+    <BundleResource Include="Resources\KZ.png" />
+    <BundleResource Include="Resources\KZ%402x.png" />
+    <BundleResource Include="Resources\KZ%403x.png" />
+    <BundleResource Include="Resources\LA.png" />
+    <BundleResource Include="Resources\LA%402x.png" />
+    <BundleResource Include="Resources\LA%403x.png" />
+    <BundleResource Include="Resources\LB.png" />
+    <BundleResource Include="Resources\LB%402x.png" />
+    <BundleResource Include="Resources\LB%403x.png" />
+    <BundleResource Include="Resources\LC.png" />
+    <BundleResource Include="Resources\LC%402x.png" />
+    <BundleResource Include="Resources\LC%403x.png" />
+    <BundleResource Include="Resources\LI.png" />
+    <BundleResource Include="Resources\LI%402x.png" />
+    <BundleResource Include="Resources\LI%403x.png" />
+    <BundleResource Include="Resources\LK.png" />
+    <BundleResource Include="Resources\LK%402x.png" />
+    <BundleResource Include="Resources\LK%403x.png" />
+    <BundleResource Include="Resources\LoginViewPassword.png" />
+    <BundleResource Include="Resources\LoginViewPassword%402x.png" />
+    <BundleResource Include="Resources\LoginViewPassword%403x.png" />
+    <BundleResource Include="Resources\LoginViewUsername.png" />
+    <BundleResource Include="Resources\LoginViewUsername%402x.png" />
+    <BundleResource Include="Resources\LoginViewUsername%403x.png" />
+    <BundleResource Include="Resources\LR.png" />
+    <BundleResource Include="Resources\LR%402x.png" />
+    <BundleResource Include="Resources\LR%403x.png" />
+    <BundleResource Include="Resources\LS.png" />
+    <BundleResource Include="Resources\LS%402x.png" />
+    <BundleResource Include="Resources\LS%403x.png" />
+    <BundleResource Include="Resources\LT.png" />
+    <BundleResource Include="Resources\LT%402x.png" />
+    <BundleResource Include="Resources\LT%403x.png" />
+    <BundleResource Include="Resources\LU.png" />
+    <BundleResource Include="Resources\LU%402x.png" />
+    <BundleResource Include="Resources\LU%403x.png" />
+    <BundleResource Include="Resources\LV.png" />
+    <BundleResource Include="Resources\LV%402x.png" />
+    <BundleResource Include="Resources\LV%403x.png" />
+    <BundleResource Include="Resources\LY.png" />
+    <BundleResource Include="Resources\LY%402x.png" />
+    <BundleResource Include="Resources\LY%403x.png" />
+    <BundleResource Include="Resources\MA.png" />
+    <BundleResource Include="Resources\MA%402x.png" />
+    <BundleResource Include="Resources\MA%403x.png" />
+    <BundleResource Include="Resources\MC.png" />
+    <BundleResource Include="Resources\MC%402x.png" />
+    <BundleResource Include="Resources\MC%403x.png" />
+    <BundleResource Include="Resources\MD.png" />
+    <BundleResource Include="Resources\MD%402x.png" />
+    <BundleResource Include="Resources\MD%403x.png" />
+    <BundleResource Include="Resources\ME.png" />
+    <BundleResource Include="Resources\ME%402x.png" />
+    <BundleResource Include="Resources\ME%403x.png" />
+    <BundleResource Include="Resources\MF.png" />
+    <BundleResource Include="Resources\MF%402x.png" />
+    <BundleResource Include="Resources\MF%403x.png" />
+    <BundleResource Include="Resources\MG.png" />
+    <BundleResource Include="Resources\MG%402x.png" />
+    <BundleResource Include="Resources\MG%403x.png" />
+    <BundleResource Include="Resources\MH.png" />
+    <BundleResource Include="Resources\MH%402x.png" />
+    <BundleResource Include="Resources\MH%403x.png" />
+    <BundleResource Include="Resources\MK.png" />
+    <BundleResource Include="Resources\MK%402x.png" />
+    <BundleResource Include="Resources\MK%403x.png" />
+    <BundleResource Include="Resources\ML.png" />
+    <BundleResource Include="Resources\ML%402x.png" />
+    <BundleResource Include="Resources\ML%403x.png" />
+    <BundleResource Include="Resources\MM.png" />
+    <BundleResource Include="Resources\MM%402x.png" />
+    <BundleResource Include="Resources\MM%403x.png" />
+    <BundleResource Include="Resources\MN.png" />
+    <BundleResource Include="Resources\MN%402x.png" />
+    <BundleResource Include="Resources\MN%403x.png" />
+    <BundleResource Include="Resources\MO.png" />
+    <BundleResource Include="Resources\MO%402x.png" />
+    <BundleResource Include="Resources\MO%403x.png" />
+    <BundleResource Include="Resources\MobileXPenseLoginLogo.png" />
+    <BundleResource Include="Resources\MobileXPenseLoginLogo%402x.png" />
+    <BundleResource Include="Resources\MobileXPenseLoginLogo%403x.png" />
+    <BundleResource Include="Resources\MP.png" />
+    <BundleResource Include="Resources\MP%402x.png" />
+    <BundleResource Include="Resources\MP%403x.png" />
+    <BundleResource Include="Resources\MQ.png" />
+    <BundleResource Include="Resources\MQ%402x.png" />
+    <BundleResource Include="Resources\MQ%403x.png" />
+    <BundleResource Include="Resources\MR.png" />
+    <BundleResource Include="Resources\MR%402x.png" />
+    <BundleResource Include="Resources\MR%403x.png" />
+    <BundleResource Include="Resources\MS.png" />
+    <BundleResource Include="Resources\MS%402x.png" />
+    <BundleResource Include="Resources\MS%403x.png" />
+    <BundleResource Include="Resources\MT.png" />
+    <BundleResource Include="Resources\MT%402x.png" />
+    <BundleResource Include="Resources\MT%403x.png" />
+    <BundleResource Include="Resources\MU.png" />
+    <BundleResource Include="Resources\MU%402x.png" />
+    <BundleResource Include="Resources\MU%403x.png" />
+    <BundleResource Include="Resources\MV.png" />
+    <BundleResource Include="Resources\MV%402x.png" />
+    <BundleResource Include="Resources\MV%403x.png" />
+    <BundleResource Include="Resources\MW.png" />
+    <BundleResource Include="Resources\MW%402x.png" />
+    <BundleResource Include="Resources\MW%403x.png" />
+    <BundleResource Include="Resources\MX.png" />
+    <BundleResource Include="Resources\MX%402x.png" />
+    <BundleResource Include="Resources\MX%403x.png" />
+    <BundleResource Include="Resources\MY.png" />
+    <BundleResource Include="Resources\MY%402x.png" />
+    <BundleResource Include="Resources\MY%403x.png" />
+    <BundleResource Include="Resources\MZ.png" />
+    <BundleResource Include="Resources\MZ%402x.png" />
+    <BundleResource Include="Resources\MZ%403x.png" />
+    <BundleResource Include="Resources\NA.png" />
+    <BundleResource Include="Resources\NA%402x.png" />
+    <BundleResource Include="Resources\NA%403x.png" />
+    <BundleResource Include="Resources\NC.png" />
+    <BundleResource Include="Resources\NC%402x.png" />
+    <BundleResource Include="Resources\NC%403x.png" />
+    <BundleResource Include="Resources\NE.png" />
+    <BundleResource Include="Resources\NE%402x.png" />
+    <BundleResource Include="Resources\NE%403x.png" />
+    <BundleResource Include="Resources\NF.png" />
+    <BundleResource Include="Resources\NF%402x.png" />
+    <BundleResource Include="Resources\NF%403x.png" />
+    <BundleResource Include="Resources\NG.png" />
+    <BundleResource Include="Resources\NG%402x.png" />
+    <BundleResource Include="Resources\NG%403x.png" />
+    <BundleResource Include="Resources\NI.png" />
+    <BundleResource Include="Resources\NI%402x.png" />
+    <BundleResource Include="Resources\NI%403x.png" />
+    <BundleResource Include="Resources\NL.png" />
+    <BundleResource Include="Resources\NL%402x.png" />
+    <BundleResource Include="Resources\NL%403x.png" />
+    <BundleResource Include="Resources\NO.png" />
+    <BundleResource Include="Resources\NO%402x.png" />
+    <BundleResource Include="Resources\NO%403x.png" />
+    <BundleResource Include="Resources\NoFlag.png" />
+    <BundleResource Include="Resources\NoFlag%402x.png" />
+    <BundleResource Include="Resources\NoFlag%403x.png" />
+    <BundleResource Include="Resources\NP.png" />
+    <BundleResource Include="Resources\NP%402x.png" />
+    <BundleResource Include="Resources\NP%403x.png" />
+    <BundleResource Include="Resources\NR.png" />
+    <BundleResource Include="Resources\NR%402x.png" />
+    <BundleResource Include="Resources\NR%403x.png" />
+    <BundleResource Include="Resources\NU.png" />
+    <BundleResource Include="Resources\NU%402x.png" />
+    <BundleResource Include="Resources\NU%403x.png" />
+    <BundleResource Include="Resources\NZ.png" />
+    <BundleResource Include="Resources\NZ%402x.png" />
+    <BundleResource Include="Resources\NZ%403x.png" />
+    <BundleResource Include="Resources\OM.png" />
+    <BundleResource Include="Resources\OM%402x.png" />
+    <BundleResource Include="Resources\OM%403x.png" />
+    <BundleResource Include="Resources\PA.png" />
+    <BundleResource Include="Resources\PA%402x.png" />
+    <BundleResource Include="Resources\PA%403x.png" />
+    <BundleResource Include="Resources\PE.png" />
+    <BundleResource Include="Resources\PE%402x.png" />
+    <BundleResource Include="Resources\PE%403x.png" />
+    <BundleResource Include="Resources\PF.png" />
+    <BundleResource Include="Resources\PF%402x.png" />
+    <BundleResource Include="Resources\PF%403x.png" />
+    <BundleResource Include="Resources\PG.png" />
+    <BundleResource Include="Resources\PG%402x.png" />
+    <BundleResource Include="Resources\PG%403x.png" />
+    <BundleResource Include="Resources\PH.png" />
+    <BundleResource Include="Resources\PH%402x.png" />
+    <BundleResource Include="Resources\PH%403x.png" />
+    <BundleResource Include="Resources\PK.png" />
+    <BundleResource Include="Resources\PK%402x.png" />
+    <BundleResource Include="Resources\PK%403x.png" />
+    <BundleResource Include="Resources\PL.png" />
+    <BundleResource Include="Resources\PL%402x.png" />
+    <BundleResource Include="Resources\PL%403x.png" />
+    <BundleResource Include="Resources\PN.png" />
+    <BundleResource Include="Resources\PN%402x.png" />
+    <BundleResource Include="Resources\PN%403x.png" />
+    <BundleResource Include="Resources\PR.png" />
+    <BundleResource Include="Resources\PR%402x.png" />
+    <BundleResource Include="Resources\PR%403x.png" />
+    <BundleResource Include="Resources\PS.png" />
+    <BundleResource Include="Resources\PS%402x.png" />
+    <BundleResource Include="Resources\PS%403x.png" />
+    <BundleResource Include="Resources\PT.png" />
+    <BundleResource Include="Resources\PT%402x.png" />
+    <BundleResource Include="Resources\PT%403x.png" />
+    <BundleResource Include="Resources\PW.png" />
+    <BundleResource Include="Resources\PW%402x.png" />
+    <BundleResource Include="Resources\PW%403x.png" />
+    <BundleResource Include="Resources\PY.png" />
+    <BundleResource Include="Resources\PY%402x.png" />
+    <BundleResource Include="Resources\PY%403x.png" />
+    <BundleResource Include="Resources\QA.png" />
+    <BundleResource Include="Resources\QA%402x.png" />
+    <BundleResource Include="Resources\QA%403x.png" />
+    <BundleResource Include="Resources\RO.png" />
+    <BundleResource Include="Resources\RO%402x.png" />
+    <BundleResource Include="Resources\RO%403x.png" />
+    <BundleResource Include="Resources\RS.png" />
+    <BundleResource Include="Resources\RS%402x.png" />
+    <BundleResource Include="Resources\RS%403x.png" />
+    <BundleResource Include="Resources\RU.png" />
+    <BundleResource Include="Resources\RU%402x.png" />
+    <BundleResource Include="Resources\RU%403x.png" />
+    <BundleResource Include="Resources\RW.png" />
+    <BundleResource Include="Resources\RW%402x.png" />
+    <BundleResource Include="Resources\RW%403x.png" />
+    <BundleResource Include="Resources\SA.png" />
+    <BundleResource Include="Resources\SA%402x.png" />
+    <BundleResource Include="Resources\SA%403x.png" />
+    <BundleResource Include="Resources\SB.png" />
+    <BundleResource Include="Resources\SB%402x.png" />
+    <BundleResource Include="Resources\SB%403x.png" />
+    <BundleResource Include="Resources\SC.png" />
+    <BundleResource Include="Resources\SC%402x.png" />
+    <BundleResource Include="Resources\SC%403x.png" />
+    <BundleResource Include="Resources\SD.png" />
+    <BundleResource Include="Resources\SD%402x.png" />
+    <BundleResource Include="Resources\SD%403x.png" />
+    <BundleResource Include="Resources\SE.png" />
+    <BundleResource Include="Resources\SE%402x.png" />
+    <BundleResource Include="Resources\SE%403x.png" />
+    <BundleResource Include="Resources\SG.png" />
+    <BundleResource Include="Resources\SG%402x.png" />
+    <BundleResource Include="Resources\SG%403x.png" />
+    <BundleResource Include="Resources\SH.png" />
+    <BundleResource Include="Resources\SH%402x.png" />
+    <BundleResource Include="Resources\SH%403x.png" />
+    <BundleResource Include="Resources\SI.png" />
+    <BundleResource Include="Resources\SI%402x.png" />
+    <BundleResource Include="Resources\SI%403x.png" />
+    <BundleResource Include="Resources\SK.png" />
+    <BundleResource Include="Resources\SK%402x.png" />
+    <BundleResource Include="Resources\SK%403x.png" />
+    <BundleResource Include="Resources\SL.png" />
+    <BundleResource Include="Resources\SL%402x.png" />
+    <BundleResource Include="Resources\SL%403x.png" />
+    <BundleResource Include="Resources\SM.png" />
+    <BundleResource Include="Resources\SM%402x.png" />
+    <BundleResource Include="Resources\SM%403x.png" />
+    <BundleResource Include="Resources\SN.png" />
+    <BundleResource Include="Resources\SN%402x.png" />
+    <BundleResource Include="Resources\SN%403x.png" />
+    <BundleResource Include="Resources\SO.png" />
+    <BundleResource Include="Resources\SO%402x.png" />
+    <BundleResource Include="Resources\SO%403x.png" />
+    <BundleResource Include="Resources\SR.png" />
+    <BundleResource Include="Resources\SR%402x.png" />
+    <BundleResource Include="Resources\SR%403x.png" />
+    <BundleResource Include="Resources\SS.png" />
+    <BundleResource Include="Resources\SS%402x.png" />
+    <BundleResource Include="Resources\SS%403x.png" />
+    <BundleResource Include="Resources\ST.png" />
+    <BundleResource Include="Resources\ST%402x.png" />
+    <BundleResource Include="Resources\ST%403x.png" />
+    <BundleResource Include="Resources\SV.png" />
+    <BundleResource Include="Resources\SV%402x.png" />
+    <BundleResource Include="Resources\SV%403x.png" />
+    <BundleResource Include="Resources\SY.png" />
+    <BundleResource Include="Resources\SY%402x.png" />
+    <BundleResource Include="Resources\SY%403x.png" />
+    <BundleResource Include="Resources\SZ.png" />
+    <BundleResource Include="Resources\SZ%402x.png" />
+    <BundleResource Include="Resources\SZ%403x.png" />
+    <BundleResource Include="Resources\TC.png" />
+    <BundleResource Include="Resources\TC%402x.png" />
+    <BundleResource Include="Resources\TC%403x.png" />
+    <BundleResource Include="Resources\TD.png" />
+    <BundleResource Include="Resources\TD%402x.png" />
+    <BundleResource Include="Resources\TD%403x.png" />
+    <BundleResource Include="Resources\TF.png" />
+    <BundleResource Include="Resources\TF%402x.png" />
+    <BundleResource Include="Resources\TF%403x.png" />
+    <BundleResource Include="Resources\TG.png" />
+    <BundleResource Include="Resources\TG%402x.png" />
+    <BundleResource Include="Resources\TG%403x.png" />
+    <BundleResource Include="Resources\TH.png" />
+    <BundleResource Include="Resources\TH%402x.png" />
+    <BundleResource Include="Resources\TH%403x.png" />
+    <BundleResource Include="Resources\TJ.png" />
+    <BundleResource Include="Resources\TJ%402x.png" />
+    <BundleResource Include="Resources\TJ%403x.png" />
+    <BundleResource Include="Resources\TK.png" />
+    <BundleResource Include="Resources\TK%402x.png" />
+    <BundleResource Include="Resources\TK%403x.png" />
+    <BundleResource Include="Resources\TL.png" />
+    <BundleResource Include="Resources\TL%402x.png" />
+    <BundleResource Include="Resources\TL%403x.png" />
+    <BundleResource Include="Resources\TM.png" />
+    <BundleResource Include="Resources\TM%402x.png" />
+    <BundleResource Include="Resources\TM%403x.png" />
+    <BundleResource Include="Resources\TN.png" />
+    <BundleResource Include="Resources\TN%402x.png" />
+    <BundleResource Include="Resources\TN%403x.png" />
+    <BundleResource Include="Resources\TO.png" />
+    <BundleResource Include="Resources\TO%402x.png" />
+    <BundleResource Include="Resources\TO%403x.png" />
+    <BundleResource Include="Resources\TR.png" />
+    <BundleResource Include="Resources\TR%402x.png" />
+    <BundleResource Include="Resources\TR%403x.png" />
+    <BundleResource Include="Resources\TT.png" />
+    <BundleResource Include="Resources\TT%402x.png" />
+    <BundleResource Include="Resources\TT%403x.png" />
+    <BundleResource Include="Resources\TV.png" />
+    <BundleResource Include="Resources\TV%402x.png" />
+    <BundleResource Include="Resources\TV%403x.png" />
+    <BundleResource Include="Resources\TW.png" />
+    <BundleResource Include="Resources\TW%402x.png" />
+    <BundleResource Include="Resources\TW%403x.png" />
+    <BundleResource Include="Resources\TZ.png" />
+    <BundleResource Include="Resources\TZ%402x.png" />
+    <BundleResource Include="Resources\TZ%403x.png" />
+    <BundleResource Include="Resources\UA.png" />
+    <BundleResource Include="Resources\UA%402x.png" />
+    <BundleResource Include="Resources\UA%403x.png" />
+    <BundleResource Include="Resources\UG.png" />
+    <BundleResource Include="Resources\UG%402x.png" />
+    <BundleResource Include="Resources\UG%403x.png" />
+    <BundleResource Include="Resources\US.png" />
+    <BundleResource Include="Resources\US%402x.png" />
+    <BundleResource Include="Resources\US%403x.png" />
+    <BundleResource Include="Resources\UY.png" />
+    <BundleResource Include="Resources\UY%402x.png" />
+    <BundleResource Include="Resources\UY%403x.png" />
+    <BundleResource Include="Resources\UZ.png" />
+    <BundleResource Include="Resources\UZ%402x.png" />
+    <BundleResource Include="Resources\UZ%403x.png" />
+    <BundleResource Include="Resources\VA.png" />
+    <BundleResource Include="Resources\VA%402x.png" />
+    <BundleResource Include="Resources\VA%403x.png" />
+    <BundleResource Include="Resources\VC.png" />
+    <BundleResource Include="Resources\VC%402x.png" />
+    <BundleResource Include="Resources\VC%403x.png" />
+    <BundleResource Include="Resources\VE.png" />
+    <BundleResource Include="Resources\VE%402x.png" />
+    <BundleResource Include="Resources\VE%403x.png" />
+    <BundleResource Include="Resources\VG.png" />
+    <BundleResource Include="Resources\VG%402x.png" />
+    <BundleResource Include="Resources\VG%403x.png" />
+    <BundleResource Include="Resources\VI.png" />
+    <BundleResource Include="Resources\VI%402x.png" />
+    <BundleResource Include="Resources\VI%403x.png" />
+    <BundleResource Include="Resources\VN.png" />
+    <BundleResource Include="Resources\VN%402x.png" />
+    <BundleResource Include="Resources\VN%403x.png" />
+    <BundleResource Include="Resources\VU.png" />
+    <BundleResource Include="Resources\VU%402x.png" />
+    <BundleResource Include="Resources\VU%403x.png" />
+    <BundleResource Include="Resources\WF.png" />
+    <BundleResource Include="Resources\WF%402x.png" />
+    <BundleResource Include="Resources\WF%403x.png" />
+    <BundleResource Include="Resources\WS.png" />
+    <BundleResource Include="Resources\WS%402x.png" />
+    <BundleResource Include="Resources\WS%403x.png" />
+    <BundleResource Include="Resources\YE.png" />
+    <BundleResource Include="Resources\YE%402x.png" />
+    <BundleResource Include="Resources\YE%403x.png" />
+    <BundleResource Include="Resources\YT.png" />
+    <BundleResource Include="Resources\YT%402x.png" />
+    <BundleResource Include="Resources\YT%403x.png" />
+    <BundleResource Include="Resources\ZA.png" />
+    <BundleResource Include="Resources\ZA%402x.png" />
+    <BundleResource Include="Resources\ZA%403x.png" />
+    <BundleResource Include="Resources\ZM.png" />
+    <BundleResource Include="Resources\ZM%402x.png" />
+    <BundleResource Include="Resources\ZM%403x.png" />
+    <BundleResource Include="Resources\ZW.png" />
+    <BundleResource Include="Resources\ZW%402x.png" />
+    <BundleResource Include="Resources\ZW%403x.png" />
+    <BundleResource Include="Resources\icon\100-100.png" />
+    <BundleResource Include="Resources\icon\106-106.png" />
+    <BundleResource Include="Resources\icon\114-114.png" />
+    <BundleResource Include="Resources\icon\1152-1920.png" />
+    <BundleResource Include="Resources\icon\120-120.png" />
+    <BundleResource Include="Resources\icon\152-152.png" />
+    <BundleResource Include="Resources\icon\170-170.png" />
+    <BundleResource Include="Resources\icon\29-29.png" />
+    <BundleResource Include="Resources\icon\360-360.png" />
+    <BundleResource Include="Resources\icon\40-40.png" />
+    <BundleResource Include="Resources\icon\50-50.png" />
+    <BundleResource Include="Resources\icon\57-57.png" />
+    <BundleResource Include="Resources\icon\58-58.png" />
+    <BundleResource Include="Resources\icon\744-360.png" />
+    <BundleResource Include="Resources\icon\76-76.png" />
+    <BundleResource Include="Resources\icon\80-80.png" />
+    <BundleResource Include="Resources\Media.xcassets\AttendeeExpenseCell.imageset\Contents.json" />
+    <BundleResource Include="Resources\Media.xcassets\CellArrow.imageset\CellArrow.png" />
+    <BundleResource Include="Resources\Media.xcassets\CellArrow.imageset\CellArrow%402x.png" />
+    <BundleResource Include="Resources\Media.xcassets\CellArrow.imageset\CellArrow%403x.png" />
+    <BundleResource Include="Resources\Media.xcassets\CellArrow.imageset\Contents.json" />
+    <BundleResource Include="Resources\Media.xcassets\Default.imageset\Contents.json" />
+    <BundleResource Include="Resources\Media.xcassets\Default.imageset\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Media.xcassets\DocumentExpenseCell.imageset\Contents.json" />
+    <BundleResource Include="Resources\Media.xcassets\DocumentExpenseCell.imageset\DocumentExpenseCell.png" />
+    <BundleResource Include="Resources\Media.xcassets\DocumentExpenseCell.imageset\DocumentExpenseCell%402x.png" />
+    <BundleResource Include="Resources\Media.xcassets\DocumentExpenseCell.imageset\DocumentExpenseCell%403x.png" />
+    <BundleResource Include="Resources\Media.xcassets\LoginViewPassword.imageset\Contents.json" />
+    <BundleResource Include="Resources\Media.xcassets\LoginViewPassword.imageset\LoginViewPassword.png" />
+    <BundleResource Include="Resources\Media.xcassets\LoginViewPassword.imageset\LoginViewPassword%402x.png" />
+    <BundleResource Include="Resources\Media.xcassets\LoginViewPassword.imageset\LoginViewPassword%403x.png" />
+    <BundleResource Include="Resources\Media.xcassets\LoginViewUsername.imageset\Contents.json" />
+    <BundleResource Include="Resources\Media.xcassets\LoginViewUsername.imageset\LoginViewUsername.png" />
+    <BundleResource Include="Resources\Media.xcassets\LoginViewUsername.imageset\LoginViewUsername%402x.png" />
+    <BundleResource Include="Resources\Media.xcassets\LoginViewUsername.imageset\LoginViewUsername%403x.png" />
+    <BundleResource Include="Resources\Media.xcassets\MobileXPenseLoginLogo.imageset\Contents.json" />
+    <BundleResource Include="Resources\Media.xcassets\MobileXPenseLoginLogo.imageset\MobileXPenseLoginLogo.png" />
+    <BundleResource Include="Resources\Media.xcassets\MobileXPenseLoginLogo.imageset\MobileXPenseLoginLogo%402x.png" />
+    <BundleResource Include="Resources\Media.xcassets\MobileXPenseLoginLogo.imageset\MobileXPenseLoginLogo%403x.png" />
+    <BundleResource Include="Resources\Sketch\AddMapMileage.pdf" />
+    <BundleResource Include="Resources\Sketch\AddMapMileage.sketch" />
+    <BundleResource Include="Resources\Sketch\approvalIconTab.pdf" />
+    <BundleResource Include="Resources\Sketch\AttendeeExpenseCell.pdf" />
+    <BundleResource Include="Resources\Sketch\backButton.pdf" />
+    <BundleResource Include="Resources\Sketch\BedIcon.pdf" />
+    <BundleResource Include="Resources\Sketch\BedIconSelected.pdf" />
+    <BundleResource Include="Resources\Sketch\BreakfastICon.pdf" />
+    <BundleResource Include="Resources\Sketch\BreakfastIConSelected.pdf" />
+    <BundleResource Include="Resources\Sketch\CloseICon.pdf" />
+    <BundleResource Include="Resources\Sketch\DinnerIcon.pdf" />
+    <BundleResource Include="Resources\Sketch\DinnerIconSelected.pdf" />
+    <BundleResource Include="Resources\Sketch\DocumentExpenseCell.pdf" />
+    <BundleResource Include="Resources\Sketch\EmptyIcon.pdf" />
+    <BundleResource Include="Resources\Sketch\expenseIconTab.pdf" />
+    <BundleResource Include="Resources\Sketch\ExpenseIsCompliant.pdf" />
+    <BundleResource Include="Resources\Sketch\ExpenseNotCompliant.pdf" />
+    <BundleResource Include="Resources\Sketch\ExpenseNotCompliantPolicy.pdf" />
+    <BundleResource Include="Resources\Sketch\flages.sketch" />
+    <BundleResource Include="Resources\Sketch\Icon.sketch" />
+    <BundleResource Include="Resources\Sketch\Icon-Allowance.sketch" />
+    <BundleResource Include="Resources\Sketch\InformationsIcon.pdf" />
+    <BundleResource Include="Resources\Sketch\InformationsIconSelected.pdf" />
+    <BundleResource Include="Resources\Sketch\LunchIcon.pdf" />
+    <BundleResource Include="Resources\Sketch\LunchIconSelected.pdf" />
+    <BundleResource Include="Resources\Sketch\MoonIcon.pdf" />
+    <BundleResource Include="Resources\Sketch\MoonIconSelected.pdf" />
+    <BundleResource Include="Resources\Sketch\PinMap.pdf" />
+    <BundleResource Include="Resources\Sketch\ReportAcceptedByController.pdf" />
+    <BundleResource Include="Resources\Sketch\ReportApprovalIsPending.pdf" />
+    <BundleResource Include="Resources\Sketch\ReportHasBeenApproved.pdf" />
+    <BundleResource Include="Resources\Sketch\ReportHasBeenOrange.pdf" />
+    <BundleResource Include="Resources\Sketch\ReportHasBeenRefused.pdf" />
+    <BundleResource Include="Resources\Sketch\ReportIsPending.pdf" />
+    <BundleResource Include="Resources\Sketch\ReportRejectedByController.pdf" />
+    <BundleResource Include="Resources\Sketch\reportsIconTab.pdf" />
+    <BundleResource Include="Resources\Sketch\SegmentArrow.pdf" />
+    <BundleResource Include="Resources\Sketch\settingsIconTab.pdf" />
+    <BundleResource Include="Resources\Views\Approvals\List\Cells\main" />
+    <BundleResource Include="Resources\AttendeeExpenseCellStriked.png" />
+    <BundleResource Include="Resources\AttendeeExpenseCellStriked%402x.png" />
+    <BundleResource Include="Resources\AttendeeExpenseCellStriked%403x.png" />
+    <BundleResource Include="Resources\powered_by_google_on_white.png" />
+    <BundleResource Include="Resources\powered_by_google_on_white%402x.png" />
+    <BundleResource Include="Resources\powered_by_google_on_white%403x.png" />
+    <BundleResource Include="Resources\navbar_overflow.png" />
+    <BundleResource Include="Resources\navbar_overflow%402x.png" />
+    <BundleResource Include="Resources\navbar_overflow%403x.png" />
+    <BundleResource Include="Resources\navbar_approval.png" />
+    <BundleResource Include="Resources\navbar_approval%402x.png" />
+    <BundleResource Include="Resources\navbar_approval%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="sdwebimage">
+      <Version>3.7.5</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+</Project>

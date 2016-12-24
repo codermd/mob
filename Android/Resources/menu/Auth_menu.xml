@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item
+		android:id="@+id/Action_overflow"
+		android:icon="@drawable/ic_action_overflow"
+		android:title="Options"
+		app:showAsAction="always">
+
+		 <menu>
+
+            <item
+            android:id="@+id/Action_open_in_browser"
+                android:icon="@drawable/ic_action_open_in_browser"
+                android:title="Open in Browser"
+                android:showAsAction="ifRoom" />
+
+        </menu>
+
+	</item>
+
+</menu>

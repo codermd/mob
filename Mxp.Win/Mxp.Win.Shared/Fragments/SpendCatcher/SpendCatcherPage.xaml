@@ -1,0 +1,61 @@
+﻿<Page x:Class="Mxp.Win.SpendCatcherPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Mxp.Win"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="White"
+          Name="GridPage">
+        <Grid.Resources>
+            <CollectionViewSource x:Name="DetailFieldsSource"
+                                  ItemsPath="ItemsField" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Background="#00A8C6"
+              Grid.Row="0">
+            <TextBlock x:Name="Title"
+                       Foreground="White"
+                       Margin="20,5,20,10"
+                       Style="{StaticResource SubheaderTextBlockStyle}" />
+        </Grid>
+        <ScrollViewer HorizontalScrollMode="Enabled"
+                      Margin="10"
+                      Name="ScrollPanel"
+                      HorizontalSnapPointsType="Mandatory"
+                      HorizontalScrollBarVisibility="Auto"
+                      Grid.Row="1">
+            <!--Loaded="StackSpendCatchers_Loaded"-->
+            <StackPanel Orientation="Horizontal"
+                        Name="StackSpendCatchers" />
+        </ScrollViewer>
+        <Grid Grid.Row="1"
+              Background="Transparent"
+              x:Name="ProgressGrid"
+              Visibility="Collapsed"
+              Tapped="Grid_Tapped">
+            <ProgressRing Grid.Row="1"
+                          Background="White"
+                          Foreground="#00A8C6"
+                          x:Name="ProgressRing" />
+        </Grid>
+
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Cancel"
+                          Click="AppBarButton_Click_2" />
+            <AppBarButton Icon="Accept"
+                          Click="AppBarButton_Click"
+                          Name="AcceptButton"
+                          Visibility="Collapsed" />
+            <AppBarButton Icon="Forward"
+                          Click="AppBarButton_Click_1"
+                          Name="NextButton" />
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
